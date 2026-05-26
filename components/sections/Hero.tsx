@@ -25,7 +25,7 @@ export default function Hero() {
       />
 
       <div className="relative z-10 pb-32 pt-16">
-        {/* Centered copy stack */}
+        {/* Eyebrow + headline */}
         <div className="mx-auto max-w-5xl px-6 text-center">
           <p className="mb-6 text-xs font-semibold uppercase tracking-widest text-white/70 md:text-sm">
             Quoting Software for Surgical Practices &amp; Medical Spas
@@ -36,8 +36,37 @@ export default function Hero() {
             <br />
             in Under 2 Minutes
           </h1>
+        </div>
 
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/90 md:text-xl">
+        {/* Huge dashboard in a browser-chrome frame, dominating the page */}
+        <div className="mx-auto mt-12 max-w-7xl px-6">
+          <div className="overflow-hidden rounded-2xl border border-white/10 bg-white shadow-2xl shadow-blue-900/40">
+            <div className="flex items-center gap-2 border-b border-gray-200 bg-gray-50 px-4 py-3">
+              <div className="flex gap-1.5">
+                <div className="h-3 w-3 rounded-full bg-red-400" />
+                <div className="h-3 w-3 rounded-full bg-yellow-400" />
+                <div className="h-3 w-3 rounded-full bg-green-400" />
+              </div>
+              <div className="flex-1 text-center font-mono text-xs text-gray-500">
+                admin.mysurgeryquote.com
+              </div>
+            </div>
+            <Image
+              src="/screens/dashboard.png"
+              alt="MySurgeryQuote dashboard with quote-by-doctor totals and recent quotes table"
+              width={3200}
+              height={2200}
+              quality={100}
+              priority
+              sizes="(min-width: 1280px) 1232px, 100vw"
+              className="h-auto w-full"
+            />
+          </div>
+        </div>
+
+        {/* Subhead + CTAs + feature pills */}
+        <div className="mx-auto mt-12 max-w-5xl px-6 text-center">
+          <p className="mx-auto max-w-2xl text-lg leading-relaxed text-white/90 md:text-xl">
             Quoting software for surgical practices and medical spas. Accurate
             pricing, automatic calculations, branded PDFs.
           </p>
@@ -56,7 +85,7 @@ export default function Hero() {
               Medical Spas
             </Link>
           </div>
-          <div className="mt-6">
+          <div className="mt-4">
             <a
               href="https://demo.mysurgeryquote.com/demo"
               target="_blank"
@@ -68,7 +97,7 @@ export default function Hero() {
           </div>
 
           {/* Three feature pills over the blue background */}
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <span className={featurePillClass}>
               <Zap className="h-4 w-4" aria-hidden="true" />
               Quick quotes in 30 seconds
@@ -81,32 +110,6 @@ export default function Hero() {
               <Users className="h-4 w-4" aria-hidden="true" />
               Per-doctor fee schedules
             </span>
-          </div>
-        </div>
-
-        {/* Huge dashboard in a browser-chrome frame, dominating the page */}
-        <div className="mx-auto mt-16 max-w-7xl px-6">
-          <div className="overflow-hidden rounded-2xl border border-white/10 bg-white shadow-2xl shadow-blue-900/40">
-            <div className="flex items-center gap-2 border-b border-gray-200 bg-gray-50 px-4 py-3">
-              <div className="flex gap-1.5">
-                <div className="h-3 w-3 rounded-full bg-red-400" />
-                <div className="h-3 w-3 rounded-full bg-yellow-400" />
-                <div className="h-3 w-3 rounded-full bg-green-400" />
-              </div>
-              <div className="flex-1 text-center font-mono text-xs text-gray-500">
-                admin.mysurgeryquote.com
-              </div>
-            </div>
-            <Image
-              src="/screens/dashboard.png"
-              alt="MySurgeryQuote dashboard with quote-by-doctor totals and recent quotes table"
-              width={1400}
-              height={788}
-              quality={100}
-              priority
-              sizes="(min-width: 1280px) 1232px, 100vw"
-              className="h-auto w-full"
-            />
           </div>
         </div>
       </div>
