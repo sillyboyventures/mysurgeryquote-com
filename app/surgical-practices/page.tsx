@@ -63,7 +63,7 @@ const featureBlocks: Block[] = [
     width: 3200,
     height: 2400,
     title: "Surgeon-Specific Pricing",
-    body: "Each surgeon gets their own price list and assigned procedures. Select the surgeon and pricing loads automatically — no spreadsheets, no manual overrides.",
+    body: "Each surgeon gets their own price list and assigned procedures. Select the surgeon and pricing loads automatically. No spreadsheets, no manual overrides.",
     href: "/features#surgeon-pricing",
   },
   {
@@ -71,7 +71,7 @@ const featureBlocks: Block[] = [
     width: 3200,
     height: 2400,
     title: "Implants Built In",
-    body: "Organize implants by brand and type and add them right on the quote. They stay attached to the patient record — no separate spreadsheet to reconcile against the OR pull list.",
+    body: "Organize implants by brand and type and add them right on the quote. They stay attached to the patient record. No separate spreadsheet to reconcile against the OR pull list.",
     href: "/features#implants",
   },
   {
@@ -79,7 +79,7 @@ const featureBlocks: Block[] = [
     width: 3200,
     height: 2400,
     title: "Quick Quotes for Common Combinations",
-    body: "Save common combinations like a Mommy Makeover as a template. One click loads procedures, implants, and fees — then customize from there.",
+    body: "Save common combinations like a Mommy Makeover as a template. One click loads procedures, implants, and fees, then customize from there.",
     href: "/features#quick-quotes",
   },
   {
@@ -103,7 +103,7 @@ const featureBlocks: Block[] = [
     width: 1538,
     height: 781,
     title: "EMR Integration",
-    body: "Send finished quote PDFs straight to the patient's chart in ModMed, DrChrono, or GoHighLevel. One click from quote to chart — Nextech coming soon.",
+    body: "Send finished quote PDFs straight to the patient's chart in ModMed, DrChrono, or GoHighLevel. One click from quote to chart. Nextech coming soon.",
     href: "/integrations",
   },
 ];
@@ -111,7 +111,7 @@ const featureBlocks: Block[] = [
 const capabilities = [
   { icon: Calculator, title: "Automatic Fee Calculations", body: "Facility and anesthesia fees compute from surgical time on every quote." },
   { icon: FileText, title: "PDF & Email Delivery", body: "Branded PDFs emailed to patients directly, with delivery logged." },
-  { icon: Users, title: "Unlimited Staff Users", body: "Add your whole team — front desk, PCCs, surgeons — with no per-seat fees." },
+  { icon: Users, title: "Unlimited Staff Users", body: "Add your whole team (front desk, PCCs, surgeons) with no per-seat fees." },
   { icon: Lock, title: "Role-Based Permissions", body: "Admin, User, and Org Admin roles control who sees and edits what." },
   { icon: History, title: "Price History & Audit Trail", body: "Every price change and quote edit is logged by user and date." },
   { icon: ShieldCheck, title: "HIPAA Compliant", body: "Encryption at rest and in transit, session timeouts, and audit logging." },
@@ -361,7 +361,7 @@ export default function SurgicalPracticesPage() {
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-text-muted">
               Many surgical practices offer injectables, lasers, and skin
-              treatments. Add med spa quoting to your existing plan — same login,
+              treatments. Add med spa quoting to your existing plan. Same login,
               same patient records.
             </p>
             <Link

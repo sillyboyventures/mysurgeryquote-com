@@ -6,7 +6,7 @@ import ContactForm from "@/components/ContactForm";
 export const metadata: Metadata = {
   title: { absolute: "Contact MySurgeryQuote" },
   description:
-    "Get in touch with MySurgeryQuote. Sales, support, partnerships, and integrations — we usually reply within one business day.",
+    "Get in touch with MySurgeryQuote. Sales, support, partnerships, and integrations. We usually reply within one business day.",
 };
 
 const infoCards = [
@@ -33,7 +33,7 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Contact"
         title="Get in touch"
-        subhead="Sales, support, partnerships, integrations — we usually reply within one business day."
+        subhead="Sales, support, partnerships, integrations. We usually reply within one business day."
       />
 
       <section className="bg-white py-20">

@@ -7,7 +7,7 @@ import FinalCta from "@/components/sections/FinalCta";
 import FAQ from "@/components/sections/FAQ";
 
 export const metadata: Metadata = {
-  title: "Features — Surgeon Pricing, Commissions, Reporting",
+  title: "Features: Surgeon Pricing, Commissions, Reporting",
   description:
     "Every feature MySurgeryQuote offers: multiple surgeon fee schedules, commission tracking, procedure log reporting, quick quotes, multi-location, and more. The quoting tool built for medical practices.",
 };
@@ -44,7 +44,7 @@ const features: Feature[] = [
     image: "/screens/procedures.png",
     eyebrow: "Price management",
     title: "Individual and global price adjustments",
-    body: "Bump a single procedure's price by an exact amount, or apply a percentage across every procedure in your catalog in one click. Built-in tools for annual price increases — no CSV exports, no spreadsheet math, no forgotten line items.",
+    body: "Bump a single procedure's price by an exact amount, or apply a percentage across every procedure in your catalog in one click. Built-in tools for annual price increases. No CSV exports, no spreadsheet math, no forgotten line items.",
     bullets: [
       "Edit any procedure's price inline with one click",
       "Apply a global percentage increase across all procedures",
@@ -59,7 +59,7 @@ const features: Feature[] = [
     image: "/screens/fee-settings.png",
     eyebrow: "Facility math",
     title: "Multiple facility fee profiles",
-    body: "Configure separate fee structures for every facility you operate — in-office OR, ambulatory surgery center, hospital. Each facility gets its own base fee, hourly rate, included hours, and maximum cap. Select the facility on the quote, and the math runs automatically based on total surgical time.",
+    body: "Configure separate fee structures for every facility you operate: in-office OR, ambulatory surgery center, hospital. Each facility gets its own base fee, hourly rate, included hours, and maximum cap. Select the facility on the quote, and the math runs automatically based on total surgical time.",
     bullets: [
       "Unlimited facility profiles with independent fee structures",
       "Base fee + hourly rate after included hours + maximum cap",
@@ -74,7 +74,7 @@ const features: Feature[] = [
     image: "/screens/fee-settings.png",
     eyebrow: "Anesthesia math",
     title: "Anesthesia fees on autopilot",
-    body: "Same formula structure as facility fees but configured independently. Set your anesthesia base, hourly rate, included hours, and cap once — every quote calculates the fee automatically based on surgical time. No more manually adding anesthesia onto every quote.",
+    body: "Same formula structure as facility fees but configured independently. Set your anesthesia base, hourly rate, included hours, and cap once. Every quote calculates the fee automatically based on surgical time. No more manually adding anesthesia onto every quote.",
     bullets: [
       "Independent anesthesia fee configuration per practice",
       "Auto-applies only to surgical procedures (not med spa items)",
@@ -89,12 +89,12 @@ const features: Feature[] = [
     image: "/screens/quick-quotes.png",
     eyebrow: "Bundled procedures",
     title: "Quick Quote templates for bundled procedures",
-    body: "Save your Mommy Makeover, Facelift Package, Daddy Do-Over, or any common combination as a Quick Quote template. One click to start a quote from a template — procedures, implants, additional fees all auto-load. Customize from there. A 10-minute quote build becomes 30 seconds.",
+    body: "Save your Mommy Makeover, Facelift Package, Daddy Do-Over, or any common combination as a Quick Quote template. One click to start a quote from a template: procedures, implants, additional fees all auto-load. Customize from there. A 10-minute quote build becomes 30 seconds.",
     bullets: [
       "Unlimited templates, practice-wide or per-surgeon",
       "One-click apply, then customize as needed",
       "Auto-loads procedures, implants, and additional fees",
-      "Editable after applying — templates are starting points, not locks",
+      "Editable after applying: templates are starting points, not locks",
       "Patients see a clean professional PDF, not a stitched-together estimate",
     ],
   },
@@ -104,7 +104,7 @@ const features: Feature[] = [
     image: "/screens/commissions.png",
     eyebrow: "Commission tracking",
     title: "Commission tracking for patient care coordinators",
-    body: "Track commissions for PCCs, schedulers, and reps without leaving the quoting tool. Set group rates (e.g. all PCCs at 5%) or individual rates. Vary rates by provider — 5% on Dr. Smith's cases, 3% on Dr. Jones's. Only invoiced quotes count toward commissions, so reps earn on closed business, not estimates.",
+    body: "Track commissions for PCCs, schedulers, and reps without leaving the quoting tool. Set group rates (e.g. all PCCs at 5%) or individual rates. Vary rates by provider: 5% on Dr. Smith's cases, 3% on Dr. Jones's. Only invoiced quotes count toward commissions, so reps earn on closed business, not estimates.",
     bullets: [
       "Commission groups (e.g. all PCCs at one rate) or per-user rates",
       "Per-provider rate variation for split practices",
@@ -120,7 +120,7 @@ const features: Feature[] = [
     image: "/screens/reports.png",
     eyebrow: "Billed services",
     title: "Procedure and implant log reporting",
-    body: "See every billed service across all surgeons and locations in one dashboard. Filter by date range or surgeon. Tabs for Summary, Billing Summary, Procedure Log, Implant Log, PCC Productivity, and Commissions — each exportable to CSV for accountants, year-end tax prep, or operational analysis.",
+    body: "See every billed service across all surgeons and locations in one dashboard. Filter by date range or surgeon. Tabs for Summary, Billing Summary, Procedure Log, Implant Log, PCC Productivity, and Commissions, each exportable to CSV for accountants, year-end tax prep, or operational analysis.",
     bullets: [
       "Procedure Log: every billed procedure with date, surgeon, patient, fee",
       "Implant Log: every implant quoted with brand, type, patient, status",
@@ -136,7 +136,7 @@ const features: Feature[] = [
     image: "/screens/implants.png",
     eyebrow: "Implant tracking",
     title: "Implants live alongside procedures",
-    body: "Organize implants by brand and type — Allergan Natrelle, Mentor, Sientra, or any vendor you use. Add them to quotes with pricing, model, and any patient-specific notes. Implants stay attached to the patient record. No more separate spreadsheet to reconcile against the OR pull list.",
+    body: "Organize implants by brand and type: Allergan Natrelle, Mentor, Sientra, or any vendor you use. Add them to quotes with pricing, model, and any patient-specific notes. Implants stay attached to the patient record. No more separate spreadsheet to reconcile against the OR pull list.",
     bullets: [
       "Brands and types nested by manufacturer",
       "Per-implant pricing with visible cost on quotes",
@@ -166,7 +166,7 @@ const features: Feature[] = [
     image: "/screens/quote-history.png",
     eyebrow: "Quote history",
     title: "Find any quote in seconds",
-    body: "Every quote your practice has ever created is searchable. Look up by patient name, date of birth, quote number, surgeon, status, or PCC. Edit old quotes — original pricing is preserved so historical quotes match what the patient was originally shown. A banner appears when prices have changed, so you can apply current pricing if needed.",
+    body: "Every quote your practice has ever created is searchable. Look up by patient name, date of birth, quote number, surgeon, status, or PCC. Edit old quotes. Original pricing is preserved so historical quotes match what the patient was originally shown. A banner appears when prices have changed, so you can apply current pricing if needed.",
     bullets: [
       "Search by patient name, DOB, quote number, surgeon, or PCC",
       "Filter by status (Draft, Sent, Invoiced) and date range",
@@ -181,12 +181,12 @@ const features: Feature[] = [
     image: "/screens/new-quote-wizard.png",
     eyebrow: "Delivery",
     title: "Branded PDFs, emailed directly to patients",
-    body: "Generate a branded PDF with your practice logo, colors, name, and contact info. Email the quote to the patient directly from the system — no downloading, attaching, and forwarding. Every send is logged so you know when the patient was sent the quote, and you can resend on demand.",
+    body: "Generate a branded PDF with your practice logo, colors, name, and contact info. Email the quote to the patient directly from the system. No downloading, attaching, and forwarding. Every send is logged so you know when the patient was sent the quote, and you can resend on demand.",
     bullets: [
       "Your logo, your colors, your contact info on every quote",
       "Per-location branding for multi-site practices",
       "One-click email send to patient with subject and message",
-      "Delivery logged on the quote — see when and to whom",
+      "Delivery logged on the quote: see when and to whom",
       "Patients can be sent quotes directly to their ModMed/DrChrono/GoHighLevel record (see Integrations)",
     ],
   },
@@ -196,7 +196,7 @@ const features: Feature[] = [
     image: "/screens/users.png",
     eyebrow: "Team management",
     title: "Roles and permissions for your whole team",
-    body: "Unlimited staff users on every plan — add your front desk, PCCs, OR coordinators, and surgeons without per-seat fees. Three role types control who sees what: Admin (full access), User (creates and edits quotes), and Org Admin (multi-location oversight). HIPAA-compliant audit logging on every sensitive action.",
+    body: "Unlimited staff users on every plan. Add your front desk, PCCs, OR coordinators, and surgeons without per-seat fees. Three role types control who sees what: Admin (full access), User (creates and edits quotes), and Org Admin (multi-location oversight). HIPAA-compliant audit logging on every sensitive action.",
     bullets: [
       "Unlimited users on every plan, no per-seat fees",
       "Admin / User / Org Admin role tiers",
@@ -329,7 +329,7 @@ export default function FeaturesPage() {
         );
       })}
 
-      {/* Visible FAQ — content matches the FAQPage JSON-LD above */}
+      {/* Visible FAQ: content matches the FAQPage JSON-LD above */}
       <FAQ items={faqs} className="bg-bg-alt py-24" />
 
       {/* D. Final CTA */}

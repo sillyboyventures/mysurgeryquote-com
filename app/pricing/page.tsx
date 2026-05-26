@@ -6,7 +6,7 @@ import FinalCta from "@/components/sections/FinalCta";
 import FAQ from "@/components/sections/FAQ";
 
 export const metadata: Metadata = {
-  title: "Pricing — Plans for Surgical Practices and Medical Spas",
+  title: "Pricing: Plans for Surgical Practices and Medical Spas",
   description:
     "Simple monthly pricing. No contracts, no setup fees, cancel anytime. Surgical plans from $100/mo. Med spa plans from $150/mo. Unlimited quotes and staff users on every plan.",
 };
@@ -227,7 +227,7 @@ const pricingFaqs = [
   },
   {
     q: "Is there a free trial?",
-    a: "Yes. Try MySurgeryQuote free for 30 days with full access — no features locked, no quote limits, no credit card required.",
+    a: "Yes. Try MySurgeryQuote free for 30 days with full access. No features locked, no quote limits, no credit card required.",
   },
   {
     q: "What payment methods do you accept?",
@@ -239,7 +239,7 @@ const pricingFaqs = [
   },
   {
     q: "What if I add a surgeon or location mid-month?",
-    a: "You're charged a prorated amount for the rest of that billing period. No downtime — we add them the same day you request it.",
+    a: "You're charged a prorated amount for the rest of that billing period. No downtime. We add them the same day you request it.",
   },
   {
     q: "What's the difference between surgical and med spa plans?",
@@ -251,7 +251,7 @@ const pricingFaqs = [
   },
   {
     q: "Are EMR integrations included?",
-    a: "Yes. All EMR integrations — ModMed, DrChrono, and GoHighLevel — are included on every plan at no extra cost. Nextech is coming soon and will also be included on every plan at launch.",
+    a: "Yes. All EMR integrations (ModMed, DrChrono, and GoHighLevel) are included on every plan at no extra cost. Nextech is coming soon and will also be included on every plan at launch.",
   },
   {
     q: "What if I need more than the included surgeons or locations?",
@@ -294,8 +294,8 @@ export default function PricingPage() {
             Surgical practices
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-center text-text-muted">
-            Built for cosmetic and plastic surgery practices. ModMed and DrChrono
-            integrations included.
+            Built for cosmetic and plastic surgery practices. All EMR
+            integrations included on every plan.
           </p>
           <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
             {surgicalPlans.map((p) => (

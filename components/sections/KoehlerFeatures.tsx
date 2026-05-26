@@ -34,7 +34,7 @@ const rows: FeatureRow[] = [
     height: 2400,
     alt: "Creating a quote with price adjustments",
     title: "Individual + Global Price Adjustments",
-    body: "Bump one procedure 5%, or apply a 10% increase across every procedure in one click. Built-in tools — no CSV exports, no spreadsheet math.",
+    body: "Bump one procedure 5%, or apply a 10% increase across every procedure in one click. Built-in tools. No CSV exports, no spreadsheet math.",
     bullets: [
       "Per-procedure edits",
       "Global percentage adjustments",
@@ -48,7 +48,7 @@ const rows: FeatureRow[] = [
     height: 879,
     alt: "Facility fee profile configuration",
     title: "Multiple Facility Fee Profiles",
-    body: "Configure separate facilities — in-office OR, ASC, hospital. Each with its own base fee, hourly rate, included hours, and cap. Select facility on the quote, math runs automatically.",
+    body: "Configure separate facilities: in-office OR, ASC, hospital. Each with its own base fee, hourly rate, included hours, and cap. Select facility on the quote, math runs automatically.",
     bullets: [
       "Multiple facility profiles",
       "Independent fee rules",
@@ -110,7 +110,7 @@ export default function KoehlerFeatures() {
           Built for how surgical practices actually run
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-center text-text-muted">
-          Real features for real medical practices — not generic quoting tools.
+          Real features for real medical practices, not generic quoting tools.
         </p>
       </div>
 

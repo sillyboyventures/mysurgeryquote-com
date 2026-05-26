@@ -6,7 +6,7 @@ import Testimonials from "@/components/sections/Testimonials";
 import FAQ from "@/components/sections/FAQ";
 
 export const metadata: Metadata = {
-  title: { absolute: "Start Your Free Trial — MySurgeryQuote" },
+  title: { absolute: "Start Your Free Trial | MySurgeryQuote" },
   description:
     "Try MySurgeryQuote free for 30 days. Full access, no credit card required. We'll have your account ready within one business day.",
 };
@@ -19,7 +19,7 @@ const included = [
   "Automatic facility & anesthesia fees",
   "Implant tracking",
   "Branded PDFs & email delivery",
-  "ModMed & DrChrono integration",
+  "All EMR integrations (ModMed, DrChrono, GoHighLevel)",
   "Initial procedure list migration from your CSV/Excel",
   "Onboarding session with our team",
 ];
@@ -39,7 +39,7 @@ const trialFaqs = [
   },
   {
     q: "What happens after 30 days?",
-    a: "You'll get a reminder email a few days before your trial ends. To continue, choose a plan and add a payment method. To stop, do nothing — your account pauses automatically.",
+    a: "You'll get a reminder email a few days before your trial ends. To continue, choose a plan and add a payment method. To stop, do nothing. Your account pauses automatically.",
   },
   {
     q: "Can I import my existing procedure list?",

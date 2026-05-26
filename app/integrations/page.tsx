@@ -6,7 +6,7 @@ import PageHero from "@/components/PageHero";
 import FinalCta from "@/components/sections/FinalCta";
 
 export const metadata: Metadata = {
-  title: "EMR Integrations — ModMed, DrChrono, GoHighLevel, Nextech",
+  title: "EMR Integrations: ModMed, DrChrono, GoHighLevel, Nextech",
   description:
     "Send quotes directly to your EMR. ModMed, DrChrono, and GoHighLevel integrations included on every plan. Nextech coming soon.",
 };
@@ -30,7 +30,7 @@ const integrations: Integration[] = [
     logo: "/logos/modmed.png",
     width: 200,
     height: 60,
-    body: "Send finished quote PDFs straight to the patient's ModMed chart. No downloading, no re-uploading — one click from quote to chart.",
+    body: "Send finished quote PDFs straight to the patient's ModMed chart. No downloading, no re-uploading. One click from quote to chart.",
     bullets: [
       "One-click PDF send to patient chart",
       "Patient search built-in (no double entry)",
@@ -62,7 +62,7 @@ const integrations: Integration[] = [
     logo: "/logos/ghl.png",
     width: 1853,
     height: 420,
-    body: "Attach quote PDFs to GoHighLevel contacts. Trigger follow-up workflows the moment a quote is sent — text, email, calendar booking.",
+    body: "Attach quote PDFs to GoHighLevel contacts. Trigger follow-up workflows the moment a quote is sent: text, email, calendar booking.",
     bullets: [
       "One-click PDF send to contact",
       "Workflow trigger on quote sent",
@@ -104,7 +104,7 @@ const benefits = [
   {
     icon: Search,
     title: "Built-in patient search",
-    body: "Look up patients from MySurgeryQuote — no copy/paste between systems. Patient pulls directly from your EMR's database.",
+    body: "Look up patients from MySurgeryQuote. No copy/paste between systems. Patient pulls directly from your EMR's database.",
   },
   {
     icon: FileCheck,
@@ -235,7 +235,7 @@ export default function IntegrationsPage() {
               Included on every plan
             </h3>
             <p className="mt-4 text-text-muted">
-              Every EMR integration is included on every plan at no extra cost —
+              Every EMR integration is included on every plan at no extra cost:
               ModMed, DrChrono, GoHighLevel, and Nextech when it launches.
             </p>
             <Link

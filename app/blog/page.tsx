@@ -5,7 +5,7 @@ import PageHero from "@/components/PageHero";
 import { getAllPosts } from "@/lib/mdx";
 
 export const metadata: Metadata = {
-  title: "Blog — Surgery & Med Spa Quoting Insights",
+  title: "Blog: Surgery & Med Spa Quoting Insights",
   description:
     "Guides and updates on surgery quote software, patient quoting, EMR integrations, and running a modern surgical practice or medical spa.",
   alternates: { canonical: "https://mysurgeryquote.com/blog/" },

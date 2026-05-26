@@ -4,7 +4,7 @@ import HelpSearch from "@/components/HelpSearch";
 import { getAllHelpArticles } from "@/lib/mdx";
 
 export const metadata: Metadata = {
-  title: "Help Center — Guides & How-Tos",
+  title: "Help Center: Guides & How-Tos",
   description:
     "Step-by-step guides for MySurgeryQuote: quotes, surgeon pricing, fee settings, EMR integrations, med spa features, reporting, and more.",
   alternates: { canonical: "https://mysurgeryquote.com/help/" },

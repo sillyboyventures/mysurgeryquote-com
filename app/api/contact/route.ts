@@ -21,7 +21,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Invalid request" }, { status: 400 });
   }
 
-  // Honeypot — pretend success for bots.
+  // Honeypot: pretend success for bots.
   if (body._botfield && body._botfield.trim() !== "") {
     return NextResponse.json({ success: true });
   }

@@ -17,7 +17,7 @@ import Testimonials from "@/components/sections/Testimonials";
 import FAQ from "@/components/sections/FAQ";
 
 export const metadata: Metadata = {
-  title: "Medical Spa Quote Software — Injectables & Treatment Pricing",
+  title: "Medical Spa Quote Software: Injectables & Treatment Pricing",
   description:
     "Quote software built for medical spas. Price injectables, lasers, body contouring, and skin treatments in under 2 minutes. Unlimited providers. HIPAA compliant. $150/mo.",
 };
@@ -78,7 +78,7 @@ const featureBlocks: Block[] = [
     width: 3200,
     height: 2400,
     title: "Membership Tiers & Auto-Discounts",
-    body: "Create VIP tiers — Gold, Platinum, Diamond — with automatic percentage discounts. Select the tier and the discount applies across the entire quote.",
+    body: "Create VIP tiers (Gold, Platinum, Diamond) with automatic percentage discounts. Select the tier and the discount applies across the entire quote.",
   },
   {
     image: "/screens/medspa-treatment-series.png",
@@ -115,7 +115,7 @@ const featureBlocks: Block[] = [
     width: 1897,
     height: 1046,
     title: "EMR Integration",
-    body: "Attach quote PDFs to patient or CRM records in GoHighLevel, ModMed, or DrChrono. One click sends the quote where your team already works — Nextech coming soon.",
+    body: "Attach quote PDFs to patient or CRM records in GoHighLevel, ModMed, or DrChrono. One click sends the quote where your team already works. Nextech coming soon.",
   },
 ];
 
