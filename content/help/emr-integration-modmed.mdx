@@ -1,0 +1,46 @@
+---
+title: "EMR Integration (ModMed)"
+slug: "emr-integration-modmed"
+date: "2026-01-12T16:31:38Z"
+modified: "2026-01-16T14:49:16Z"
+description: "MySurgeryQuote integrates with ModMed (Modernizing Medicine) for seamless patient data flow. Setting Up ModMed Integration What the Integration Does Data…"
+featured_image: ""
+category: "Admin Settings"
+author: "MySurgeryQuote Team"
+reviewed_date: "2026-05-26"
+stale_flag: false
+---
+
+MySurgeryQuote integrates with ModMed (Modernizing Medicine) for seamless patient data flow.
+
+**Setting Up ModMed Integration**
+
+1.  Go to **Admin → EMR Integration**
+2.  Click **Connect ModMed**
+3.  Enter your ModMed credentials:
+    -   Firm Prefix
+    -   Username
+    -   API Key
+    -   API URL
+4.  Click **Test Connection**
+5.  If successful, click **Save**
+
+**What the Integration Does**
+
+-   Pull patient demographics from ModMed
+-   Push completed quotes to patient records
+-   Sync provider information
+
+**Data Security**
+
+All data transfers are encrypted and HIPAA compliant. Your ModMed credentials are stored securely and never exposed.
+
+**Permissions:** *Only users with Admin roles (ADMIN, ORG\_ADMIN, LOCATION\_ADMIN) can send quotes to the EMR. Regular users can create and manage quotes but will not see the ModMed/DrChrono buttons. This ensures billing accuracy and prevents accidental duplicate submissions.*
+
+**Troubleshooting**
+
+If connection fails:
+
+-   Verify your API credentials with ModMed
+-   Check that your ModMed account has API access enabled
+-   Contact support if issues persist

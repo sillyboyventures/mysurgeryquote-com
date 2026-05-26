@@ -1,0 +1,23 @@
+# MySurgeryQuote
+
+> Quoting software for surgical practices and medical spas. Create professional patient quotes in under 2 minutes with automatic facility and anesthesia fee calculations, surgeon-specific pricing, and branded PDFs. HIPAA compliant. Plans from $100/mo (surgical) and $150/mo (med spa). All EMR integrations — ModMed, DrChrono, GoHighLevel — included on every plan; Nextech coming soon.
+
+Site: MySurgeryQuote
+URL: https://mysurgeryquote.com
+
+## Product
+- [Features](https://mysurgeryquote.com/features/): Every feature — multiple surgeon fee schedules, facility/anesthesia fee math, commission tracking, procedure & implant log reporting, quick quotes, multi-location, branded PDFs.
+- [Pricing](https://mysurgeryquote.com/pricing/): Surgical (Solo $100, Practice $150, Multi-Location $350) and med spa (Med Spa $150, Med Spa Multi $300) plans. No contracts, unlimited quotes and staff users on every plan.
+- [Integrations](https://mysurgeryquote.com/integrations/): One-click send of quote PDFs to ModMed, DrChrono, and GoHighLevel. Nextech coming soon.
+
+## Solutions
+- [Surgical Practices](https://mysurgeryquote.com/surgical-practices/): Multi-procedure quotes with automatic facility and anesthesia fees, surgeon-specific pricing, implant tracking, and Quick Quote templates.
+- [Medical Spas](https://mysurgeryquote.com/medical-spas/): Unit-based pricing for injectables and treatments, membership tiers, treatment series, unlimited providers.
+
+## Get started
+- [Free Trial](https://mysurgeryquote.com/free-trial/): 30-day free trial, full access, no credit card required.
+- [Contact](https://mysurgeryquote.com/contact/): Sales, support, partnerships, and integrations.
+
+## Resources
+- [Blog](https://mysurgeryquote.com/blog/): Guides on surgery quote software, patient quoting, and EMR integrations.
+- [Help Center](https://mysurgeryquote.com/help/): Step-by-step guides for quotes, pricing, fee settings, EMR integrations, med spa features, and reporting.

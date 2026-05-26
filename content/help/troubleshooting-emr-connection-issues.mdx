@@ -1,0 +1,68 @@
+---
+title: "Troubleshooting EMR Connection Issues"
+slug: "troubleshooting-emr-connection-issues"
+date: "2026-01-22T11:37:00Z"
+modified: "2026-01-22T11:37:02Z"
+description: "Having trouble with your EMR integration? Here are solutions to common issues. ModMed Issues “Connection Failed” or “Invalid Credentials” “Patient Not…"
+featured_image: ""
+category: "EMR Integrations"
+author: "MySurgeryQuote Team"
+reviewed_date: "2026-05-26"
+stale_flag: false
+---
+
+Having trouble with your EMR integration? Here are solutions to common issues.
+
+### ModMed Issues
+
+**“Connection Failed” or “Invalid Credentials”**
+
+-   Double-check your Firm URL Prefix, Username, Password, and API Key
+-   Ensure there are no extra spaces before or after credentials
+-   Confirm your API access is still active with ModMed
+
+**“Patient Not Found”**
+
+-   Try searching with fewer characters (e.g., last name only)
+-   Verify the patient exists in ModMed
+-   Check that the patient name spelling matches exactly
+
+**“Failed to Send Quote”**
+
+-   Ensure you selected a patient before sending
+-   Check your internet connection
+-   Try disconnecting and reconnecting
+
+### DrChrono Issues
+
+**“Authorization Failed”**
+
+-   Verify your Client ID and Client Secret are correct
+-   Make sure the Redirect URI in DrChrono matches exactly
+-   Try creating a new API application in DrChrono
+
+**“Connection Expired”**
+
+-   DrChrono tokens expire periodically
+-   Click **Disconnect** then **Connect to DrChrono** to reauthorize
+
+**“Patient Not Found”**
+
+-   Search using the patient’s name as it appears in DrChrono
+-   Try searching by last name only
+-   Verify the patient exists in your DrChrono account
+
+**“Failed to Upload Document”**
+
+-   Ensure your DrChrono account has document storage enabled
+-   Check that you have permission to add patient documents
+-   Try disconnecting and reconnecting the integration
+
+### Still Need Help?
+
+[Contact us](https://mysurgeryquote.com/contact/) with:
+
+-   Your practice name
+-   Which EMR you’re using
+-   A description of the issue
+-   Any error messages you see

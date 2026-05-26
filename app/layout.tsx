@@ -38,6 +38,29 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "MySurgeryQuote",
+  url: "https://mysurgeryquote.com",
+  logo: "https://mysurgeryquote.com/brand/logo-white.png",
+  description:
+    "Quoting software for surgical practices and medical spas. Professional patient quotes in under 2 minutes with automatic fee calculations and branded PDFs. HIPAA compliant.",
+  sameAs: [],
+};
+
+const webSiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "MySurgeryQuote",
+  url: "https://mysurgeryquote.com",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: "https://mysurgeryquote.com/help?q={search_term_string}",
+    "query-input": "required name=search_term_string",
+  },
+};
+
 const softwareApplicationSchema = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -45,50 +68,12 @@ const softwareApplicationSchema = {
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web",
   offers: [
-    {
-      "@type": "Offer",
-      name: "Solo",
-      price: "100",
-      priceCurrency: "USD",
-    },
-    {
-      "@type": "Offer",
-      name: "Practice",
-      price: "150",
-      priceCurrency: "USD",
-    },
-    {
-      "@type": "Offer",
-      name: "Multi-Location",
-      price: "350",
-      priceCurrency: "USD",
-    },
-    {
-      "@type": "Offer",
-      name: "Med Spa",
-      price: "150",
-      priceCurrency: "USD",
-    },
-    {
-      "@type": "Offer",
-      name: "Med Spa Multi",
-      price: "300",
-      priceCurrency: "USD",
-    },
-    {
-      "@type": "Offer",
-      name: "Hybrid Add-On",
-      price: "50",
-      priceCurrency: "USD",
-    },
+    { "@type": "Offer", price: "100", priceCurrency: "USD", name: "Solo (Surgical)" },
+    { "@type": "Offer", price: "150", priceCurrency: "USD", name: "Practice (Surgical)" },
+    { "@type": "Offer", price: "350", priceCurrency: "USD", name: "Multi-Location (Surgical)" },
+    { "@type": "Offer", price: "150", priceCurrency: "USD", name: "Med Spa" },
+    { "@type": "Offer", price: "300", priceCurrency: "USD", name: "Med Spa Multi-Location" },
   ],
-};
-
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "MySurgeryQuote",
-  url: "https://mysurgeryquote.com",
 };
 
 export default function RootLayout({
@@ -105,13 +90,17 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(softwareApplicationSchema),
+            __html: JSON.stringify(organizationSchema),
           }}
         />
         <script
           type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
+        />
+        <script
+          type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationSchema),
+            __html: JSON.stringify(softwareApplicationSchema),
           }}
         />
         <Header />

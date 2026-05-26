@@ -1,0 +1,50 @@
+---
+title: "Fee Settings & Calculations"
+slug: "fee-settings-calculations"
+date: "2026-01-12T16:30:15Z"
+modified: "2026-01-12T16:30:17Z"
+description: "Facility and anesthesia fees are calculated automatically based on surgical time. This article explains how the calculations work. Facility Fee Formula…"
+featured_image: ""
+category: "Admin Settings"
+author: "MySurgeryQuote Team"
+reviewed_date: "2026-05-26"
+stale_flag: false
+---
+
+Facility and anesthesia fees are calculated automatically based on surgical time. This article explains how the calculations work.
+
+**Facility Fee Formula**
+
+```
+If total time ≤ included hours:
+    Facility Fee = Base Fee
+
+If total time > included hours:
+    Facility Fee = Base Fee + (Hourly Rate × Extra Hours)
+    
+Capped at maximum hours
+```
+
+**Example Settings**
+
+-   Base Fee: $2,500
+-   Hourly Rate: $1,500
+-   Included Hours: 2
+-   Max Hours Cap: 8
+
+**Example Calculation**
+
+For a 4-hour surgery:
+
+-   Extra hours = 4 – 2 = 2 hours
+-   Facility Fee = $2,500 + ($1,500 × 2) = $5,500
+
+**Anesthesia Fee**
+
+Anesthesia uses the same formula with its own settings.
+
+**Configuring Fee Settings**
+
+1.  Go to **Admin → Fee Settings**
+2.  Set Base Fee, Hourly Rate, Included Hours, and Max Cap
+3.  Save

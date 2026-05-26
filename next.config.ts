@@ -2,6 +2,16 @@ import type { NextConfig } from "next";
 import path from "node:path";
 
 const nextConfig: NextConfig = {
+  // Match WordPress URLs exactly: every page is served at /path/ with a trailing
+  // slash. Without this, every existing inbound link would 301 to a stripped
+  // path and lose backlink equity at cutover.
+  trailingSlash: true,
+  async redirects() {
+    return [
+      { source: "/index.php", destination: "/", permanent: true },
+      { source: "/index.php/:path*", destination: "/:path*", permanent: true },
+    ];
+  },
   // Pin the workspace root to this project. Without this, a stray lockfile in a
   // parent directory can make Next infer the wrong root.
   turbopack: {
