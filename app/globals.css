@@ -1,26 +1,54 @@
 @import "tailwindcss";
+@config "../tailwind.config.ts";
 
+/* ── Design tokens (literal CSS variables) ─────────────────────────── */
 :root {
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --secondary: #3b82f6;
+  --navy: #001d39;
+  --bg-accent: #eff6ff;
+  --bg-accent-2: #e0edff;
+  --bg-alt: #f9fafb;
+  --text: #0f172a;
+  --text-muted: #64748b;
+  --border: #e2e8f0;
+
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: var(--text);
 }
 
+/* ── Tailwind theme bindings ───────────────────────────────────────── */
+/* `inline` keeps the utilities pointing at the live CSS variables above
+   (and at the next/font variables for the font families). */
 @theme inline {
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-secondary: var(--secondary);
+  --color-navy: var(--navy);
+  --color-bg-accent: var(--bg-accent);
+  --color-bg-accent-2: var(--bg-accent-2);
+  --color-bg-alt: var(--bg-alt);
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+  --color-border: var(--border);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-poppins: var(--font-poppins);
+  --font-inter: var(--font-inter);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Poppins on headings by default; can still be overridden per-element. */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
 }
