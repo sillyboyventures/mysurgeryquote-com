@@ -27,7 +27,7 @@ export const faqs: Faq[] = [
   },
   {
     q: "Do you track commissions for patient care coordinators?",
-    a: "Yes. Set commission rates for PCCs, schedulers, and reps — either as group rates or individual rates. Rates can vary by provider. Only invoiced quotes count toward commissions, and reports export to CSV.",
+    a: "Yes. Set commission rates for PCCs, schedulers, and reps, either as group rates or individual rates. Rates can vary by provider. Only invoiced quotes count toward commissions, and reports export to CSV.",
   },
   {
     q: "How are facility and anesthesia fees calculated?",
@@ -35,7 +35,7 @@ export const faqs: Faq[] = [
   },
   {
     q: "Can I import my existing procedure list?",
-    a: "Yes. We support CSV and Excel import for bulk procedure upload. Our team handles the initial migration during setup at no extra charge — you send the file, we load it.",
+    a: "Yes. We support CSV and Excel import for bulk procedure upload. Our team handles the initial migration during setup at no extra charge. You send the file, we load it.",
   },
   {
     q: "Can I quote surgical and med spa services on the same quote?",
@@ -47,6 +47,6 @@ export const faqs: Faq[] = [
   },
   {
     q: "What happens if I add a surgeon or location mid-month?",
-    a: "You're charged a prorated amount for the rest of that billing period. No downtime, no setup fees — we add them the same day you request it.",
+    a: "You're charged a prorated amount for the rest of that billing period. No downtime, no setup fees. We add them the same day you request it.",
   },
 ];

@@ -87,7 +87,7 @@ export async function sendFormEmail(opts: {
   const key = process.env.MSQ_RESEND_API_KEY;
   if (!key) {
     console.log(
-      `[form-submit] MSQ_RESEND_API_KEY not set — skipping send. Subject: ${opts.subject}`,
+      `[form-submit] MSQ_RESEND_API_KEY not set, skipping send. Subject: ${opts.subject}`,
     );
     return;
   }

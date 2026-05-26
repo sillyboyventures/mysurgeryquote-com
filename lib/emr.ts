@@ -14,7 +14,7 @@ export const emrLogos: EmrLogo[] = [
     width: 200,
     height: 60,
     detail:
-      "Send finished quote PDFs straight to the patient's ModMed chart. No downloading and re-uploading — it's one click from quote to chart.",
+      "Send finished quote PDFs straight to the patient's ModMed chart. No downloading and re-uploading. It's one click from quote to chart.",
   },
   {
     name: "DrChrono",
