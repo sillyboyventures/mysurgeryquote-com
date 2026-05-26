@@ -127,7 +127,7 @@ export default async function BlogPostPage({
         )}
 
         <div
-          className="prose prose-slate mt-10 max-w-none prose-headings:font-poppins prose-headings:text-navy prose-a:text-primary"
+          className="prose prose-slate mt-10 max-w-none prose-headings:font-poppins prose-headings:text-navy prose-a:text-primary prose-headings:no-underline [&_h1_a]:text-navy [&_h1_a]:no-underline [&_h2_a]:text-navy [&_h2_a]:no-underline [&_h3_a]:text-navy [&_h3_a]:no-underline [&_h4_a]:text-navy [&_h4_a]:no-underline"
           dangerouslySetInnerHTML={{ __html: html }}
         />
 

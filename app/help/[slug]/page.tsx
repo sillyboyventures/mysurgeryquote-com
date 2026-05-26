@@ -121,14 +121,8 @@ export default async function HelpArticlePage({
             <h1 className="font-poppins text-3xl font-bold text-navy md:text-4xl">
               {data.title}
             </h1>
-            {data.stale_flag && (
-              <p className="mt-4 rounded-lg bg-amber-50 px-4 py-3 text-sm text-amber-800">
-                Updated {data.reviewed_date} to reflect current pricing and
-                feature behavior.
-              </p>
-            )}
             <div
-              className="prose prose-slate mt-8 max-w-none prose-headings:font-poppins prose-headings:text-navy prose-a:text-primary"
+              className="prose prose-slate mt-8 max-w-none prose-headings:font-poppins prose-headings:text-navy prose-a:text-primary prose-headings:no-underline [&_h1_a]:text-navy [&_h1_a]:no-underline [&_h2_a]:text-navy [&_h2_a]:no-underline [&_h3_a]:text-navy [&_h3_a]:no-underline [&_h4_a]:text-navy [&_h4_a]:no-underline"
               dangerouslySetInnerHTML={{ __html: html }}
             />
 
