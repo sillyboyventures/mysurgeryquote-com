@@ -71,7 +71,6 @@ const integrations: Integration[] = [
       "Audit log",
     ],
     status: "live",
-    note: "Included on Med Spa plans.",
     cta: { label: "Start Free Trial", href: "/free-trial" },
   },
   {
@@ -236,9 +235,8 @@ export default function IntegrationsPage() {
               Included on every plan
             </h3>
             <p className="mt-4 text-text-muted">
-              ModMed and DrChrono are included on every surgical and med spa plan at
-              no extra cost. GoHighLevel is included on Med Spa plans. Nextech will
-              be included at launch.
+              Every EMR integration is included on every plan at no extra cost —
+              ModMed, DrChrono, GoHighLevel, and Nextech when it launches.
             </p>
             <Link
               href="/pricing"

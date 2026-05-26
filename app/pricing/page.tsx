@@ -32,7 +32,7 @@ const surgicalPlans: Plan[] = [
       "Surgeon-specific pricing",
       "Implant tracking",
       "Branded PDFs & email delivery",
-      "ModMed & DrChrono integration",
+      "All EMR integrations included (ModMed, DrChrono, GoHighLevel)",
       "HIPAA compliant",
       "Price history & audit trail",
     ],
@@ -85,7 +85,7 @@ const medspaPlans: Plan[] = [
       "Treatment series packages",
       "Product catalog",
       "Branded PDFs & email delivery",
-      "ModMed, DrChrono & GoHighLevel integration",
+      "All EMR integrations included (ModMed, DrChrono, GoHighLevel)",
       "HIPAA compliant",
     ],
   },
@@ -192,9 +192,13 @@ const comparison: CompGroup[] = [
       { label: "Price history & audit trail", values: [C, C, C, C, C] },
       { label: "ModMed integration", values: [C, C, C, C, C] },
       { label: "DrChrono integration", values: [C, C, C, C, C] },
-      { label: "GoHighLevel integration", values: [X, X, X, C, C] },
+      { label: "GoHighLevel integration", values: [C, C, C, C, C] },
       { label: "HIPAA compliant", values: [C, C, C, C, C] },
       { label: "Role-based permissions", values: [C, C, C, C, C] },
+      {
+        label: "Nextech integration",
+        values: ["Coming soon", "Coming soon", "Coming soon", "Coming soon", "Coming soon"],
+      },
     ],
   },
 ];
@@ -211,6 +215,8 @@ function CompCell({ value }: { value: Cell }) {
     );
   if (value === "—")
     return <span className="text-text-muted" aria-label="Not included">—</span>;
+  if (value === "Coming soon")
+    return <span className="text-sm text-text-muted">Coming soon</span>;
   return <span className="text-sm text-text">{value}</span>;
 }
 
@@ -245,7 +251,7 @@ const pricingFaqs = [
   },
   {
     q: "Are EMR integrations included?",
-    a: "Yes. ModMed and DrChrono integrations are included on every plan at no extra cost. GoHighLevel is included on Med Spa plans. Nextech is coming soon.",
+    a: "Yes. All EMR integrations — ModMed, DrChrono, and GoHighLevel — are included on every plan at no extra cost. Nextech is coming soon and will also be included on every plan at launch.",
   },
   {
     q: "What if I need more than the included surgeons or locations?",

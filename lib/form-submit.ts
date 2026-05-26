@@ -93,7 +93,7 @@ export async function sendFormEmail(opts: {
   }
   const resend = new Resend(key);
   const { error } = await resend.emails.send({
-    from: "MySurgeryQuote Website <noreply@mysurgeryquote.com>",
+    from: "MySurgeryQuote Website <noreply@mg.mysurgeryquote.com>",
     to: "support@mysurgeryquote.com",
     replyTo: opts.replyTo,
     subject: opts.subject,
