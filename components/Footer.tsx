@@ -79,9 +79,10 @@ export default function Footer() {
             <Image
               src="/brand/logo-white.png"
               alt="MySurgeryQuote"
-              width={240}
-              height={40}
-              className="h-9 w-auto"
+              width={200}
+              height={33}
+              quality={100}
+              className="h-auto w-[200px]"
             />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/70">
               The quoting tool built for medical practices. Accurate pricing,

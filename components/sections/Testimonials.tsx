@@ -35,11 +35,12 @@ export default function Testimonials() {
                 src="/icons/quote-icon.png"
                 alt=""
                 aria-hidden="true"
-                width={80}
-                height={59}
-                className="h-auto w-20"
+                width={70}
+                height={51}
+                quality={100}
+                className="mb-6 h-auto w-[70px]"
               />
-              <blockquote className="mt-6 text-lg italic leading-relaxed text-text">
+              <blockquote className="text-lg italic leading-relaxed text-text">
                 “{testimonial.quote}”
               </blockquote>
               <figcaption className="mt-6">

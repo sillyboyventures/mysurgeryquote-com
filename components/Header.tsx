@@ -73,10 +73,11 @@ export default function Header() {
           <Image
             src="/brand/logo-white.png"
             alt="MySurgeryQuote"
-            width={240}
-            height={40}
+            width={220}
+            height={37}
+            quality={100}
             priority
-            className="h-10 w-auto"
+            className="h-auto w-[220px]"
           />
         </Link>
 
@@ -140,9 +141,10 @@ export default function Header() {
             <Image
               src="/brand/logo-white.png"
               alt="MySurgeryQuote"
-              width={240}
-              height={40}
-              className="h-10 w-auto"
+              width={220}
+              height={37}
+              quality={100}
+              className="h-auto w-[200px]"
             />
             <button
               type="button"

@@ -1,5 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
+import { ShieldCheck, Clock, Users } from "lucide-react";
+
+const pillClass =
+  "absolute z-20 flex items-center gap-2 rounded-full bg-white/95 px-4 py-2.5 text-sm font-medium text-navy shadow-xl shadow-blue-900/20 backdrop-blur-sm";
 
 export default function Hero() {
   return (
@@ -10,11 +14,23 @@ export default function Hero() {
           "radial-gradient(ellipse at top right, #1FA9F7 0%, #0095F3 50%, #0078C7 100%)",
       }}
     >
-      <div className="mx-auto grid min-h-[700px] max-w-[1440px] items-center gap-12 px-4 pb-28 pt-16 sm:px-6 lg:grid-cols-2 lg:px-8">
+      {/* Subtle dot-grid texture behind the content */}
+      <div
+        className="absolute inset-0 opacity-[0.08]"
+        style={{
+          backgroundImage: "radial-gradient(circle, white 1px, transparent 1px)",
+          backgroundSize: "24px 24px",
+        }}
+        aria-hidden="true"
+      />
+
+      <div className="relative z-10 mx-auto grid min-h-[700px] max-w-[1440px] items-center gap-12 px-4 pb-28 pt-16 sm:px-6 lg:grid-cols-[1fr_1.15fr] lg:px-8">
         {/* Left: copy + CTAs */}
         <div>
-          <h1 className="font-poppins text-5xl font-bold leading-tight text-white md:text-6xl lg:text-7xl">
-            Professional Patient Quotes in Under 2 Minutes
+          <h1 className="max-w-2xl font-poppins text-5xl font-bold leading-[1.1] text-white md:text-6xl lg:text-7xl">
+            Professional Patient Quotes
+            <br />
+            in Under 2 Minutes
           </h1>
           <p className="mt-6 max-w-xl text-lg text-white/90 md:text-xl">
             Quoting software for surgical practices and medical spas. Accurate
@@ -46,9 +62,24 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right: laptop-framed dashboard */}
+        {/* Right: laptop-framed dashboard with floating stat pills */}
         <div className="lg:justify-self-end">
-          <div className="relative mx-auto w-full max-w-[760px]">
+          <div className="relative mx-auto mt-8 w-full max-w-[760px] lg:mt-0">
+            {/* Floating stat pills */}
+            <div className={`${pillClass} -top-4 left-2 lg:-left-4`}>
+              <ShieldCheck className="h-4 w-4 text-primary" aria-hidden="true" />
+              HIPAA Compliant
+            </div>
+            <div className={`${pillClass} -top-4 right-2 lg:-right-2`}>
+              <Clock className="h-4 w-4 text-primary" aria-hidden="true" />
+              Under 2 Min
+            </div>
+            <div className={`${pillClass} -bottom-4 left-2 lg:-left-4`}>
+              <Users className="h-4 w-4 text-primary" aria-hidden="true" />
+              Unlimited Users
+            </div>
+
+            {/* Laptop frame */}
             <div className="rounded-t-xl border-2 border-[#E5E7EB] bg-white p-2 shadow-2xl">
               <Image
                 src="/screens/dashboard.png"
@@ -56,6 +87,7 @@ export default function Hero() {
                 width={847}
                 height={478}
                 priority
+                quality={95}
                 sizes="(min-width: 1024px) 720px, 100vw"
                 className="h-auto w-full rounded-md"
               />
