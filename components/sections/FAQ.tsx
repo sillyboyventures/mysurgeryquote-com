@@ -2,20 +2,28 @@
 
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
-import { faqs } from "@/lib/faq";
+import { faqs as defaultFaqs, type Faq } from "@/lib/faq";
 
-export default function FAQ() {
+export default function FAQ({
+  items = defaultFaqs,
+  heading = "Frequently Asked Questions",
+  className = "bg-bg-alt py-24",
+}: {
+  items?: Faq[];
+  heading?: string;
+  className?: string;
+}) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="bg-bg-alt py-24">
+    <section className={className}>
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <h2 className="text-center font-poppins text-4xl font-bold text-navy">
-          Frequently Asked Questions
+          {heading}
         </h2>
 
         <div className="mt-12 divide-y divide-border overflow-hidden rounded-2xl border border-border bg-white">
-          {faqs.map((faq, index) => {
+          {items.map((faq, index) => {
             const isOpen = openIndex === index;
             const panelId = `faq-panel-${index}`;
             const buttonId = `faq-button-${index}`;

@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { Check } from "lucide-react";
+import BrowserFrame from "@/components/BrowserFrame";
 
 type FeatureRow = {
   image: string;
@@ -11,7 +11,8 @@ type FeatureRow = {
   bullets: string[];
 };
 
-// Screenshot intrinsic dimensions are kept true to avoid vertical distortion.
+// Intrinsic dimensions kept true to each capture to avoid distortion.
+// (quick-quotes / quote-history / implants were re-captured at 3200x2400.)
 const rows: FeatureRow[] = [
   {
     image: "/screens/surgeon-list.png",
@@ -57,8 +58,8 @@ const rows: FeatureRow[] = [
   },
   {
     image: "/screens/quick-quotes.png",
-    width: 1892,
-    height: 866,
+    width: 3200,
+    height: 2400,
     alt: "Commission tracking for patient care coordinators",
     title: "Commission Tracking for PCCs",
     body: "Track commissions for patient care coordinators, schedulers, and reps. Group rates (all PCCs at 5%) or individual rates. Vary by provider. Only invoiced quotes count.",
@@ -72,8 +73,8 @@ const rows: FeatureRow[] = [
   },
   {
     image: "/screens/quote-history.png",
-    width: 1898,
-    height: 883,
+    width: 3200,
+    height: 2400,
     alt: "Procedure and implant log reporting",
     title: "Procedure & Implant Log Reporting",
     body: "See every billed service across surgeons and locations. Filter by date range, surgeon, procedure, or status. Implant log tracks every implant quoted with serials and patient. Export to CSV.",
@@ -87,8 +88,8 @@ const rows: FeatureRow[] = [
   },
   {
     image: "/screens/implants.png",
-    width: 1430,
-    height: 893,
+    width: 3200,
+    height: 2400,
     alt: "Quick Quote templates for bundled procedures",
     title: "Quick Quotes for Bundled Procedures",
     body: "Save your Mommy Makeover, Facelift Package, or any common combination as a Quick Quote template. One click to start a quote from a template, customize from there. 10 minutes becomes 30 seconds.",
@@ -100,42 +101,6 @@ const rows: FeatureRow[] = [
     ],
   },
 ];
-
-function BrowserFrame({
-  src,
-  alt,
-  width,
-  height,
-}: {
-  src: string;
-  alt: string;
-  width: number;
-  height: number;
-}) {
-  return (
-    <div className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-2xl shadow-blue-900/10">
-      <div className="flex items-center gap-2 border-b border-gray-200 bg-gray-50 px-4 py-2.5">
-        <div className="flex gap-1.5">
-          <div className="h-3 w-3 rounded-full bg-red-400" />
-          <div className="h-3 w-3 rounded-full bg-yellow-400" />
-          <div className="h-3 w-3 rounded-full bg-green-400" />
-        </div>
-        <div className="flex-1 text-center font-mono text-xs text-gray-500">
-          admin.mysurgeryquote.com
-        </div>
-      </div>
-      <Image
-        src={src}
-        alt={alt}
-        width={width}
-        height={height}
-        quality={95}
-        sizes="(min-width: 768px) 50vw, 100vw"
-        className="h-auto w-full"
-      />
-    </div>
-  );
-}
 
 export default function KoehlerFeatures() {
   return (
