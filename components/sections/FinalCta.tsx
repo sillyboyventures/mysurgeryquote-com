@@ -1,28 +1,53 @@
 import Link from "next/link";
 
-export default function FinalCta() {
+type CtaButton = {
+  label: string;
+  href: string;
+  variant?: "navy" | "outline";
+  external?: boolean;
+};
+
+const navyClass =
+  "rounded-lg bg-button-navy px-6 py-3 font-medium text-white shadow-lg transition-opacity hover:opacity-90";
+const outlineClass =
+  "rounded-lg border border-white px-6 py-3 font-medium text-white transition-colors hover:bg-white hover:text-primary";
+
+export default function FinalCta({
+  heading = "Ready to Simplify Quoting?",
+  subhead = "Professional quotes in under 2 minutes. No contracts.",
+  buttons = [
+    { label: "Surgical Practices", href: "/surgical-practices", variant: "navy" },
+    { label: "Medical Spas", href: "/medical-spas", variant: "navy" },
+  ],
+}: {
+  heading?: string;
+  subhead?: string;
+  buttons?: CtaButton[];
+}) {
   return (
     <section className="relative bg-primary pt-20 text-white">
       <div className="mx-auto max-w-3xl px-4 pb-32 text-center sm:px-6 lg:px-8">
-        <h2 className="font-poppins text-4xl font-bold">
-          Ready to Simplify Quoting?
-        </h2>
-        <p className="mt-4 text-lg text-white/80">
-          Professional quotes in under 2 minutes. No contracts.
-        </p>
+        <h2 className="font-poppins text-4xl font-bold">{heading}</h2>
+        <p className="mt-4 text-lg text-white/80">{subhead}</p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-          <Link
-            href="/surgical-practices"
-            className="rounded-lg bg-button-navy px-6 py-3 font-medium text-white shadow-lg transition-opacity hover:opacity-90"
-          >
-            Surgical Practices
-          </Link>
-          <Link
-            href="/medical-spas"
-            className="rounded-lg bg-button-navy px-6 py-3 font-medium text-white shadow-lg transition-opacity hover:opacity-90"
-          >
-            Medical Spas
-          </Link>
+          {buttons.map((b) => {
+            const cls = b.variant === "outline" ? outlineClass : navyClass;
+            return b.external ? (
+              <a
+                key={b.label}
+                href={b.href}
+                target="_blank"
+                rel="noopener"
+                className={cls}
+              >
+                {b.label}
+              </a>
+            ) : (
+              <Link key={b.label} href={b.href} className={cls}>
+                {b.label}
+              </Link>
+            );
+          })}
         </div>
       </div>
 
