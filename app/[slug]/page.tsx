@@ -89,11 +89,25 @@ export default async function BlogPostPage({
     description: data.description,
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: `${PROD}/` },
+      { "@type": "ListItem", position: 2, name: "Blog", item: `${PROD}/blog/` },
+      { "@type": "ListItem", position: 3, name: data.title, item: canonical },
+    ],
+  };
+
   return (
     <article className="bg-white py-16">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <div className="mx-auto max-w-3xl px-6">
         <Link
