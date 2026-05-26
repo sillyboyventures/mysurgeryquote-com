@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ShieldCheck, Clock, Users } from "lucide-react";
+import { Zap, Calculator, Users } from "lucide-react";
 
-const pillClass =
-  "absolute z-20 flex items-center gap-2 rounded-full bg-white/95 px-4 py-2.5 text-sm font-medium text-navy shadow-xl shadow-blue-900/20 backdrop-blur-sm";
+const featurePillClass =
+  "flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur-md";
 
 export default function Hero() {
   return (
@@ -24,19 +24,25 @@ export default function Hero() {
         aria-hidden="true"
       />
 
-      <div className="relative z-10 mx-auto grid min-h-[700px] max-w-[1440px] items-center gap-12 px-4 pb-28 pt-16 sm:px-6 lg:grid-cols-[1fr_1.15fr] lg:px-8">
-        {/* Left: copy + CTAs */}
-        <div>
-          <h1 className="max-w-2xl font-poppins text-5xl font-bold leading-[1.1] text-white md:text-6xl lg:text-7xl">
+      <div className="relative z-10 pb-32 pt-16">
+        {/* Centered copy stack */}
+        <div className="mx-auto max-w-5xl px-6 text-center">
+          <p className="mb-6 text-xs font-semibold uppercase tracking-widest text-white/70 md:text-sm">
+            Quoting Software for Surgical Practices &amp; Medical Spas
+          </p>
+
+          <h1 className="mx-auto max-w-5xl font-poppins text-5xl font-bold leading-[1.05] tracking-tight text-white md:text-6xl lg:text-7xl">
             Professional Patient Quotes
             <br />
             in Under 2 Minutes
           </h1>
-          <p className="mt-6 max-w-xl text-lg text-white/90 md:text-xl">
+
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/90 md:text-xl">
             Quoting software for surgical practices and medical spas. Accurate
             pricing, automatic calculations, branded PDFs.
           </p>
-          <div className="mt-8 flex flex-wrap gap-4">
+
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/surgical-practices"
               className="rounded-lg bg-button-navy px-6 py-3 font-medium text-white shadow-lg transition-opacity hover:opacity-90"
@@ -60,40 +66,47 @@ export default function Hero() {
               Try the Demo <span aria-hidden="true">→</span>
             </a>
           </div>
+
+          {/* Three feature pills over the blue background */}
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
+            <span className={featurePillClass}>
+              <Zap className="h-4 w-4" aria-hidden="true" />
+              Quick quotes in 30 seconds
+            </span>
+            <span className={featurePillClass}>
+              <Calculator className="h-4 w-4" aria-hidden="true" />
+              Auto facility &amp; anesthesia math
+            </span>
+            <span className={featurePillClass}>
+              <Users className="h-4 w-4" aria-hidden="true" />
+              Per-doctor fee schedules
+            </span>
+          </div>
         </div>
 
-        {/* Right: laptop-framed dashboard with floating stat pills */}
-        <div className="lg:justify-self-end">
-          <div className="relative mx-auto mt-8 w-full max-w-[760px] lg:mt-0">
-            {/* Floating stat pills */}
-            <div className={`${pillClass} -top-4 left-2 lg:-left-4`}>
-              <ShieldCheck className="h-4 w-4 text-primary" aria-hidden="true" />
-              HIPAA Compliant
+        {/* Huge dashboard in a browser-chrome frame, dominating the page */}
+        <div className="mx-auto mt-16 max-w-7xl px-6">
+          <div className="overflow-hidden rounded-2xl border border-white/10 bg-white shadow-2xl shadow-blue-900/40">
+            <div className="flex items-center gap-2 border-b border-gray-200 bg-gray-50 px-4 py-3">
+              <div className="flex gap-1.5">
+                <div className="h-3 w-3 rounded-full bg-red-400" />
+                <div className="h-3 w-3 rounded-full bg-yellow-400" />
+                <div className="h-3 w-3 rounded-full bg-green-400" />
+              </div>
+              <div className="flex-1 text-center font-mono text-xs text-gray-500">
+                admin.mysurgeryquote.com
+              </div>
             </div>
-            <div className={`${pillClass} -top-4 right-2 lg:-right-2`}>
-              <Clock className="h-4 w-4 text-primary" aria-hidden="true" />
-              Under 2 Min
-            </div>
-            <div className={`${pillClass} -bottom-4 left-2 lg:-left-4`}>
-              <Users className="h-4 w-4 text-primary" aria-hidden="true" />
-              Unlimited Users
-            </div>
-
-            {/* Laptop frame */}
-            <div className="rounded-t-xl border-2 border-[#E5E7EB] bg-white p-2 shadow-2xl">
-              <Image
-                src="/screens/dashboard.png"
-                alt="MySurgeryQuote dashboard showing a patient quote"
-                width={847}
-                height={478}
-                priority
-                quality={95}
-                sizes="(min-width: 1024px) 720px, 100vw"
-                className="h-auto w-full rounded-md"
-              />
-            </div>
-            {/* laptop base lip */}
-            <div className="mx-[-12px] h-3 rounded-b-2xl bg-gray-200" />
+            <Image
+              src="/screens/dashboard.png"
+              alt="MySurgeryQuote dashboard with quote-by-doctor totals and recent quotes table"
+              width={1400}
+              height={788}
+              quality={100}
+              priority
+              sizes="(min-width: 1280px) 1232px, 100vw"
+              className="h-auto w-full"
+            />
           </div>
         </div>
       </div>
