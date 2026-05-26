@@ -78,10 +78,10 @@ export default function KoehlerFeatures() {
             return (
               <div
                 key={feature.title}
-                className="rounded-2xl border border-border bg-white p-6 transition-shadow hover:shadow-lg"
+                className="rounded-2xl border-2 border-border bg-white p-8 transition-all duration-200 hover:-translate-y-1 hover:border-primary hover:shadow-xl"
               >
-                <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-bg-accent text-primary">
-                  <Icon className="h-6 w-6" aria-hidden="true" />
+                <span className="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-bg-accent text-primary">
+                  <Icon className="h-8 w-8" aria-hidden="true" />
                 </span>
                 <h3 className="mt-5 font-poppins text-lg font-semibold text-navy">
                   {feature.title}

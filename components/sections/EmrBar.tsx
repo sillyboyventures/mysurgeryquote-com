@@ -4,7 +4,7 @@ import { emrLogos } from "@/lib/emr";
 
 export default function EmrBar() {
   return (
-    <section className="bg-bg-alt py-12">
+    <section className="bg-white py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <p className="text-center text-sm uppercase tracking-wider text-text-muted">
           Sends quotes directly to your EMR

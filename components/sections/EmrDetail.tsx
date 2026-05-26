@@ -4,7 +4,7 @@ import { emrLogos } from "@/lib/emr";
 
 export default function EmrDetail() {
   return (
-    <section className="py-20">
+    <section className="bg-bg-blue-tint py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2 className="text-center font-poppins text-4xl font-bold text-navy">
           Connects to Your EMR
@@ -14,25 +14,25 @@ export default function EmrDetail() {
           click.
         </p>
 
-        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {emrLogos.map((logo) => (
             <div
               key={logo.name}
-              className="flex flex-col rounded-2xl border border-border bg-white p-6"
+              className="relative flex flex-col rounded-2xl border border-border bg-white p-6"
             >
-              <div className="relative flex h-12 items-center">
+              {logo.comingSoon && (
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-button-navy px-3 py-1 text-xs text-white">
+                  Coming Soon
+                </div>
+              )}
+              <div className="flex h-12 items-center">
                 <Image
                   src={logo.src}
                   alt={logo.name}
                   width={logo.width}
                   height={logo.height}
-                  className="h-8 w-auto"
+                  className="h-8 w-auto opacity-80 grayscale"
                 />
-                {logo.comingSoon && (
-                  <span className="ml-3 rounded-full bg-primary px-2 py-0.5 text-[10px] font-semibold text-white">
-                    Coming Soon
-                  </span>
-                )}
               </div>
               <p className="mt-4 flex-1 text-sm text-text-muted">
                 {logo.detail}

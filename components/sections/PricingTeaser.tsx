@@ -32,7 +32,7 @@ const plans: Plan[] = [
 
 export default function PricingTeaser() {
   return (
-    <section className="bg-bg-accent py-24">
+    <section className="bg-white py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2 className="text-center font-poppins text-4xl font-bold text-navy">
           Simple and Transparent Pricing

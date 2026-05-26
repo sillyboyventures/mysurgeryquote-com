@@ -8,7 +8,7 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-24">
+    <section className="bg-bg-alt py-24">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <h2 className="text-center font-poppins text-4xl font-bold text-navy">
           Frequently Asked Questions

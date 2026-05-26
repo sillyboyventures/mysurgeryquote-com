@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function FinalCta() {
   return (
-    <section className="bg-navy py-20 text-white">
-      <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
+    <section className="relative bg-primary pt-20 text-white">
+      <div className="mx-auto max-w-3xl px-4 pb-32 text-center sm:px-6 lg:px-8">
         <h2 className="font-poppins text-4xl font-bold">
           Ready to Simplify Quoting?
         </h2>
@@ -12,19 +12,32 @@ export default function FinalCta() {
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
           <Link
-            href="/free-trial"
-            className="rounded-lg bg-primary px-6 py-3 font-medium text-white shadow-sm transition-colors hover:bg-primary-dark"
+            href="/surgical-practices"
+            className="rounded-lg bg-button-navy px-6 py-3 font-medium text-white shadow-lg transition-opacity hover:opacity-90"
           >
-            Start Free Trial
+            Surgical Practices
           </Link>
           <Link
-            href="/pricing"
-            className="rounded-lg border border-white px-6 py-3 font-medium text-white transition-colors hover:bg-white hover:text-navy"
+            href="/medical-spas"
+            className="rounded-lg bg-button-navy px-6 py-3 font-medium text-white shadow-lg transition-opacity hover:opacity-90"
           >
-            See Pricing
+            Medical Spas
           </Link>
         </div>
       </div>
+
+      {/* Cloud-shape divider transitioning into the navy footer */}
+      <svg
+        className="-mb-px block h-[80px] w-full lg:h-[120px]"
+        viewBox="0 0 1440 120"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+      >
+        <path
+          d="M0,60 C120,20 240,100 360,60 C480,20 600,100 720,60 C840,20 960,100 1080,60 C1200,20 1320,100 1440,60 L1440,120 L0,120 Z"
+          fill="#121B3A"
+        />
+      </svg>
     </section>
   );
 }

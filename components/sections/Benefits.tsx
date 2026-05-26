@@ -35,7 +35,7 @@ const benefits: Benefit[] = [
 
 export default function Benefits() {
   return (
-    <section className="bg-bg-alt py-20">
+    <section className="bg-bg-blue-tint py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
           {benefits.map((benefit) => (

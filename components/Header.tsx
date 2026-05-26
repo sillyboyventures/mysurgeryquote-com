@@ -2,20 +2,21 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, ChevronDown, X } from "lucide-react";
 
 type NavItem = { label: string; href: string; external?: boolean };
 
 const solutions: NavItem[] = [
-  { label: "Surgical Practices", href: "#" },
-  { label: "Medical Spas", href: "#" },
-  { label: "Integrations", href: "#" },
+  { label: "Surgical Practices", href: "/surgical-practices" },
+  { label: "Medical Spas", href: "/medical-spas" },
+  { label: "Integrations", href: "/integrations" },
 ];
 
 const resources: NavItem[] = [
-  { label: "Help", href: "#" },
-  { label: "Blog", href: "#" },
-  { label: "Contact", href: "#" },
+  { label: "Help", href: "/help" },
+  { label: "Blog", href: "/blog" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const SIGN_IN_URL = "https://admin.mysurgeryquote.com/login";
@@ -26,7 +27,7 @@ function Dropdown({ label, items }: { label: string; items: NavItem[] }) {
     <div className="group relative">
       <button
         type="button"
-        className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-text transition-colors hover:text-primary"
+        className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-white transition-colors hover:text-white/80"
         aria-haspopup="true"
       >
         {label}
@@ -39,7 +40,7 @@ function Dropdown({ label, items }: { label: string; items: NavItem[] }) {
             <Link
               key={item.label}
               href={item.href}
-              className="block rounded-md px-3 py-2 text-sm text-text-muted transition-colors hover:bg-bg-accent hover:text-primary"
+              className="block rounded-md px-3 py-2 text-sm text-text transition-colors hover:bg-bg-accent hover:text-primary"
             >
               {item.label}
             </Link>
@@ -51,15 +52,7 @@ function Dropdown({ label, items }: { label: string; items: NavItem[] }) {
 }
 
 export default function Header() {
-  const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
@@ -71,23 +64,20 @@ export default function Header() {
   const closeMobile = () => setMobileOpen(false);
 
   return (
-    <header
-      className={`sticky top-0 z-50 transition-colors duration-300 ${
-        scrolled
-          ? "border-b border-border bg-white/95 shadow-sm backdrop-blur"
-          : "bg-transparent"
-      }`}
-    >
+    <header className="sticky top-0 z-50 bg-primary text-white">
       <nav
-        className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8"
+        className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8"
         aria-label="Main navigation"
       >
-        <Link
-          href="/"
-          className="font-poppins text-xl font-bold text-navy"
-          aria-label="MySurgeryQuote home"
-        >
-          MySurgeryQuote
+        <Link href="/" aria-label="MySurgeryQuote home" className="shrink-0">
+          <Image
+            src="/brand/logo-white.png"
+            alt="MySurgeryQuote"
+            width={240}
+            height={40}
+            priority
+            className="h-10 w-auto"
+          />
         </Link>
 
         {/* Desktop navigation */}
@@ -95,13 +85,13 @@ export default function Header() {
           <Dropdown label="Solutions" items={solutions} />
           <Link
             href="/features"
-            className="rounded-md px-3 py-2 text-sm font-medium text-text transition-colors hover:text-primary"
+            className="rounded-md px-3 py-2 text-sm font-medium text-white transition-colors hover:text-white/80"
           >
             Features
           </Link>
           <Link
             href="/pricing"
-            className="rounded-md px-3 py-2 text-sm font-medium text-text transition-colors hover:text-primary"
+            className="rounded-md px-3 py-2 text-sm font-medium text-white transition-colors hover:text-white/80"
           >
             Pricing
           </Link>
@@ -109,7 +99,7 @@ export default function Header() {
             href={DEMO_URL}
             target="_blank"
             rel="noopener"
-            className="rounded-md px-3 py-2 text-sm font-medium text-text transition-colors hover:text-primary"
+            className="rounded-md px-3 py-2 text-sm font-medium text-white transition-colors hover:text-white/80"
           >
             Demos
           </a>
@@ -120,13 +110,13 @@ export default function Header() {
         <div className="hidden items-center gap-4 lg:flex">
           <a
             href={SIGN_IN_URL}
-            className="text-sm font-medium text-text transition-colors hover:text-primary"
+            className="text-sm font-medium text-white transition-colors hover:text-white/80"
           >
             Sign In
           </a>
           <Link
             href="/free-trial"
-            className="rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-white shadow-sm transition-colors hover:bg-primary-dark"
+            className="rounded-lg bg-button-navy px-5 py-2.5 text-sm font-medium text-white shadow-sm transition-opacity hover:opacity-90"
           >
             Start Free Trial
           </Link>
@@ -136,7 +126,7 @@ export default function Header() {
         <button
           type="button"
           onClick={() => setMobileOpen(true)}
-          className="rounded-md p-2 text-navy lg:hidden"
+          className="rounded-md p-2 text-white lg:hidden"
           aria-label="Open menu"
         >
           <Menu className="h-6 w-6" />
@@ -145,15 +135,19 @@ export default function Header() {
 
       {/* Mobile full-screen overlay */}
       {mobileOpen && (
-        <div className="fixed inset-0 z-50 flex flex-col bg-white lg:hidden">
-          <div className="flex items-center justify-between px-4 py-4 sm:px-6">
-            <span className="font-poppins text-xl font-bold text-navy">
-              MySurgeryQuote
-            </span>
+        <div className="fixed inset-0 z-50 flex flex-col bg-primary text-white lg:hidden">
+          <div className="flex items-center justify-between px-4 py-3 sm:px-6">
+            <Image
+              src="/brand/logo-white.png"
+              alt="MySurgeryQuote"
+              width={240}
+              height={40}
+              className="h-10 w-auto"
+            />
             <button
               type="button"
               onClick={closeMobile}
-              className="rounded-md p-2 text-navy"
+              className="rounded-md p-2 text-white"
               aria-label="Close menu"
             >
               <X className="h-6 w-6" />
@@ -164,7 +158,7 @@ export default function Header() {
             className="flex flex-1 flex-col gap-1 overflow-y-auto px-4 py-2 sm:px-6"
             aria-label="Mobile navigation"
           >
-            <p className="px-2 pt-4 text-xs font-semibold uppercase tracking-wider text-text-muted">
+            <p className="px-2 pt-4 text-xs font-semibold uppercase tracking-wider text-white/70">
               Solutions
             </p>
             {solutions.map((item) => (
@@ -172,7 +166,7 @@ export default function Header() {
                 key={item.label}
                 href={item.href}
                 onClick={closeMobile}
-                className="rounded-md px-2 py-3 text-lg font-medium text-text"
+                className="rounded-md px-2 py-3 text-lg font-medium text-white"
               >
                 {item.label}
               </Link>
@@ -181,14 +175,14 @@ export default function Header() {
             <Link
               href="/features"
               onClick={closeMobile}
-              className="rounded-md px-2 py-3 text-lg font-medium text-text"
+              className="rounded-md px-2 py-3 text-lg font-medium text-white"
             >
               Features
             </Link>
             <Link
               href="/pricing"
               onClick={closeMobile}
-              className="rounded-md px-2 py-3 text-lg font-medium text-text"
+              className="rounded-md px-2 py-3 text-lg font-medium text-white"
             >
               Pricing
             </Link>
@@ -197,12 +191,12 @@ export default function Header() {
               target="_blank"
               rel="noopener"
               onClick={closeMobile}
-              className="rounded-md px-2 py-3 text-lg font-medium text-text"
+              className="rounded-md px-2 py-3 text-lg font-medium text-white"
             >
               Demos
             </a>
 
-            <p className="px-2 pt-4 text-xs font-semibold uppercase tracking-wider text-text-muted">
+            <p className="px-2 pt-4 text-xs font-semibold uppercase tracking-wider text-white/70">
               Resources
             </p>
             {resources.map((item) => (
@@ -210,7 +204,7 @@ export default function Header() {
                 key={item.label}
                 href={item.href}
                 onClick={closeMobile}
-                className="rounded-md px-2 py-3 text-lg font-medium text-text"
+                className="rounded-md px-2 py-3 text-lg font-medium text-white"
               >
                 {item.label}
               </Link>
@@ -219,17 +213,17 @@ export default function Header() {
             <a
               href={SIGN_IN_URL}
               onClick={closeMobile}
-              className="rounded-md px-2 py-3 text-lg font-medium text-text"
+              className="rounded-md px-2 py-3 text-lg font-medium text-white"
             >
               Sign In
             </a>
           </nav>
 
-          <div className="border-t border-border p-4 sm:p-6">
+          <div className="border-t border-white/20 p-4 sm:p-6">
             <Link
               href="/free-trial"
               onClick={closeMobile}
-              className="block w-full rounded-lg bg-primary px-5 py-3 text-center font-medium text-white shadow-sm transition-colors hover:bg-primary-dark"
+              className="block w-full rounded-lg bg-button-navy px-5 py-3 text-center font-medium text-white shadow-sm"
             >
               Start Free Trial
             </Link>

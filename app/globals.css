@@ -3,12 +3,15 @@
 
 /* ── Design tokens (literal CSS variables) ─────────────────────────── */
 :root {
-  --primary: #2563eb;
-  --primary-dark: #1d4ed8;
-  --secondary: #3b82f6;
-  --navy: #001d39;
+  --primary: #0095f3;
+  --primary-dark: #0078c7;
+  --secondary: #1fa9f7;
+  --navy: #121b3a;
+  --button-navy: #354a97;
+  --hero-blue-deep: #0078c7;
   --bg-accent: #eff6ff;
   --bg-accent-2: #e0edff;
+  --bg-blue-tint: #f1f8fe;
   --bg-alt: #f9fafb;
   --text: #0f172a;
   --text-muted: #64748b;
@@ -26,8 +29,11 @@
   --color-primary-dark: var(--primary-dark);
   --color-secondary: var(--secondary);
   --color-navy: var(--navy);
+  --color-button-navy: var(--button-navy);
+  --color-hero-blue-deep: var(--hero-blue-deep);
   --color-bg-accent: var(--bg-accent);
   --color-bg-accent-2: var(--bg-accent-2);
+  --color-bg-blue-tint: var(--bg-blue-tint);
   --color-bg-alt: var(--bg-alt);
   --color-text: var(--text);
   --color-text-muted: var(--text-muted);

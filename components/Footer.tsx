@@ -4,17 +4,17 @@ import Image from "next/image";
 type FooterLink = { label: string; href: string; external?: boolean };
 
 const solutions: FooterLink[] = [
-  { label: "Surgical Practices", href: "#" },
-  { label: "Medical Spas", href: "#" },
-  { label: "Integrations", href: "#" },
+  { label: "Surgical Practices", href: "/surgical-practices" },
+  { label: "Medical Spas", href: "/medical-spas" },
+  { label: "Integrations", href: "/integrations" },
   { label: "Features", href: "/features" },
   { label: "Pricing", href: "/pricing" },
 ];
 
 const resources: FooterLink[] = [
-  { label: "Help Center", href: "#" },
-  { label: "Blog", href: "#" },
-  { label: "Contact", href: "#" },
+  { label: "Help Center", href: "/help" },
+  { label: "Blog", href: "/blog" },
+  { label: "Contact", href: "/contact" },
   { label: "Demos", href: "https://demo.mysurgeryquote.com/demo", external: true },
 ];
 
