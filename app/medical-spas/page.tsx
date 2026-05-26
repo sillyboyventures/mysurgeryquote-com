@@ -3,11 +3,11 @@ import Link from "next/link";
 import Image from "next/image";
 import {
   Check,
-  FileText,
-  Mail,
-  History,
-  Building2,
+  Award,
+  Package,
   Users,
+  FileText,
+  History,
   ShieldCheck,
 } from "lucide-react";
 import BrowserFrame from "@/components/BrowserFrame";
@@ -50,7 +50,7 @@ type Block = {
 
 const featureBlocks: Block[] = [
   {
-    image: "/screens/new-quote-wizard.png",
+    image: "/screens/medspa-dashboard.png",
     width: 3200,
     height: 2400,
     title: "Streamlined Quoting",
@@ -64,21 +64,21 @@ const featureBlocks: Block[] = [
     body: "Add every injector, laser tech, and front-desk staffer at no extra cost. We charge by location, not by provider, so your price stays predictable as your team grows.",
   },
   {
-    image: "/screens/procedures.png",
+    image: "/screens/medspa-procedures.png",
     width: 3200,
     height: 2400,
     title: "Unit-Based Pricing",
     body: "Price Botox and Dysport by the unit, fillers by the syringe, and treatments by the session. Enter the quantity and the quote totals instantly.",
   },
   {
-    image: "/screens/additional-fees.png",
+    image: "/screens/medspa-membership-tiers.png",
     width: 3200,
     height: 2400,
     title: "Membership Tiers & Auto-Discounts",
     body: "Create VIP tiers — Gold, Platinum, Diamond — with automatic percentage discounts. Select the tier and the discount applies across the entire quote.",
   },
   {
-    image: "/screens/quick-quotes.png",
+    image: "/screens/medspa-treatment-series.png",
     width: 3200,
     height: 2400,
     title: "Treatment Series",
@@ -110,12 +110,12 @@ const services = [
 ];
 
 const everything = [
-  { icon: FileText, title: "Branded PDFs", body: "Your logo, colors, and name on every patient quote." },
-  { icon: Mail, title: "Email Delivery", body: "Send quotes to patients directly, with every send logged." },
+  { icon: Award, title: "Membership Tiers", body: "Bronze, Silver, Gold tiers with automatic percentage discounts on every service." },
+  { icon: Package, title: "Treatment Series", body: "Buy 5 Get 1 Free style packages. Pre-paid sessions tracked automatically." },
+  { icon: Users, title: "Unlimited Providers", body: "Every injector, laser tech, and front-desk staffer included. Priced by location." },
+  { icon: FileText, title: "Branded PDFs", body: "Your logo, your colors, your name on every patient quote." },
   { icon: History, title: "Quote History", body: "Search and re-open any quote by patient, date, or status." },
-  { icon: Building2, title: "Multi-Location", body: "Run every location under one account with its own branding." },
-  { icon: Users, title: "Unlimited Providers", body: "Add your whole team — priced by location, not per seat." },
-  { icon: ShieldCheck, title: "HIPAA Compliant", body: "Encrypted data, audit logging, and automatic session timeouts." },
+  { icon: ShieldCheck, title: "HIPAA Compliant", body: "Encrypted data, audit logging, automatic session timeouts." },
 ];
 
 const plans = [
@@ -247,8 +247,8 @@ export default function MedicalSpasPage() {
           </div>
           <div className="mx-auto mt-12 max-w-5xl">
             <BrowserFrame
-              src="/screens/quick-quotes.png"
-              alt="MySurgeryQuote med spa quoting"
+              src="/screens/medspa-new-quote.png"
+              alt="MySurgeryQuote med spa new-quote wizard"
               priority
             />
           </div>

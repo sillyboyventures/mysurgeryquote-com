@@ -4,6 +4,7 @@ import { Check } from "lucide-react";
 import BrowserFrame from "@/components/BrowserFrame";
 import WaveDivider from "@/components/WaveDivider";
 import FinalCta from "@/components/sections/FinalCta";
+import FAQ from "@/components/sections/FAQ";
 
 export const metadata: Metadata = {
   title: "Features — Surgeon Pricing, Commissions, Reporting",
@@ -208,24 +209,24 @@ const features: Feature[] = [
 
 const faqs = [
   {
-    q: "Can each surgeon really have their own pricing?",
-    a: "Yes. Every surgeon has an independent price list and assigned-procedure set. Select the surgeon at the start of a quote and their prices load automatically — changes never touch your master price list.",
+    q: "Can each surgeon have their own price list?",
+    a: "Yes. Every surgeon in your practice can have an independent procedure price list. Select the surgeon at the start of a quote and the prices auto-load. Commission rates and procedure assignments can also vary per surgeon.",
   },
   {
     q: "How are facility and anesthesia fees calculated?",
-    a: "You set a base fee, hourly rate after included hours, and an optional cap for each facility and for anesthesia. The system multiplies by total surgical time on the quote and applies the cap automatically — no manual math.",
+    a: "You set a base fee, an hourly rate after included hours, and a maximum cap for each facility. The system uses the formula base_fee + (min(surgery_time, max_cap) - included_hours) × hourly_rate. Surgical time auto-calculates from the procedures on the quote.",
   },
   {
-    q: "Can I track commissions for patient care coordinators?",
-    a: "Yes. Set group or per-user commission rates, vary them by provider, and credit only invoiced quotes. PCC productivity and commissions export to CSV for payroll.",
+    q: "Do you track commissions for patient care coordinators?",
+    a: "Yes. You can set group rates (all PCCs at 5%) or per-user rates, and vary rates by provider. Only invoiced quotes credit commissions. Reports cover YTD, Same Period Last Year, Full Year, and any custom date range.",
   },
   {
-    q: "What reporting do I get?",
-    a: "Procedure log, implant log, billing summary, and PCC productivity — each filterable by date range and surgeon, and exportable to CSV.",
+    q: "What does the procedure log report include?",
+    a: "Every billed procedure across all surgeons and locations with date, surgeon, patient, fee, and status. Filter by date range or surgeon. Tabs cover Billing Summary, Procedure Log, Implant Log, PCC Productivity, and Commissions. Every tab exports to CSV.",
   },
   {
-    q: "Can I manage multiple locations?",
-    a: "Yes. Run multiple locations under one organization with per-location branding, a location switcher in the nav, and an org-level dashboard showing totals across every site.",
+    q: "Can I manage multiple practice locations from one account?",
+    a: "Yes. Run all your locations under one organization. Each location gets its own branding on quotes. Surgeons can work at multiple locations. The org-level dashboard shows totals across all sites, and you switch context from a dropdown in the top nav.",
   },
 ];
 
@@ -327,6 +328,9 @@ export default function FeaturesPage() {
           </section>
         );
       })}
+
+      {/* Visible FAQ — content matches the FAQPage JSON-LD above */}
+      <FAQ items={faqs} className="bg-bg-alt py-24" />
 
       {/* D. Final CTA */}
       <FinalCta />

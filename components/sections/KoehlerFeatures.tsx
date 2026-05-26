@@ -15,9 +15,9 @@ type FeatureRow = {
 // (quick-quotes / quote-history / implants were re-captured at 3200x2400.)
 const rows: FeatureRow[] = [
   {
-    image: "/screens/surgeon-list.png",
-    width: 1893,
-    height: 868,
+    image: "/screens/homepage-surgeons.png",
+    width: 3200,
+    height: 2400,
     alt: "Per-surgeon fee schedule list",
     title: "Multiple Surgeon Fee Schedules",
     body: "Each surgeon gets their own price list. Select the surgeon at quote start, prices auto-load. No spreadsheets, no manual overrides, no mistakes.",
@@ -29,9 +29,9 @@ const rows: FeatureRow[] = [
     ],
   },
   {
-    image: "/screens/create-quote.png",
-    width: 1895,
-    height: 884,
+    image: "/screens/homepage-create-quote.png",
+    width: 3200,
+    height: 2400,
     alt: "Creating a quote with price adjustments",
     title: "Individual + Global Price Adjustments",
     body: "Bump one procedure 5%, or apply a 10% increase across every procedure in one click. Built-in tools — no CSV exports, no spreadsheet math.",
