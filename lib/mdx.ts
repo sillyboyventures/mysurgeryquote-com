@@ -9,6 +9,7 @@ import rehypeRaw from "rehype-raw";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeStringify from "rehype-stringify";
+import { categoryRank, articleRank, CATEGORY_ORDER } from "@/lib/help-order";
 
 const ROOT = process.cwd();
 const BLOG_DIR = path.join(ROOT, "content", "blog");
@@ -21,6 +22,7 @@ export type Doc = {
   modified: string;
   description: string;
   featured_image?: string;
+  alt?: string;
   category?: string;
   author: string;
   reviewed_date: string;
@@ -56,7 +58,8 @@ export function getPostBySlug(slug: string) {
 export function getAllHelpArticles(): Doc[] {
   return readAll(HELP_DIR).sort(
     (a, b) =>
-      (a.category || "").localeCompare(b.category || "") ||
+      categoryRank(a.category) - categoryRank(b.category) ||
+      articleRank(a.category, a.slug) - articleRank(b.category, b.slug) ||
       a.title.localeCompare(b.title),
   );
 }
@@ -66,15 +69,11 @@ export function getHelpArticleBySlug(slug: string) {
 }
 
 export function getHelpCategories(): { category: string; articles: Doc[] }[] {
-  const byCat = new Map<string, Doc[]>();
-  for (const a of getAllHelpArticles()) {
-    const cat = a.category || "General";
-    if (!byCat.has(cat)) byCat.set(cat, []);
-    byCat.get(cat)!.push(a);
-  }
-  return [...byCat.entries()]
-    .map(([category, articles]) => ({ category, articles }))
-    .sort((a, b) => a.category.localeCompare(b.category));
+  const all = getAllHelpArticles();
+  return CATEGORY_ORDER.map((category) => ({
+    category,
+    articles: all.filter((a) => (a.category || "General") === category),
+  })).filter((g) => g.articles.length > 0);
 }
 
 /** Render a markdown string to sanitized-ish HTML (GFM, heading anchors). */

@@ -43,7 +43,7 @@ export default function BlogIndexPage() {
                   {post.featured_image && (
                     <Image
                       src={post.featured_image}
-                      alt={post.title}
+                      alt={post.alt || post.title}
                       fill
                       sizes="(min-width: 1024px) 360px, (min-width: 768px) 50vw, 100vw"
                       className="object-cover transition-transform duration-300 group-hover:scale-105"

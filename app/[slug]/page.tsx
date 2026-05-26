@@ -31,7 +31,9 @@ export async function generateMetadata({
       title: data.title,
       description: data.description,
       url: canonical,
-      images: data.featured_image ? [data.featured_image] : undefined,
+      images: data.featured_image
+        ? [{ url: data.featured_image, alt: data.alt || data.title }]
+        : undefined,
       publishedTime: data.date,
       modifiedTime: data.modified,
     },
@@ -115,7 +117,7 @@ export default async function BlogPostPage({
           <div className="relative mt-8 aspect-video overflow-hidden rounded-2xl border border-border">
             <Image
               src={data.featured_image}
-              alt={data.title}
+              alt={data.alt || data.title}
               fill
               sizes="(min-width: 768px) 768px, 100vw"
               className="object-cover"

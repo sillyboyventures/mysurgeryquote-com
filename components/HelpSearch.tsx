@@ -38,7 +38,9 @@ export default function HelpSearch({ articles }: { articles: Article[] }) {
       if (!m.has(a.category)) m.set(a.category, []);
       m.get(a.category)!.push(a);
     }
-    return [...m.entries()].sort((a, b) => a[0].localeCompare(b[0]));
+    // Insertion order follows the (already ordered) `articles` prop, which
+    // getAllHelpArticles() returns in the explicit category + article order.
+    return [...m.entries()];
   }, [filtered]);
 
   return (
