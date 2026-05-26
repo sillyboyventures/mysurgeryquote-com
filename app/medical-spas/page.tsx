@@ -7,7 +7,7 @@ import {
   Package,
   Users,
   FileText,
-  History,
+  Send,
   ShieldCheck,
 } from "lucide-react";
 import BrowserFrame from "@/components/BrowserFrame";
@@ -46,6 +46,9 @@ type Block = {
   height: number;
   title: string;
   body: string;
+  eyebrow?: string;
+  bullets?: string[];
+  href?: string;
 };
 
 const featureBlocks: Block[] = [
@@ -92,6 +95,22 @@ const featureBlocks: Block[] = [
     body: "Keep your retail skincare and product line in the same catalog as your treatments. Add products to any quote alongside services for a complete patient estimate.",
   },
   {
+    image: "/screens/medspa-quote-history.png",
+    width: 3200,
+    height: 2400,
+    eyebrow: "Patient tracking",
+    title: "Find any quote in seconds",
+    body: "Every quote your med spa has ever created is searchable. Look up by patient name, provider, status, or PCC. Edit any quote with original pricing preserved. Resend the patient's quote PDF on demand, straight from the quote list.",
+    bullets: [
+      "Search by patient name, DOB, provider, or status",
+      "Filter by PCC (patient care coordinator)",
+      "Edit any quote with price preservation",
+      "Resend email PDF directly from the quote row",
+      "Per-quote audit trail (every edit logged with user and timestamp)",
+    ],
+    href: "/free-trial",
+  },
+  {
     image: "/screens/ghl-ui.png",
     width: 1897,
     height: 1046,
@@ -114,7 +133,7 @@ const everything = [
   { icon: Package, title: "Treatment Series", body: "Buy 5 Get 1 Free style packages. Pre-paid sessions tracked automatically." },
   { icon: Users, title: "Unlimited Providers", body: "Every injector, laser tech, and front-desk staffer included. Priced by location." },
   { icon: FileText, title: "Branded PDFs", body: "Your logo, your colors, your name on every patient quote." },
-  { icon: History, title: "Quote History", body: "Search and re-open any quote by patient, date, or status." },
+  { icon: Send, title: "Send to EMR", body: "One-click send to ModMed, DrChrono, and GoHighLevel. Nextech coming soon." },
   { icon: ShieldCheck, title: "HIPAA Compliant", body: "Encrypted data, audit logging, automatic session timeouts." },
 ];
 
@@ -305,12 +324,38 @@ export default function MedicalSpasPage() {
                   />
                 </div>
                 <div className={reverse ? "md:order-1" : ""}>
-                  <h3 className="font-poppins text-2xl font-bold text-navy">
+                  {block.eyebrow && (
+                    <p className="text-sm font-semibold uppercase tracking-wider text-primary">
+                      {block.eyebrow}
+                    </p>
+                  )}
+                  <h3 className="mt-2 font-poppins text-2xl font-bold text-navy">
                     {block.title}
                   </h3>
                   <p className="mt-3 text-lg leading-relaxed text-text-muted">
                     {block.body}
                   </p>
+                  {block.bullets && (
+                    <ul className="mt-6 space-y-3">
+                      {block.bullets.map((b) => (
+                        <li key={b} className="flex items-start gap-2 text-text">
+                          <Check
+                            className="mt-1 h-5 w-5 shrink-0 text-primary"
+                            aria-hidden="true"
+                          />
+                          {b}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                  {block.href && (
+                    <Link
+                      href={block.href}
+                      className="mt-6 inline-flex items-center gap-1 font-medium text-primary transition-colors hover:text-primary-dark"
+                    >
+                      Start free trial <span aria-hidden="true">→</span>
+                    </Link>
+                  )}
                 </div>
               </div>
             );
