@@ -19,8 +19,8 @@ const resources: FooterLink[] = [
 ];
 
 const legal: FooterLink[] = [
-  { label: "Privacy Policy", href: "#" },
-  { label: "Terms of Service", href: "#" },
+  { label: "Privacy Policy", href: "/privacy-policy/" },
+  { label: "Terms of Service", href: "/terms-of-service/" },
   {
     label: "Client Login",
     href: "https://admin.mysurgeryquote.com/login",

@@ -6,6 +6,9 @@ import FinalCta from "@/components/sections/FinalCta";
 import FAQ from "@/components/sections/FAQ";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://www.mysurgeryquote.com/pricing/" },
+  openGraph: { siteName: "MySurgeryQuote", type: "website", images: ["/og/pricing.png"] },
+  twitter: { card: "summary_large_image", images: ["/og/pricing.png"] },
   title: "Pricing: Plans for Surgical Practices and Medical Spas",
   description:
     "Simple monthly pricing. No contracts, no setup fees, cancel anytime. Surgical plans from $100/mo. Med spa plans from $150/mo. Unlimited quotes and staff users on every plan.",

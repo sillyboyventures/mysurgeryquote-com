@@ -6,7 +6,8 @@ import Testimonials from "@/components/sections/Testimonials";
 import FAQ from "@/components/sections/FAQ";
 
 export const metadata: Metadata = {
-  title: { absolute: "Start Your Free Trial | MySurgeryQuote" },
+  alternates: { canonical: "https://www.mysurgeryquote.com/free-trial/" },
+  title: { absolute: "Free Trial: Try MySurgeryQuote for 30 Days, No Card Required | MySurgeryQuote" },
   description:
     "Try MySurgeryQuote free for 30 days. Full access, no credit card required. We'll have your account ready within one business day.",
 };

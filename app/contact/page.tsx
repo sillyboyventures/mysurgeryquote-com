@@ -4,7 +4,8 @@ import PageHero from "@/components/PageHero";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: { absolute: "Contact MySurgeryQuote" },
+  alternates: { canonical: "https://www.mysurgeryquote.com/contact/" },
+  title: { absolute: "Contact MySurgeryQuote: Sales, Support, Partnerships, Integrations" },
   description:
     "Get in touch with MySurgeryQuote. Sales, support, partnerships, and integrations. We usually reply within one business day.",
 };

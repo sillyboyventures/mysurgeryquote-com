@@ -6,7 +6,7 @@ import { getAllPosts, getPostBySlug, renderMarkdown } from "@/lib/mdx";
 
 export const dynamicParams = false;
 
-const PROD = "https://mysurgeryquote.com";
+const PROD = "https://www.mysurgeryquote.com";
 
 export function generateStaticParams() {
   return getAllPosts().map((p) => ({ slug: p.slug }));
@@ -82,7 +82,7 @@ export default async function BlogPostPage({
       name: "MySurgeryQuote",
       logo: {
         "@type": "ImageObject",
-        url: "https://mysurgeryquote-com.vercel.app/brand/logo-white.png",
+        url: "https://www.mysurgeryquote.com/brand/logo-white.png",
       },
     },
     mainEntityOfPage: { "@type": "WebPage", "@id": canonical },

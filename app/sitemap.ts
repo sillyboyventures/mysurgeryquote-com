@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getAllPosts, getAllHelpArticles } from "@/lib/mdx";
 
-const BASE = "https://mysurgeryquote.com";
+const BASE = "https://www.mysurgeryquote.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
@@ -15,6 +15,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/free-trial/`, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE}/blog/`, changeFrequency: "weekly", priority: 0.7 },
     { url: `${BASE}/help/`, changeFrequency: "weekly", priority: 0.7 },
+    { url: `${BASE}/privacy-policy/`, changeFrequency: "yearly", priority: 0.3 },
+    { url: `${BASE}/terms-of-service/`, changeFrequency: "yearly", priority: 0.3 },
   ];
 
   const posts: MetadataRoute.Sitemap = getAllPosts().map((p) => ({

@@ -8,7 +8,12 @@ import EmrDetail from "@/components/sections/EmrDetail";
 import PricingTeaser from "@/components/sections/PricingTeaser";
 import FAQ from "@/components/sections/FAQ";
 import FinalCta from "@/components/sections/FinalCta";
+import type { Metadata } from "next";
 import { faqs } from "@/lib/faq";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "https://www.mysurgeryquote.com/" },
+};
 
 const faqSchema = {
   "@context": "https://schema.org",

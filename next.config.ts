@@ -12,6 +12,25 @@ const nextConfig: NextConfig = {
       { source: "/index.php/:path*", destination: "/:path*", permanent: true },
     ];
   },
+  async headers() {
+    const immutable = [
+      { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+    ];
+    return [
+      { source: "/:path*.png", headers: immutable },
+      { source: "/:path*.svg", headers: immutable },
+      { source: "/:path*.jpg", headers: immutable },
+      {
+        source: "/:path*",
+        headers: [
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
+        ],
+      },
+    ];
+  },
   // Pin the workspace root to this project. Without this, a stray lockfile in a
   // parent directory can make Next infer the wrong root.
   turbopack: {

@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: "/api/",
     },
-    sitemap: "https://mysurgeryquote.com/sitemap.xml",
+    sitemap: "https://www.mysurgeryquote.com/sitemap.xml",
   };
 }

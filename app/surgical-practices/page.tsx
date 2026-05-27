@@ -17,6 +17,9 @@ import Testimonials from "@/components/sections/Testimonials";
 import FAQ from "@/components/sections/FAQ";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://www.mysurgeryquote.com/surgical-practices/" },
+  openGraph: { siteName: "MySurgeryQuote", type: "website", images: ["/og/surgical.png"] },
+  twitter: { card: "summary_large_image", images: ["/og/surgical.png"] },
   title: "Surgery Quote Software for Cosmetic Surgeons",
   description:
     "Multi-procedure quotes with automatic facility and anesthesia fee calculations. Surgeon-specific pricing. Implant tracking. Quick Quote templates. Professional PDFs in under 2 minutes.",

@@ -17,7 +17,10 @@ import Testimonials from "@/components/sections/Testimonials";
 import FAQ from "@/components/sections/FAQ";
 
 export const metadata: Metadata = {
-  title: "Medical Spa Quote Software: Injectables & Treatment Pricing",
+  alternates: { canonical: "https://www.mysurgeryquote.com/medical-spas/" },
+  openGraph: { siteName: "MySurgeryQuote", type: "website", images: ["/og/medspa.png"] },
+  twitter: { card: "summary_large_image", images: ["/og/medspa.png"] },
+  title: "Medical Spa Quote Software: Injectables and Treatment Pricing",
   description:
     "Quote software built for medical spas. Price injectables, lasers, body contouring, and skin treatments in under 2 minutes. Unlimited providers. HIPAA compliant. $150/mo.",
 };

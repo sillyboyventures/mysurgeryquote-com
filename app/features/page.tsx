@@ -7,6 +7,9 @@ import FinalCta from "@/components/sections/FinalCta";
 import FAQ from "@/components/sections/FAQ";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://www.mysurgeryquote.com/features/" },
+  openGraph: { siteName: "MySurgeryQuote", type: "website", images: ["/og/features.png"] },
+  twitter: { card: "summary_large_image", images: ["/og/features.png"] },
   title: "Features: Surgeon Pricing, Commissions, Reporting",
   description:
     "Every feature MySurgeryQuote offers: multiple surgeon fee schedules, commission tracking, procedure log reporting, quick quotes, multi-location, and more. The quoting tool built for medical practices.",

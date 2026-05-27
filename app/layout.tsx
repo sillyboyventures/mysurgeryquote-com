@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   description:
     "Surgery quote software for medical practices. Professional patient quotes in under 2 minutes with automatic fee calculations and branded PDFs. HIPAA compliant.",
-  metadataBase: new URL("https://mysurgeryquote-com.vercel.app"),
+  metadataBase: new URL("https://www.mysurgeryquote.com"),
   openGraph: {
     siteName: "MySurgeryQuote",
     type: "website",
@@ -42,8 +42,8 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "MySurgeryQuote",
-  url: "https://mysurgeryquote.com",
-  logo: "https://mysurgeryquote.com/brand/logo-white.png",
+  url: "https://www.mysurgeryquote.com",
+  logo: "https://www.mysurgeryquote.com/brand/logo-white.png",
   description:
     "Quoting software for surgical practices and medical spas. Professional patient quotes in under 2 minutes with automatic fee calculations and branded PDFs. HIPAA compliant.",
   sameAs: [],
@@ -53,10 +53,10 @@ const webSiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "MySurgeryQuote",
-  url: "https://mysurgeryquote.com",
+  url: "https://www.mysurgeryquote.com",
   potentialAction: {
     "@type": "SearchAction",
-    target: "https://mysurgeryquote.com/help?q={search_term_string}",
+    target: "https://www.mysurgeryquote.com/help?q={search_term_string}",
     "query-input": "required name=search_term_string",
   },
 };

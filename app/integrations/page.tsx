@@ -6,6 +6,9 @@ import PageHero from "@/components/PageHero";
 import FinalCta from "@/components/sections/FinalCta";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://www.mysurgeryquote.com/integrations/" },
+  openGraph: { siteName: "MySurgeryQuote", type: "website", images: ["/og/integrations.png"] },
+  twitter: { card: "summary_large_image", images: ["/og/integrations.png"] },
   title: "EMR Integrations: ModMed, DrChrono, GoHighLevel, Nextech",
   description:
     "Send quotes directly to your EMR. ModMed, DrChrono, and GoHighLevel integrations included on every plan. Nextech coming soon.",
