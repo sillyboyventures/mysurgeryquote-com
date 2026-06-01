@@ -63,7 +63,7 @@ export default function PricingTeaser() {
                 ))}
               </ul>
               <Link
-                href="/pricing"
+                href="/pricing/"
                 className="mt-8 inline-flex items-center gap-1 font-medium text-primary transition-colors hover:text-primary-dark"
               >
                 View Plans <span aria-hidden="true">→</span>
@@ -74,7 +74,7 @@ export default function PricingTeaser() {
 
         <div className="mt-12 text-center">
           <Link
-            href="/pricing"
+            href="/pricing/"
             className="inline-block rounded-lg bg-primary px-6 py-3 font-medium text-white shadow-sm transition-colors hover:bg-primary-dark"
           >
             View Full Pricing

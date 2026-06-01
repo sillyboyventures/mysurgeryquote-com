@@ -42,7 +42,7 @@ const integrations: Integration[] = [
       "Audit log of every send",
     ],
     status: "live",
-    cta: { label: "Start Free Trial", href: "/free-trial" },
+    cta: { label: "Start Free Trial", href: "/free-trial/" },
   },
   {
     name: "DrChrono",
@@ -58,7 +58,7 @@ const integrations: Integration[] = [
       "Audit log",
     ],
     status: "live",
-    cta: { label: "Start Free Trial", href: "/free-trial" },
+    cta: { label: "Start Free Trial", href: "/free-trial/" },
   },
   {
     name: "GoHighLevel",
@@ -74,7 +74,7 @@ const integrations: Integration[] = [
       "Audit log",
     ],
     status: "live",
-    cta: { label: "Start Free Trial", href: "/free-trial" },
+    cta: { label: "Start Free Trial", href: "/free-trial/" },
   },
   {
     name: "Nextech",
@@ -92,7 +92,7 @@ const integrations: Integration[] = [
     comingSoon: true,
     cta: {
       label: "Request Early Access",
-      href: "/contact?subject=Nextech+Early+Access",
+      href: "/contact/?subject=Nextech+Early+Access",
       button: true,
     },
   },
@@ -242,7 +242,7 @@ export default function IntegrationsPage() {
               ModMed, DrChrono, GoHighLevel, and Nextech when it launches.
             </p>
             <Link
-              href="/pricing"
+              href="/pricing/"
               className="mt-6 inline-flex items-center gap-1 font-medium text-primary transition-colors hover:text-primary-dark"
             >
               See pricing <span aria-hidden="true">→</span>
@@ -256,8 +256,8 @@ export default function IntegrationsPage() {
         heading="Ready to send quotes where your team works?"
         subhead="Start a free 30-day trial. No credit card required."
         buttons={[
-          { label: "Start Free Trial", href: "/free-trial", variant: "navy" },
-          { label: "Talk to Sales", href: "/contact", variant: "outline" },
+          { label: "Start Free Trial", href: "/free-trial/", variant: "navy" },
+          { label: "Talk to Sales", href: "/contact/", variant: "outline" },
         ]}
       />
     </>

@@ -321,7 +321,7 @@ export default function FeaturesPage() {
                   ))}
                 </ul>
                 <Link
-                  href="/free-trial"
+                  href="/free-trial/"
                   className="mt-6 inline-flex items-center gap-1 font-medium text-primary transition-colors hover:text-primary-dark"
                 >
                   Start free trial <span aria-hidden="true">→</span>

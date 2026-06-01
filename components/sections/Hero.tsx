@@ -73,13 +73,13 @@ export default function Hero() {
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link
-              href="/surgical-practices"
+              href="/surgical-practices/"
               className="rounded-lg bg-button-navy px-6 py-3 font-medium text-white shadow-lg transition-opacity hover:opacity-90"
             >
               Surgical Practices
             </Link>
             <Link
-              href="/medical-spas"
+              href="/medical-spas/"
               className="rounded-lg bg-button-navy px-6 py-3 font-medium text-white shadow-lg transition-opacity hover:opacity-90"
             >
               Medical Spas
@@ -89,7 +89,7 @@ export default function Hero() {
             <a
               href="https://demo.mysurgeryquote.com/demo"
               target="_blank"
-              rel="noopener"
+              rel="noopener nofollow"
               className="inline-flex items-center gap-1 font-medium text-white/90 transition-colors hover:text-white"
             >
               Try the Demo <span aria-hidden="true">→</span>

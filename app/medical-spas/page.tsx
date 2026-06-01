@@ -111,7 +111,7 @@ const featureBlocks: Block[] = [
       "Resend email PDF directly from the quote row",
       "Per-quote audit trail (every edit logged with user and timestamp)",
     ],
-    href: "/free-trial",
+    href: "/free-trial/",
   },
   {
     image: "/screens/ghl-ui.png",
@@ -253,7 +253,7 @@ export default function MedicalSpasPage() {
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link
-              href="/pricing"
+              href="/pricing/"
               className="rounded-lg bg-button-navy px-6 py-3 font-medium text-white shadow-lg transition-opacity hover:opacity-90"
             >
               See Pricing
@@ -261,7 +261,7 @@ export default function MedicalSpasPage() {
             <a
               href="https://demo.mysurgeryquote.com/demo"
               target="_blank"
-              rel="noopener"
+              rel="noopener nofollow"
               className="rounded-lg border border-white px-6 py-3 font-medium text-white transition-colors hover:bg-white hover:text-primary"
             >
               Try Demo
@@ -408,7 +408,7 @@ export default function MedicalSpasPage() {
               entire practice.
             </p>
             <Link
-              href="/surgical-practices"
+              href="/surgical-practices/"
               className="mt-6 inline-flex items-center gap-1 font-medium text-primary transition-colors hover:text-primary-dark"
             >
               Explore Surgical Practice features <span aria-hidden="true">→</span>
@@ -495,7 +495,7 @@ export default function MedicalSpasPage() {
           </div>
           <div className="mt-12 text-center">
             <Link
-              href="/pricing"
+              href="/pricing/"
               className="inline-block rounded-lg bg-primary px-6 py-3 font-medium text-white shadow-sm transition-colors hover:bg-primary-dark"
             >
               See Full Pricing

@@ -73,7 +73,7 @@ export default async function HelpArticlePage({
       <div className="mx-auto max-w-6xl px-6">
         {/* Breadcrumb */}
         <nav className="text-sm text-text-muted" aria-label="Breadcrumb">
-          <Link href="/help" className="hover:text-primary">
+          <Link href="/help/" className="hover:text-primary">
             Help
           </Link>
           <span className="px-2" aria-hidden="true">
@@ -90,7 +90,7 @@ export default async function HelpArticlePage({
           {/* Sidebar */}
           <aside className="lg:sticky lg:top-24 lg:self-start">
             <Link
-              href="/help"
+              href="/help/"
               className="text-sm font-medium text-primary hover:text-primary-dark"
             >
               ← Back to Help center

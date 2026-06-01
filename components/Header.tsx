@@ -8,15 +8,15 @@ import { Menu, ChevronDown, X } from "lucide-react";
 type NavItem = { label: string; href: string; external?: boolean };
 
 const solutions: NavItem[] = [
-  { label: "Surgical Practices", href: "/surgical-practices" },
-  { label: "Medical Spas", href: "/medical-spas" },
-  { label: "Integrations", href: "/integrations" },
+  { label: "Surgical Practices", href: "/surgical-practices/" },
+  { label: "Medical Spas", href: "/medical-spas/" },
+  { label: "Integrations", href: "/integrations/" },
 ];
 
 const resources: NavItem[] = [
-  { label: "Help", href: "/help" },
-  { label: "Blog", href: "/blog" },
-  { label: "Contact", href: "/contact" },
+  { label: "Help", href: "/help/" },
+  { label: "Blog", href: "/blog/" },
+  { label: "Contact", href: "/contact/" },
 ];
 
 const SIGN_IN_URL = "https://admin.mysurgeryquote.com/login";
@@ -85,13 +85,13 @@ export default function Header() {
         <div className="hidden items-center gap-1 lg:flex">
           <Dropdown label="Solutions" items={solutions} />
           <Link
-            href="/features"
+            href="/features/"
             className="rounded-md px-3 py-2 text-sm font-medium text-white transition-colors hover:text-white/80"
           >
             Features
           </Link>
           <Link
-            href="/pricing"
+            href="/pricing/"
             className="rounded-md px-3 py-2 text-sm font-medium text-white transition-colors hover:text-white/80"
           >
             Pricing
@@ -99,7 +99,7 @@ export default function Header() {
           <a
             href={DEMO_URL}
             target="_blank"
-            rel="noopener"
+            rel="noopener nofollow"
             className="rounded-md px-3 py-2 text-sm font-medium text-white transition-colors hover:text-white/80"
           >
             Demos
@@ -111,12 +111,13 @@ export default function Header() {
         <div className="hidden items-center gap-4 lg:flex">
           <a
             href={SIGN_IN_URL}
+            rel="nofollow"
             className="text-sm font-medium text-white transition-colors hover:text-white/80"
           >
             Sign In
           </a>
           <Link
-            href="/free-trial"
+            href="/free-trial/"
             className="rounded-lg bg-button-navy px-5 py-2.5 text-sm font-medium text-white shadow-sm transition-opacity hover:opacity-90"
           >
             Start Free Trial
@@ -175,14 +176,14 @@ export default function Header() {
             ))}
 
             <Link
-              href="/features"
+              href="/features/"
               onClick={closeMobile}
               className="rounded-md px-2 py-3 text-lg font-medium text-white"
             >
               Features
             </Link>
             <Link
-              href="/pricing"
+              href="/pricing/"
               onClick={closeMobile}
               className="rounded-md px-2 py-3 text-lg font-medium text-white"
             >
@@ -191,7 +192,7 @@ export default function Header() {
             <a
               href={DEMO_URL}
               target="_blank"
-              rel="noopener"
+              rel="noopener nofollow"
               onClick={closeMobile}
               className="rounded-md px-2 py-3 text-lg font-medium text-white"
             >
@@ -214,6 +215,7 @@ export default function Header() {
 
             <a
               href={SIGN_IN_URL}
+              rel="nofollow"
               onClick={closeMobile}
               className="rounded-md px-2 py-3 text-lg font-medium text-white"
             >
@@ -223,7 +225,7 @@ export default function Header() {
 
           <div className="border-t border-white/20 p-4 sm:p-6">
             <Link
-              href="/free-trial"
+              href="/free-trial/"
               onClick={closeMobile}
               className="block w-full rounded-lg bg-button-navy px-5 py-3 text-center font-medium text-white shadow-sm"
             >

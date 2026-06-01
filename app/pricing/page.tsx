@@ -135,7 +135,7 @@ function PlanCard({ plan }: { plan: Plan }) {
         ))}
       </ul>
       <Link
-        href="/free-trial"
+        href="/free-trial/"
         className="mt-8 block rounded-lg bg-button-navy px-6 py-3 text-center font-medium text-white shadow-sm transition-opacity hover:opacity-90"
       >
         Start Free Trial
@@ -343,7 +343,7 @@ export default function PricingPage() {
               surgical items automatically.
             </p>
             <Link
-              href="/contact"
+              href="/contact/"
               className="mt-6 inline-flex items-center gap-1 font-medium text-primary transition-colors hover:text-primary-dark"
             >
               Contact Sales <span aria-hidden="true">→</span>
@@ -415,8 +415,8 @@ export default function PricingPage() {
         heading="Ready to start your free trial?"
         subhead="Professional quotes in under 2 minutes. No credit card required."
         buttons={[
-          { label: "Start Free Trial", href: "/free-trial", variant: "navy" },
-          { label: "Talk to Sales", href: "/contact", variant: "outline" },
+          { label: "Start Free Trial", href: "/free-trial/", variant: "navy" },
+          { label: "Talk to Sales", href: "/contact/", variant: "outline" },
         ]}
       />
     </>

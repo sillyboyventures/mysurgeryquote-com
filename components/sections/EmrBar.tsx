@@ -13,7 +13,7 @@ export default function EmrBar() {
           {emrLogos.map((logo) => (
             <Link
               key={logo.name}
-              href="/integrations"
+              href="/integrations/"
               className="group relative flex w-32 items-center justify-center"
               aria-label={logo.name}
             >

@@ -111,7 +111,7 @@ export default async function BlogPostPage({
       />
       <div className="mx-auto max-w-3xl px-6">
         <Link
-          href="/blog"
+          href="/blog/"
           className="text-sm font-medium text-primary transition-colors hover:text-primary-dark"
         >
           ← Back to Blog
@@ -153,7 +153,7 @@ export default async function BlogPostPage({
             Professional patient quotes in under 2 minutes.
           </p>
           <Link
-            href="/free-trial"
+            href="/free-trial/"
             className="mt-4 inline-block rounded-lg bg-primary px-6 py-3 font-medium text-white transition-colors hover:bg-primary-dark"
           >
             Start Free Trial

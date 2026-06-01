@@ -50,7 +50,7 @@ export default function FreeTrialForm() {
         <a
           href="https://demo.mysurgeryquote.com/demo"
           target="_blank"
-          rel="noopener"
+          rel="noopener nofollow"
           className="mt-6 inline-block rounded-lg bg-primary px-6 py-3 font-medium text-white shadow-sm transition-colors hover:bg-primary-dark"
         >
           Open the Demo →

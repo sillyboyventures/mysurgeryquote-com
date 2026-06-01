@@ -38,7 +38,7 @@ export default function EmrDetail() {
                 {logo.detail}
               </p>
               <Link
-                href="/integrations"
+                href="/integrations/"
                 className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary transition-colors hover:text-primary-dark"
               >
                 Learn more <span aria-hidden="true">→</span>
@@ -49,7 +49,7 @@ export default function EmrDetail() {
 
         <div className="mt-12 text-center">
           <Link
-            href="/integrations"
+            href="/integrations/"
             className="inline-block rounded-lg bg-primary px-6 py-3 font-medium text-white shadow-sm transition-colors hover:bg-primary-dark"
           >
             See All Integrations

@@ -16,8 +16,8 @@ export default function FinalCta({
   heading = "Ready to Simplify Quoting?",
   subhead = "Professional quotes in under 2 minutes. No contracts.",
   buttons = [
-    { label: "Surgical Practices", href: "/surgical-practices", variant: "navy" },
-    { label: "Medical Spas", href: "/medical-spas", variant: "navy" },
+    { label: "Surgical Practices", href: "/surgical-practices/", variant: "navy" },
+    { label: "Medical Spas", href: "/medical-spas/", variant: "navy" },
   ],
 }: {
   heading?: string;

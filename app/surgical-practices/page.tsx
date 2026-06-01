@@ -59,7 +59,7 @@ const featureBlocks: Block[] = [
     height: 2400,
     title: "7-Step Quote Wizard",
     body: "A guided seven-step flow walks you from patient info through procedures, implants, fees, and delivery. Nothing gets missed, and a complete quote takes under two minutes.",
-    href: "/features#pdfs-email",
+    href: "/features/#pdfs-email",
   },
   {
     image: "/screens/surgeons.png",
@@ -67,7 +67,7 @@ const featureBlocks: Block[] = [
     height: 2400,
     title: "Surgeon-Specific Pricing",
     body: "Each surgeon gets their own price list and assigned procedures. Select the surgeon and pricing loads automatically. No spreadsheets, no manual overrides.",
-    href: "/features#surgeon-pricing",
+    href: "/features/#surgeon-pricing",
   },
   {
     image: "/screens/implants.png",
@@ -75,7 +75,7 @@ const featureBlocks: Block[] = [
     height: 2400,
     title: "Implants Built In",
     body: "Organize implants by brand and type and add them right on the quote. They stay attached to the patient record. No separate spreadsheet to reconcile against the OR pull list.",
-    href: "/features#implants",
+    href: "/features/#implants",
   },
   {
     image: "/screens/quick-quotes.png",
@@ -83,7 +83,7 @@ const featureBlocks: Block[] = [
     height: 2400,
     title: "Quick Quotes for Common Combinations",
     body: "Save common combinations like a Mommy Makeover as a template. One click loads procedures, implants, and fees, then customize from there.",
-    href: "/features#quick-quotes",
+    href: "/features/#quick-quotes",
   },
   {
     image: "/screens/quote-history.png",
@@ -91,7 +91,7 @@ const featureBlocks: Block[] = [
     height: 2400,
     title: "Full Quote History",
     body: "Every quote is searchable by patient, date, surgeon, or status. Edit old quotes with original pricing preserved, and resend by email in one click.",
-    href: "/features#quote-history",
+    href: "/features/#quote-history",
   },
   {
     image: "/screens/surgeons.png",
@@ -99,7 +99,7 @@ const featureBlocks: Block[] = [
     height: 2400,
     title: "Multiple Location Support",
     body: "Run all your locations under one organization with per-location branding. Switch locations from the top nav and see org-wide totals on one dashboard.",
-    href: "/features#multi-location",
+    href: "/features/#multi-location",
   },
   {
     image: "/screens/modmed-ui.png",
@@ -107,7 +107,7 @@ const featureBlocks: Block[] = [
     height: 781,
     title: "EMR Integration",
     body: "Send finished quote PDFs straight to the patient's chart in ModMed, DrChrono, or GoHighLevel. One click from quote to chart. Nextech coming soon.",
-    href: "/integrations",
+    href: "/integrations/",
   },
 ];
 
@@ -234,7 +234,7 @@ export default function SurgicalPracticesPage() {
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link
-              href="/pricing"
+              href="/pricing/"
               className="rounded-lg bg-button-navy px-6 py-3 font-medium text-white shadow-lg transition-opacity hover:opacity-90"
             >
               See Pricing
@@ -242,7 +242,7 @@ export default function SurgicalPracticesPage() {
             <a
               href="https://demo.mysurgeryquote.com/demo"
               target="_blank"
-              rel="noopener"
+              rel="noopener nofollow"
               className="rounded-lg border border-white px-6 py-3 font-medium text-white transition-colors hover:bg-white hover:text-primary"
             >
               Try Demo
@@ -368,7 +368,7 @@ export default function SurgicalPracticesPage() {
               same patient records.
             </p>
             <Link
-              href="/medical-spas"
+              href="/medical-spas/"
               className="mt-6 inline-flex items-center gap-1 font-medium text-primary transition-colors hover:text-primary-dark"
             >
               Explore Medical Spa features <span aria-hidden="true">→</span>
@@ -428,7 +428,7 @@ export default function SurgicalPracticesPage() {
           </div>
           <div className="mt-12 text-center">
             <Link
-              href="/pricing"
+              href="/pricing/"
               className="inline-block rounded-lg bg-primary px-6 py-3 font-medium text-white shadow-sm transition-colors hover:bg-primary-dark"
             >
               See Full Pricing
