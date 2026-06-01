@@ -4,17 +4,17 @@ import Image from "next/image";
 type FooterLink = { label: string; href: string; external?: boolean };
 
 const solutions: FooterLink[] = [
-  { label: "Surgical Practices", href: "/surgical-practices" },
-  { label: "Medical Spas", href: "/medical-spas" },
-  { label: "Integrations", href: "/integrations" },
-  { label: "Features", href: "/features" },
-  { label: "Pricing", href: "/pricing" },
+  { label: "Surgical Practices", href: "/surgical-practices/" },
+  { label: "Medical Spas", href: "/medical-spas/" },
+  { label: "Integrations", href: "/integrations/" },
+  { label: "Features", href: "/features/" },
+  { label: "Pricing", href: "/pricing/" },
 ];
 
 const resources: FooterLink[] = [
-  { label: "Help Center", href: "/help" },
-  { label: "Blog", href: "/blog" },
-  { label: "Contact", href: "/contact" },
+  { label: "Help Center", href: "/help/" },
+  { label: "Blog", href: "/blog/" },
+  { label: "Contact", href: "/contact/" },
   { label: "Demos", href: "https://demo.mysurgeryquote.com/demo", external: true },
 ];
 
@@ -47,7 +47,7 @@ function FooterColumn({
               <a
                 href={link.href}
                 target="_blank"
-                rel="noopener"
+                rel="noopener nofollow"
                 className="text-sm text-white/70 transition-colors hover:text-white"
               >
                 {link.label}

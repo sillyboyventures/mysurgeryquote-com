@@ -21,7 +21,7 @@ const solutions: Solution[] = [
       "Implant tracking",
       "Quick Quote templates",
     ],
-    href: "/surgical-practices",
+    href: "/surgical-practices/",
   },
   {
     title: "Medical Spas",
@@ -34,7 +34,7 @@ const solutions: Solution[] = [
       "Treatment packages",
       "Unlimited providers",
     ],
-    href: "/medical-spas",
+    href: "/medical-spas/",
   },
 ];
 
