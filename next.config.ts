@@ -11,15 +11,38 @@ const nextConfig: NextConfig = {
     // so the request method is preserved; Google consolidates 308 identically to
     // 301 for indexing, so this is the correct "permanent" signal for SEO.
     return [
-      // --- Apex (non-www) -> www, preserving the path. The host value is
-      // anchored (^...$) so it matches ONLY the bare apex and never
-      // www.mysurgeryquote.com — an unanchored value would substring-match the
-      // www host and cause an infinite redirect loop. Vercel may already do this
-      // at the domain layer; this is a belt-and-suspenders fallback. ---
+      // --- Apex (non-www) -> www, preserving the FULL path verbatim. ---
+      // Uses a single `(.*)` capture rather than `/:path*`: the segment-array
+      // form (`:path*`) drops the trailing slash when it recompiles the
+      // destination, so "/surgical-practices/" was redirecting to
+      // ".../surgical-practices" (no slash) which then 308s AGAIN under
+      // trailingSlash:true — a two-hop chain that fails GSC validation. The
+      // greedy `(.*)` keeps the trailing slash, so the apex hop is now a single
+      // clean 308 straight to the canonical trailing-slash URL.
+      //
+      // Next.js wraps every `has` value in ^...$ automatically (see
+      // prepare-destination.js), so the bare value below already matches ONLY
+      // the apex host and never www.mysurgeryquote.com (no infinite loop). No
+      // manual anchors needed. Vercel may also do this at the domain layer;
+      // this is a belt-and-suspenders fallback.
       {
-        source: "/:path*",
-        has: [{ type: "host", value: "^mysurgeryquote\\.com$" }],
-        destination: "https://www.mysurgeryquote.com/:path*",
+        source: "/:path(.*)",
+        has: [{ type: "host", value: "mysurgeryquote\\.com" }],
+        destination: "https://www.mysurgeryquote.com/:path",
+        permanent: true,
+      },
+
+      // --- Legacy WordPress Echo Knowledge Base articles. These were served at
+      // the root with a ?post_type=epkb_post_type_1&p=<id> query string, so they
+      // ALSO carry a `p` key and would otherwise be swept into the generic ?p=
+      // -> /blog/ rule below. This rule is ordered first (first match wins) so
+      // KB articles land on /help/ instead. Like the ?p= rule, the destination
+      // path (/help/) differs from the source path (/), so the passed-through
+      // query string cannot cause the rule to re-match and loop. ---
+      {
+        source: "/",
+        has: [{ type: "query", key: "post_type", value: "epkb_post_type_1" }],
+        destination: "/help/",
         permanent: true,
       },
 
