@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { getAllPosts, getPostBySlug, renderMarkdown } from "@/lib/mdx";
+import { getAllPosts, getPostBySlug, renderMarkdown, extractFaqs } from "@/lib/mdx";
 
 export const dynamicParams = false;
 
@@ -67,6 +67,19 @@ export default async function BlogPostPage({
   const html = await renderMarkdown(content);
   const canonical = `${PROD}/${slug}/`;
 
+  const faqs = data.faq ? await extractFaqs(content) : [];
+  const faqSchema = faqs.length
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqs.map((f) => ({
+          "@type": "Question",
+          name: f.question,
+          acceptedAnswer: { "@type": "Answer", text: f.answer },
+        })),
+      }
+    : null;
+
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -109,6 +122,12 @@ export default async function BlogPostPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
       <div className="mx-auto max-w-3xl px-6">
         <Link
           href="/blog/"

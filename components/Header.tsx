@@ -10,6 +10,7 @@ type NavItem = { label: string; href: string; external?: boolean };
 const solutions: NavItem[] = [
   { label: "Surgical Practices", href: "/surgical-practices/" },
   { label: "Medical Spas", href: "/medical-spas/" },
+  { label: "Standalone Quote Software", href: "/standalone-surgery-quote-software/" },
   { label: "Integrations", href: "/integrations/" },
 ];
 
@@ -19,10 +20,24 @@ const resources: NavItem[] = [
   { label: "Contact", href: "/contact/" },
 ];
 
+const comparisons: NavItem[] = [
+  { label: "EMR Quoting Tools Compared", href: "/emr-quoting-tools-compared/" },
+  { label: "ModMed vs. MySurgeryQuote", href: "/modmed-quoting-vs-mysurgeryquote/" },
+  { label: "DrChrono vs. MySurgeryQuote", href: "/drchrono-quoting-vs-mysurgeryquote/" },
+];
+
 const SIGN_IN_URL = "https://admin.mysurgeryquote.com/login";
 const DEMO_URL = "https://demo.mysurgeryquote.com/demo";
 
-function Dropdown({ label, items }: { label: string; items: NavItem[] }) {
+function Dropdown({
+  label,
+  items,
+  group,
+}: {
+  label: string;
+  items: NavItem[];
+  group?: { heading: string; items: NavItem[] };
+}) {
   return (
     <div className="group relative">
       <button
@@ -35,7 +50,7 @@ function Dropdown({ label, items }: { label: string; items: NavItem[] }) {
       </button>
       {/* Outer wrapper starts at top-full (no hover gap); pt-2 gives visual spacing */}
       <div className="invisible absolute left-0 top-full pt-2 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
-        <div className="min-w-52 rounded-xl border border-border bg-white p-2 shadow-lg">
+        <div className="min-w-60 rounded-xl border border-border bg-white p-2 shadow-lg">
           {items.map((item) => (
             <Link
               key={item.label}
@@ -45,6 +60,23 @@ function Dropdown({ label, items }: { label: string; items: NavItem[] }) {
               {item.label}
             </Link>
           ))}
+          {group && (
+            <>
+              <div className="my-2 border-t border-border" />
+              <p className="px-3 pb-1 text-xs font-semibold uppercase tracking-wider text-text-muted">
+                {group.heading}
+              </p>
+              {group.items.map((item) => (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  className="block rounded-md px-3 py-2 text-sm text-text transition-colors hover:bg-bg-accent hover:text-primary"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </>
+          )}
         </div>
       </div>
     </div>
@@ -104,7 +136,11 @@ export default function Header() {
           >
             Demos
           </a>
-          <Dropdown label="Resources" items={resources} />
+          <Dropdown
+            label="Resources"
+            items={resources}
+            group={{ heading: "Comparisons", items: comparisons }}
+          />
         </div>
 
         {/* Desktop CTAs */}
@@ -203,6 +239,20 @@ export default function Header() {
               Resources
             </p>
             {resources.map((item) => (
+              <Link
+                key={item.label}
+                href={item.href}
+                onClick={closeMobile}
+                className="rounded-md px-2 py-3 text-lg font-medium text-white"
+              >
+                {item.label}
+              </Link>
+            ))}
+
+            <p className="px-2 pt-4 text-xs font-semibold uppercase tracking-wider text-white/70">
+              Comparisons
+            </p>
+            {comparisons.map((item) => (
               <Link
                 key={item.label}
                 href={item.href}

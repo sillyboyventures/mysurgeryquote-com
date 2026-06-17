@@ -27,7 +27,11 @@ export type Doc = {
   author: string;
   reviewed_date: string;
   stale_flag: boolean;
+  /** When true on a Q&A-structured blog post, emit FAQPage JSON-LD built from its H2 sections. */
+  faq?: boolean;
 };
+
+export type Faq = { question: string; answer: string };
 
 function readAll(dir: string): Doc[] {
   if (!fs.existsSync(dir)) return [];
@@ -88,4 +92,39 @@ export async function renderMarkdown(md: string): Promise<string> {
     .use(rehypeStringify, { allowDangerousHtml: true })
     .process(md);
   return String(file);
+}
+
+/** A line that is only a thematic break (`* * *`, `---`, `___`). */
+const THEMATIC_BREAK = /^(\*{3,}|-{3,}|_{3,})$/;
+
+/**
+ * Build FAQ pairs from a Q&A-structured post: each level-2 heading becomes a
+ * question and the markdown beneath it (up to the next H2) becomes the answer,
+ * rendered through the same pipeline as the visible page so the FAQPage JSON-LD
+ * mirrors on-page content exactly. Returns [] if the post has no H2 sections.
+ */
+export async function extractFaqs(content: string): Promise<Faq[]> {
+  const sections: { question: string; body: string[] }[] = [];
+  let current: { question: string; body: string[] } | null = null;
+
+  for (const line of content.split(/\r?\n/)) {
+    const h2 = line.match(/^##\s+(.+?)\s*$/);
+    if (h2) {
+      current = { question: h2[1].trim(), body: [] };
+      sections.push(current);
+      continue;
+    }
+    if (!current) continue; // intro text before the first H2 is not a Q&A pair
+    if (THEMATIC_BREAK.test(line.replace(/\s+/g, ""))) continue; // drop `* * *` separators
+    current.body.push(line);
+  }
+
+  const faqs: Faq[] = [];
+  for (const section of sections) {
+    const md = section.body.join("\n").trim();
+    if (!md) continue;
+    const answer = (await renderMarkdown(md)).trim();
+    faqs.push({ question: section.question, answer });
+  }
+  return faqs;
 }

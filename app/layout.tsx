@@ -65,6 +65,9 @@ const softwareApplicationSchema = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   name: "MySurgeryQuote",
+  url: "https://www.mysurgeryquote.com",
+  description:
+    "Surgery quote software for medical practices and medical spas. Build itemized patient quotes in under 2 minutes with surgeon-specific pricing, automatic facility and anesthesia fee calculations, and branded PDFs. HIPAA compliant.",
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web",
   offers: [

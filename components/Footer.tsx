@@ -6,6 +6,7 @@ type FooterLink = { label: string; href: string; external?: boolean };
 const solutions: FooterLink[] = [
   { label: "Surgical Practices", href: "/surgical-practices/" },
   { label: "Medical Spas", href: "/medical-spas/" },
+  { label: "Standalone Quote Software", href: "/standalone-surgery-quote-software/" },
   { label: "Integrations", href: "/integrations/" },
   { label: "Features", href: "/features/" },
   { label: "Pricing", href: "/pricing/" },
@@ -16,6 +17,12 @@ const resources: FooterLink[] = [
   { label: "Blog", href: "/blog/" },
   { label: "Contact", href: "/contact/" },
   { label: "Demos", href: "https://demo.mysurgeryquote.com/demo", external: true },
+];
+
+const comparisons: FooterLink[] = [
+  { label: "EMR Quoting Tools Compared", href: "/emr-quoting-tools-compared/" },
+  { label: "ModMed vs. MySurgeryQuote", href: "/modmed-quoting-vs-mysurgeryquote/" },
+  { label: "DrChrono vs. MySurgeryQuote", href: "/drchrono-quoting-vs-mysurgeryquote/" },
 ];
 
 const legal: FooterLink[] = [
@@ -73,7 +80,7 @@ export default function Footer() {
   return (
     <footer className="bg-navy text-white">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-3 lg:grid-cols-5">
           {/* Brand */}
           <div>
             <Image
@@ -92,6 +99,7 @@ export default function Footer() {
 
           <FooterColumn title="Solutions" links={solutions} />
           <FooterColumn title="Resources" links={resources} />
+          <FooterColumn title="Comparisons" links={comparisons} />
           <FooterColumn title="Legal" links={legal} />
         </div>
 
