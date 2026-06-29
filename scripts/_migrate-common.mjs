@@ -102,13 +102,8 @@ const CURRENT_MONTHLY = new Set(["100", "150", "350", "300", "50", "40"]);
 
 export function checkStale(text) {
   const reasons = [];
-  if (
-    /nextech/i.test(text) &&
-    !/nextech[\s\S]{0,80}(coming soon|in development|on the way|launch)/i.test(text) &&
-    !/(coming soon|in development|on the way)[\s\S]{0,80}nextech/i.test(text)
-  ) {
-    reasons.push('mentions Nextech without "coming soon"');
-  }
+  // (Removed the "mentions Nextech without 'coming soon'" check — Nextech is now LIVE,
+  //  so that rule is inverted: Nextech copy should NOT say "coming soon" anymore.)
   const priceRe = /\$(\d{2,4})\s*(?:\/\s*mo\b|\/\s*month\b|per month|a month|monthly)/gi;
   let m;
   while ((m = priceRe.exec(text)) !== null) {

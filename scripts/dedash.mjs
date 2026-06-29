@@ -26,7 +26,6 @@ const edits = {
       `Create VIP tiers ${DASH} Gold, Platinum, Diamond ${DASH} with automatic`,
       "Create VIP tiers (Gold, Platinum, Diamond) with automatic",
     ],
-    [`your team already works ${DASH} Nextech coming soon`, "your team already works. Nextech coming soon"],
   ],
   "app/free-trial/page.tsx": [
     [`Start Your Free Trial ${DASH} MySurgeryQuote`, "Start Your Free Trial | MySurgeryQuote"],
@@ -52,7 +51,6 @@ const edits = {
     [`loads automatically ${DASH} no spreadsheets`, "loads automatically. No spreadsheets"],
     [`patient record ${DASH} no separate spreadsheet`, "patient record. No separate spreadsheet"],
     [`implants, and fees ${DASH} then customize`, "implants, and fees, then customize"],
-    [`quote to chart ${DASH} Nextech coming soon`, "quote to chart. Nextech coming soon"],
     [
       `Add your whole team ${DASH} front desk, PCCs, surgeons ${DASH} with no per-seat fees`,
       "Add your whole team (front desk, PCCs, surgeons) with no per-seat fees",
@@ -134,7 +132,6 @@ const edits = {
     [`flow into insurance claims ${DASH} not for itemized`, "flow into insurance claims, not for itemized"],
     [`fee calculation engine ${DASH} base fee`, "fee calculation engine: base fee"],
     [`handles the quote build ${DASH} surgeon pricing`, "handles the quote build: surgeon pricing"],
-    [`with Nextech coming soon ${DASH} and every integration`, "with Nextech coming soon, and every integration"],
   ],
   "content/blog/new-gohighlevel-integration-send-quotes-invoices-estimates-directly-to-your-crm.mdx": [
     [`New: GoHighLevel Integration ${DASH} Send Quotes`, "New GoHighLevel Integration: Send Quotes"],
