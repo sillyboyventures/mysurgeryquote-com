@@ -1,0 +1,69 @@
+---
+title: "How to Connect Nextech"
+slug: "how-to-connect-nextech"
+date: "2026-06-29T12:00:00Z"
+modified: "2026-06-29T12:00:00Z"
+description: "Connect Nextech to MySurgeryQuote using SMART Backend Services (System) authentication. Register a System app, exchange keys, enter your Client ID, and send quote PDFs to patient charts."
+featured_image: ""
+category: "EMR Integrations"
+author: "MySurgeryQuote Team"
+reviewed_date: "2026-06-29"
+stale_flag: false
+---
+
+This guide walks you through connecting your Nextech account to MySurgeryQuote.
+
+Unlike ModMed and DrChrono, Nextech does **not** use an OAuth login popup. Instead it uses **SMART Backend Services (System) authentication**, a server-to-server flow that connects without anyone logging in or being redirected. Setup is a one-time key exchange between your practice, Nextech, and MySurgeryQuote.
+
+### Before You Begin
+
+You’ll need:
+
+-   Admin or Organization Admin role in MySurgeryQuote
+-   An active Nextech account
+-   The ability to request a System (SMART Backend Services) app from Nextech
+
+### Step 1: Request a Nextech System App
+
+Contact Nextech and request a **System (SMART Backend Services) app** for integrating with MySurgeryQuote. This is the application Nextech uses to grant MySurgeryQuote system-level access to your charts.
+
+### Step 2: Give Nextech Your JWK Set URL and Key ID
+
+1.  In MySurgeryQuote, go to **Admin → EMR Integration**
+2.  Select **Nextech** as your EMR provider
+3.  Copy the **JWK Set URL** and the **Key ID** shown on the screen
+4.  Send both values to Nextech so they can register your public key
+
+These values let Nextech verify MySurgeryQuote’s signed requests without ever sharing a password.
+
+### Step 3: Nextech Registers the Key and Returns a Client ID
+
+Nextech will:
+
+-   Register the public key from your JWK Set URL
+-   Grant the system scopes MySurgeryQuote needs to read patients and write documents
+-   Provide you with a **System Client ID**
+
+### Step 4: Enter the Client ID and Connect
+
+1.  Go back to **Admin → EMR Integration**
+2.  In the Nextech section, paste the **System Client ID** from Nextech
+3.  Click **Connect**
+
+There’s no login screen and no redirect — MySurgeryQuote authenticates directly with Nextech using the registered key. You should see a green “Connected” status.
+
+### Step 5: Test the Connection
+
+Click **Test Connection** to verify everything is working. You should see a green “Connected” status.
+
+### Sending Quotes to Nextech
+
+Once connected:
+
+1.  Open any quote
+2.  Click **Send to Nextech**
+3.  Search for the patient by name
+4.  Select the patient from the results
+5.  Click **Send** to attach the quote PDF to the patient’s chart
+
+Every send is recorded in the audit log with timestamp, user, and recipient.

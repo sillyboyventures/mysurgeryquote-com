@@ -118,7 +118,7 @@ const featureBlocks: Block[] = [
     width: 1897,
     height: 1046,
     title: "EMR Integration",
-    body: "Attach quote PDFs to patient or CRM records in GoHighLevel, ModMed, or DrChrono. One click sends the quote where your team already works. Nextech coming soon.",
+    body: "Attach quote PDFs to patient or CRM records in GoHighLevel, ModMed, DrChrono, or Nextech. One click sends the quote where your team already works.",
   },
 ];
 
@@ -136,7 +136,7 @@ const everything = [
   { icon: Package, title: "Treatment Series", body: "Buy 5 Get 1 Free style packages. Pre-paid sessions tracked automatically." },
   { icon: Users, title: "Unlimited Providers", body: "Every injector, laser tech, and front-desk staffer included. Priced by location." },
   { icon: FileText, title: "Branded PDFs", body: "Your logo, your colors, your name on every patient quote." },
-  { icon: Send, title: "Send to EMR", body: "One-click send to ModMed, DrChrono, and GoHighLevel. Nextech coming soon." },
+  { icon: Send, title: "Send to EMR", body: "One-click send to ModMed, DrChrono, GoHighLevel, and Nextech." },
   { icon: ShieldCheck, title: "HIPAA Compliant", body: "Encrypted data, audit logging, automatic session timeouts." },
 ];
 

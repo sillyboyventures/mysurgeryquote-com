@@ -19,7 +19,7 @@ export const faqs: Faq[] = [
   },
   {
     q: "Do you integrate with EMRs?",
-    a: "Yes. We integrate with ModMed, DrChrono, and GoHighLevel today, with Nextech coming soon. Send quote PDFs directly to patient charts or CRM contacts with one click.",
+    a: "Yes. We integrate with ModMed, DrChrono, GoHighLevel, and Nextech. Send quote PDFs directly to patient charts or CRM contacts with one click.",
   },
   {
     q: "Can each surgeon have their own price list?",

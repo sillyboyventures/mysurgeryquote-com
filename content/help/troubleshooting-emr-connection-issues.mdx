@@ -3,7 +3,7 @@ title: "Troubleshooting EMR Connection Issues"
 slug: "troubleshooting-emr-connection-issues"
 date: "2026-01-22T11:37:00Z"
 modified: "2026-01-22T11:37:02Z"
-description: "Fix common EMR connection problems in MySurgeryQuote: blocked popups, failed authorization, expired tokens, and missing patient search results."
+description: "Fix common EMR connection problems in MySurgeryQuote across ModMed, DrChrono, and Nextech: blocked popups, failed authorization, expired tokens, key registration, and missing patient search results."
 featured_image: ""
 category: "EMR Integrations"
 author: "MySurgeryQuote Team"
@@ -56,6 +56,27 @@ Having trouble with your EMR integration? Here are solutions to common issues.
 
 -   Ensure your DrChrono account has document storage enabled
 -   Check that you have permission to add patient documents
+-   Try disconnecting and reconnecting the integration
+
+### Nextech Issues
+
+**“Connection Failed” or “Not Authorized”**
+
+-   Confirm Nextech has registered the public key from your **JWK Set URL**
+-   Verify the **Key ID** you gave Nextech matches the one shown on the EMR Integration page
+-   Double-check the **System Client ID** you entered (no extra spaces before or after)
+-   Confirm Nextech granted the system scopes for your app
+
+**“Patient Not Found”**
+
+-   Search using the patient’s name as it appears in Nextech
+-   Try searching by last name only
+-   Verify the patient exists in your Nextech account
+
+**“Failed to Send Quote”**
+
+-   The note **category** value must match a note category configured in your practice’s Nextech instance. If a send fails, confirm the category with your practice’s Nextech admin.
+-   Ensure you selected a patient before sending
 -   Try disconnecting and reconnecting the integration
 
 ### Still Need Help?

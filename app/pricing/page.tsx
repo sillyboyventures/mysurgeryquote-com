@@ -254,7 +254,7 @@ const pricingFaqs = [
   },
   {
     q: "Are EMR integrations included?",
-    a: "Yes. All EMR integrations (ModMed, DrChrono, and GoHighLevel) are included on every plan at no extra cost. Nextech is coming soon and will also be included on every plan at launch.",
+    a: "Yes. All EMR integrations (ModMed, DrChrono, GoHighLevel, and Nextech) are included on every plan at no extra cost.",
   },
   {
     q: "What if I need more than the included surgeons or locations?",

@@ -37,8 +37,7 @@ export const emrLogos: EmrLogo[] = [
     src: "/logos/nextech.svg",
     width: 167,
     height: 28,
-    comingSoon: true,
     detail:
-      "Nextech integration is on the way. Soon you'll send quotes to Nextech charts with the same one-click flow.",
+      "Send finished quote PDFs straight to the patient's Nextech chart. No downloading and re-uploading. It's one click from quote to chart.",
   },
 ];

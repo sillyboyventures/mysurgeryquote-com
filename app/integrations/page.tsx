@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image", images: ["/og/integrations.png"] },
   title: "EMR Integrations: ModMed, DrChrono, GoHighLevel, Nextech",
   description:
-    "Send quotes directly to your EMR. ModMed, DrChrono, and GoHighLevel integrations included on every plan. Nextech coming soon.",
+    "Send quotes directly to your EMR. ModMed, DrChrono, GoHighLevel, and Nextech integrations included on every plan. One click from quote to chart.",
 };
 
 type Integration = {
@@ -81,20 +81,15 @@ const integrations: Integration[] = [
     logo: "/logos/nextech.svg",
     width: 167,
     height: 28,
-    body: "Nextech integration is on the way. Soon you'll send quotes to Nextech charts with the same one-click flow.",
+    body: "Send finished quote PDFs straight to the patient's Nextech chart. No downloading, no re-uploading. One click from quote to chart.",
     bullets: [
-      "In active development",
-      "Same one-click flow as ModMed and DrChrono",
-      "Will be included on every plan at launch",
-      "Request early access below",
+      "One-click PDF send to patient chart",
+      "Patient search built-in (no double entry)",
+      "Audit log of every send",
+      "HIPAA-compliant via Nextech SMART Backend Services (System) auth",
     ],
-    status: "dev",
-    comingSoon: true,
-    cta: {
-      label: "Request Early Access",
-      href: "/contact/?subject=Nextech+Early+Access",
-      button: true,
-    },
+    status: "live",
+    cta: { label: "Start Free Trial", href: "/free-trial/" },
   },
 ];
 
@@ -135,7 +130,7 @@ export default function IntegrationsPage() {
       <PageHero
         eyebrow="Integrations"
         title="EMR integrations that just work"
-        subhead="One-click send to ModMed, DrChrono, and GoHighLevel. Nextech coming soon. Included on every plan."
+        subhead="One-click send to ModMed, DrChrono, GoHighLevel, and Nextech. Included on every plan."
       />
 
       {/* 4 integration cards */}
@@ -239,7 +234,7 @@ export default function IntegrationsPage() {
             </h3>
             <p className="mt-4 text-text-muted">
               Every EMR integration is included on every plan at no extra cost:
-              ModMed, DrChrono, GoHighLevel, and Nextech when it launches.
+              ModMed, DrChrono, GoHighLevel, and Nextech.
             </p>
             <Link
               href="/pricing/"
