@@ -97,7 +97,7 @@ const benefits = [
   {
     icon: Send,
     title: "One-click delivery",
-    body: "Hit Send. The quote PDF lands in the patient's chart in ModMed, DrChrono, or as a contact attachment in GoHighLevel. No downloading and re-uploading.",
+    body: "Hit Send. The quote PDF lands in the patient's chart in ModMed, DrChrono, or Nextech, or as a contact attachment in GoHighLevel. No downloading and re-uploading.",
   },
   {
     icon: Search,

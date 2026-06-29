@@ -20,7 +20,7 @@ const included = [
   "Automatic facility & anesthesia fees",
   "Implant tracking",
   "Branded PDFs & email delivery",
-  "All EMR integrations (ModMed, DrChrono, GoHighLevel)",
+  "All EMR integrations (ModMed, DrChrono, GoHighLevel, Nextech)",
   "Initial procedure list migration from your CSV/Excel",
   "Onboarding session with our team",
 ];

@@ -190,7 +190,7 @@ const features: Feature[] = [
       "Per-location branding for multi-site practices",
       "One-click email send to patient with subject and message",
       "Delivery logged on the quote: see when and to whom",
-      "Patients can be sent quotes directly to their ModMed/DrChrono/GoHighLevel record (see Integrations)",
+      "Patients can be sent quotes directly to their ModMed/DrChrono/GoHighLevel/Nextech record (see Integrations)",
     ],
   },
   {
