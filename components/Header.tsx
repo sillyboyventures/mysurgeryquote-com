@@ -24,6 +24,7 @@ const comparisons: NavItem[] = [
   { label: "EMR Quoting Tools Compared", href: "/emr-quoting-tools-compared/" },
   { label: "ModMed vs. MySurgeryQuote", href: "/modmed-quoting-vs-mysurgeryquote/" },
   { label: "DrChrono vs. MySurgeryQuote", href: "/drchrono-quoting-vs-mysurgeryquote/" },
+  { label: "Nextech vs. MySurgeryQuote", href: "/nextech-quoting-vs-mysurgeryquote/" },
 ];
 
 const SIGN_IN_URL = "https://admin.mysurgeryquote.com/login";

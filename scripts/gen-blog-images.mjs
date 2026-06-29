@@ -8,6 +8,7 @@ const jobs = [
   ["public/screens/fee-settings.png", "public/blog/why-your-emr-quoting-tool-falls-short.png"],
   ["public/screens/modmed-ui.png", "public/blog/modmed-quoting-vs-mysurgeryquote.png"],
   ["public/screens/quote-history.png", "public/blog/drchrono-quoting-vs-mysurgeryquote.png"],
+  ["public/screens/create-quote.png", "public/blog/nextech-quoting-vs-mysurgeryquote.png"],
   ["public/screens/dashboard.png", "public/blog/hidden-cost-of-bad-surgery-quotes.png"],
   ["public/screens/commissions.png", "public/blog/how-pccs-use-quoting-software.png"],
   ["public/screens/reports.png", "public/blog/emr-quoting-tools-compared.png"],

@@ -23,6 +23,7 @@ const comparisons: FooterLink[] = [
   { label: "EMR Quoting Tools Compared", href: "/emr-quoting-tools-compared/" },
   { label: "ModMed vs. MySurgeryQuote", href: "/modmed-quoting-vs-mysurgeryquote/" },
   { label: "DrChrono vs. MySurgeryQuote", href: "/drchrono-quoting-vs-mysurgeryquote/" },
+  { label: "Nextech vs. MySurgeryQuote", href: "/nextech-quoting-vs-mysurgeryquote/" },
 ];
 
 const legal: FooterLink[] = [
