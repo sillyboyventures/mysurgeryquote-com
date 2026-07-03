@@ -31,7 +31,7 @@ const desc = {
   "surgeon-procedure-assignments": "Control which procedures each surgeon can quote in MySurgeryQuote, so junior partners only see and offer what they're approved for.",
   "danger-zone-pricing-tools": "Use the high-impact pricing tools in MySurgeryQuote carefully: bulk price changes and resets that affect your whole catalog. What to know first.",
   "emr-integration-modmed": "Connect MySurgeryQuote to ModMed to send quote PDFs to patient charts and push billing charges. Setup steps, credentials, and permissions explained.",
-  "setting-up-commissions": "Configure commission tracking for PCCs and reps. Set group rates or individual rates, vary by provider, and run reports on closed quotes.",
+  "setting-up-commissions": "Configure commission tracking for PCCs and reps in MySurgeryQuote: set group or individual rates, vary rates by provider, then run earnings reports on invoiced quotes.",
   "managing-multiple-facilities": "Create separate facility profiles in MySurgeryQuote, each with its own base fee, hourly rate, included hours, cap, and branding for multi-site quoting.",
   // PDF & Email
   "generating-downloading-pdfs": "Generate a branded patient quote PDF in MySurgeryQuote with your logo, colors, and contact info, then download it to share however you like.",
@@ -59,10 +59,6 @@ const desc = {
   "adding-med-spa-to-your-surgical-account": "Add med spa quoting to an existing surgical MySurgeryQuote plan for $50/mo per location, with the same login and patient records.",
   // Reports
   "reports-overview": "An overview of MySurgeryQuote reporting: billing summary, procedure log, implant log, PCC productivity, and commissions, each filterable and CSV-exportable.",
-  "procedure-log": "See every billed procedure across surgeons and locations in MySurgeryQuote. Filter by date, surgeon, or status, and export the log to CSV.",
-  "implant-log": "Track every implant quoted in MySurgeryQuote by brand, type, and patient. Filter and export the implant log for inventory and reorder planning.",
-  "pcc-productivity": "Measure patient care coordinator performance in MySurgeryQuote: quotes created, conversion rate, and revenue generated per coordinator.",
-  "commission-reports": "Run commission reports in MySurgeryQuote by PCC or rep. See YTD, same period last year, and full year earnings on invoiced quotes, exportable to CSV.",
   // EMR Integrations
   "emr-integrations-overview": "How MySurgeryQuote connects to ModMed, DrChrono, and GoHighLevel to send quotes to charts and CRM records. All integrations included on every plan.",
   "how-to-connect-modmed-modernizing-medicine": "Step-by-step setup to connect ModMed to MySurgeryQuote, from requesting API access to entering credentials and sending your first quote to a chart.",

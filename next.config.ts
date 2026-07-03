@@ -89,6 +89,19 @@ const nextConfig: NextConfig = {
       // --- Date-based archives (/2025/, /2025/12/, /2025/12/13/). The first
       // segment must be exactly four digits, which no real slug uses. ---
       { source: "/:year(\\d{4})/:path*", destination: "/blog/", permanent: true },
+
+      // --- Consolidated help-center stubs. Four near-empty Reports/Commissions
+      // articles were merged into their parent pages to fix "Crawled - currently
+      // not indexed" (thin content). Each old URL 308s to the surviving parent so
+      // it never 404s and any accrued index equity passes through. Redirects are
+      // checked before the filesystem, so these fire even though the [slug] route
+      // uses dynamicParams:false and no longer generates these slugs. Destinations
+      // carry the trailing slash to land on the canonical URL in a single hop
+      // under trailingSlash:true. ---
+      { source: "/help/procedure-log", destination: "/help/reports-overview/", permanent: true },
+      { source: "/help/implant-log", destination: "/help/reports-overview/", permanent: true },
+      { source: "/help/pcc-productivity", destination: "/help/reports-overview/", permanent: true },
+      { source: "/help/commission-reports", destination: "/help/setting-up-commissions/", permanent: true },
     ];
   },
   async headers() {

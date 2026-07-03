@@ -72,10 +72,6 @@ export const ARTICLE_ORDER: Record<string, string[]> = {
   ],
   "Reports": [
     "reports-overview",
-    "procedure-log",
-    "implant-log",
-    "pcc-productivity",
-    "commission-reports",
   ],
   "EMR Integrations": [
     "emr-integrations-overview",

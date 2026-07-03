@@ -1,14 +1,37 @@
 ---
-title: "Setting Up Commissions"
+title: "Setting Up & Running Commissions"
 slug: "setting-up-commissions"
 date: "2026-01-16T14:49:39Z"
-modified: "2026-01-16T14:49:40Z"
-description: "Configure commission tracking for PCCs and reps. Set group rates or individual rates, vary by provider, and run reports on closed quotes."
+modified: "2026-07-03T00:00:00Z"
+description: "Configure commission tracking for PCCs and reps in MySurgeryQuote: set group or individual rates, vary rates by provider, then run earnings reports on invoiced quotes."
 featured_image: ""
 category: "Admin Settings"
 author: "MySurgeryQuote Team"
-reviewed_date: "2026-05-26"
+reviewed_date: "2026-07-03"
 stale_flag: false
 ---
 
-> Configure commission rates for staff members under Admin > Commissions. Create commission groups (e.g., “Patient Care Coordinators”) or set individual rates. Rates can vary by provider – for example, 5% for Dr. Smith’s cases, 3% for Dr. Jones. Only invoiced quotes count toward commissions.
+Commission tracking pays your patient care coordinators and reps automatically from the quotes they close. Setup and reporting live together: you configure rates once under **Admin > Commissions**, and MySurgeryQuote calculates earnings from invoiced quotes on an ongoing basis. Only **invoiced quotes** — those sent to your EMR — count toward commissions, so draft and abandoned quotes never inflate a payout.
+
+### Setting Up Commission Rates
+
+Open **Admin > Commissions** to define how staff are paid. You can work two ways, and mix them as needed:
+
+-   **Commission groups.** Create a group such as "Patient Care Coordinators" and assign a single rate to everyone in it — the fastest way to get consistent payouts across a team.
+-   **Individual rates.** Set a specific rate for a single staff member when they're paid differently from the group.
+
+Rates can also **vary by provider**. For example, you might pay 5% on Dr. Smith's cases and 3% on Dr. Jones's cases for the same coordinator. These per-provider overrides sit on top of the group or individual rate, so you can model real-world arrangements without creating a separate group for every combination.
+
+### Running the Commission Report
+
+Once rates are configured, the commission report calculates earnings from invoiced quotes — no manual tallying. Run it **by PCC or by rep**, and the report shows:
+
+-   **Year-to-date earnings** for the current year
+-   **The same period last year**, for a like-for-like comparison
+-   **Full-year earnings**, so you can see where the year is heading
+
+Filter by date range and export the results to CSV for payroll or bookkeeping. Because the numbers come straight from invoiced quotes and the rates you set above, what you pay always matches what was actually closed.
+
+### Before You Start
+
+Set up your rates first — the report has nothing to calculate until at least one commission group or individual rate exists and quotes have been invoiced against it.
