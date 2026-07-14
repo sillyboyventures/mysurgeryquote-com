@@ -9,6 +9,8 @@ import {
   Lock,
   History,
   ShieldCheck,
+  CreditCard,
+  Split,
 } from "lucide-react";
 import BrowserFrame from "@/components/BrowserFrame";
 import WaveDivider from "@/components/WaveDivider";
@@ -118,6 +120,8 @@ const capabilities = [
   { icon: Lock, title: "Role-Based Permissions", body: "Admin, User, and Org Admin roles control who sees and edits what." },
   { icon: History, title: "Price History & Audit Trail", body: "Every price change and quote edit is logged by user and date." },
   { icon: ShieldCheck, title: "HIPAA Compliant", body: "Encryption at rest and in transit, session timeouts, and audit logging." },
+  { icon: CreditCard, title: "Payment Status Tracking", body: "Mark deposit paid, surgery scheduled, and balance paid, with badges on every quote." },
+  { icon: Split, title: "Insurance-Covered Split", body: "Flag procedures as billed to insurance so the patient total covers cosmetic only." },
 ];
 
 const plans = [
