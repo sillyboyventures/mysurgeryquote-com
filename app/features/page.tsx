@@ -208,6 +208,66 @@ const features: Feature[] = [
       "Per-user activity log for sensitive actions",
     ],
   },
+  {
+    id: "procedure-hours",
+    nav: "Procedure Hours",
+    image: "/screens/procedure-hours.png",
+    eyebrow: "Surgical time on quotes",
+    title: "Procedure hours patients can actually see",
+    body: "Turn on procedure hours and every line shows its estimated surgical time in place of a billing code, with a total surgery time line at the bottom. Patients understand why a longer case costs more, and the facility and anesthesia math stops looking like a black box. Times pull from each procedure's default and respect surgeon- and location-specific overrides.",
+    bullets: [
+      "Per-procedure estimated time shown in place of the procedure code",
+      "Total surgery time line on every quote",
+      "Times inherit surgeon and location overrides automatically",
+      "Feeds the facility and anesthesia fee calculation directly",
+      "Toggle on per practice in Practice Settings",
+    ],
+  },
+  {
+    id: "insurance-split",
+    nav: "Insurance Split",
+    image: "/screens/insurance-split.png",
+    eyebrow: "Cosmetic and insurance on one quote",
+    title: "Split a quote between cosmetic and insurance-covered work",
+    body: "Flag any procedure as billed to insurance and it appears under Billed to Insurance with no dollar amount, excluded from the patient's total. The patient sees the full surgical plan in one document but only pays for the cosmetic portion. For mixed cases you choose whether facility and anesthesia fees are charged on cosmetic hours only or on total surgery time.",
+    bullets: [
+      "Per-procedure Billed to Insurance checkbox",
+      "Insurance-covered lines show on the quote without a price",
+      "Patient total covers the cosmetic portion only",
+      "Facility and anesthesia billed on cosmetic hours or total hours, your choice",
+      "Cosmetic and total surgery time tracked separately on every quote",
+    ],
+  },
+  {
+    id: "quote-lifecycle",
+    nav: "Quote Lifecycle",
+    image: "/screens/quote-lifecycle.png",
+    eyebrow: "Expiration and payment tracking",
+    title: "Follow a quote from sent to surgery to paid",
+    body: "Quotes can carry an expiration date computed from the created date plus your validity window, so pricing doesn't stay open forever. Once a quote goes out, staff mark the deposit paid, the surgery scheduled with its date, and the balance paid. Status badges show on the quote list, so you can see at a glance which cases are converting.",
+    bullets: [
+      "Expires date on quotes, from a validity window you set (90 days by default)",
+      "Deposit, Scheduled, and Paid badges on the quote list",
+      "Surgery scheduled date captured alongside the status",
+      "Every status change logged with the user and timestamp",
+      "Both features toggle on per practice",
+    ],
+  },
+  {
+    id: "fee-categories",
+    nav: "Fees & Credits",
+    image: "/screens/fee-categories.png",
+    eyebrow: "Fees and credits",
+    title: "Group your fees and credit the consultation",
+    body: "Additional fees group into categories like Supplies, Garments, and Labs, so a long fee list stays readable for the staff building the quote and the patient reading it. Set a default consultation fee and staff can deduct it as a line-item credit at the discounts step, the simplest way to honor a consult fee against surgery.",
+    bullets: [
+      "Group additional fees into named categories",
+      "Fees without a category fall under Uncategorized",
+      "Control the display order of each category",
+      "Consultation fee credited as a discount line on the quote",
+      "Set a default consultation fee once in Practice Settings",
+    ],
+  },
 ];
 
 const faqs = [
@@ -230,6 +290,14 @@ const faqs = [
   {
     q: "Can I manage multiple practice locations from one account?",
     a: "Yes. Run all your locations under one organization. Each location gets its own branding on quotes. Surgeons can work at multiple locations. The org-level dashboard shows totals across all sites, and you switch context from a dropdown in the top nav.",
+  },
+  {
+    q: "Can one quote include both cosmetic and insurance-covered procedures?",
+    a: "Yes. Flag any procedure as billed to insurance and it appears on the quote without a price and is excluded from the patient total. The patient sees the full surgical plan in one document but pays only for the cosmetic portion. For mixed cases you choose whether facility and anesthesia fees are charged on cosmetic hours only or on the full surgery time.",
+  },
+  {
+    q: "Can I track deposits and scheduling on a quote?",
+    a: "Yes. Turn on payment status tracking and staff can mark the deposit paid, the surgery scheduled with its date, and the balance paid. Deposit, Scheduled, and Paid badges appear on the quote list, and every change is logged with the user and timestamp.",
   },
 ];
 

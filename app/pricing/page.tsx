@@ -177,6 +177,12 @@ const comparison: CompGroup[] = [
       { label: "Commission tracking", values: [X, C, C, C, C] },
       { label: "Procedure log reporting", values: [C, C, C, C, C] },
       { label: "Implant log reporting", values: [C, C, C, X, X] },
+      { label: "Procedure hours on quotes", values: [C, C, C, X, X] },
+      { label: "Insurance-covered split", values: [C, C, C, X, X] },
+      { label: "Payment status tracking", values: [C, C, C, C, C] },
+      { label: "Quote expiration dates", values: [C, C, C, C, C] },
+      { label: "Consultation fee credit", values: [C, C, C, C, C] },
+      { label: "Additional fee categories", values: [C, C, C, C, C] },
       { label: "Unit-based pricing", values: [X, X, X, C, C] },
       { label: "Membership tiers", values: [X, X, X, C, C] },
       { label: "Treatment series", values: [X, X, X, C, C] },
@@ -401,6 +407,11 @@ export default function PricingPage() {
               ))}
             </table>
           </div>
+          <p className="mt-6 text-sm text-text-muted">
+            Procedure hours, insurance-covered split, payment status tracking, quote
+            expiration, and the consultation fee credit are optional. Each one is turned
+            on per practice in Practice Settings, and they are off by default.
+          </p>
         </div>
       </section>
 
