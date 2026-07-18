@@ -32,28 +32,26 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
 
-      // --- Legacy WordPress Echo Knowledge Base articles. These were served at
-      // the root with a ?post_type=epkb_post_type_1&p=<id> query string, so they
-      // ALSO carry a `p` key and would otherwise be swept into the generic ?p=
-      // -> /blog/ rule below. This rule is ordered first (first match wins) so
-      // KB articles land on /help/ instead. Like the ?p= rule, the destination
-      // path (/help/) differs from the source path (/), so the passed-through
-      // query string cannot cause the rule to re-match and loop. ---
-      {
-        source: "/",
-        has: [{ type: "query", key: "post_type", value: "epkb_post_type_1" }],
-        destination: "/help/",
-        permanent: true,
-      },
+      // --- Legacy WordPress Echo Knowledge Base artifacts (?post_type=
+      // epkb_post_type_1&p=<id>). These have no value and no equivalent page.
+      // They used to 308 -> /help/, but a redirect to a live 200 page keeps them
+      // parked forever in Google's "Page with redirect" bucket (that validation
+      // only clears once a URL STOPS redirecting). They are now hard-410'd in
+      // proxy.ts so Google drops them. `redirects` can't emit 410, and proxy runs
+      // AFTER these config redirects, so the ?p= rule below is guarded with a
+      // `missing` condition to let epkb requests fall through to the proxy. ---
 
       // --- Legacy WordPress query-string permalinks (?p=123 / ?page_id=12). ---
       // Sent to /blog/ rather than / on purpose: Next.js passes the original
       // query string through to the destination, so redirecting "/?p=5" to "/"
       // would re-emit "/?p=5" and loop forever. Because the destination path
-      // (/blog/) differs from the source path (/), the rule cannot re-match.
+      // (/blog/) differs from the source path (/), the rule cannot re-match. The
+      // `missing` guard excludes the epkb KB artifacts above (which also carry a
+      // `p` key) so they reach the 410 in proxy.ts instead of landing on /blog/.
       {
         source: "/",
         has: [{ type: "query", key: "p" }],
+        missing: [{ type: "query", key: "post_type", value: "epkb_post_type_1" }],
         destination: "/blog/",
         permanent: true,
       },
