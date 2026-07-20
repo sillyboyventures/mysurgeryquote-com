@@ -52,6 +52,7 @@ type Block = {
   title: string;
   body: string;
   href: string;
+  linkText?: string;
 };
 
 const featureBlocks: Block[] = [
@@ -109,7 +110,8 @@ const featureBlocks: Block[] = [
     height: 781,
     title: "EMR Integration",
     body: "Send finished quote PDFs straight to the patient's chart in ModMed, DrChrono, GoHighLevel, or Nextech. One click from quote to chart.",
-    href: "/integrations/",
+    href: "/modmed-quoting/",
+    linkText: "Better quoting for ModMed practices",
   },
 ];
 
@@ -322,7 +324,8 @@ export default function SurgicalPracticesPage() {
                     href={block.href}
                     className="mt-4 inline-flex items-center gap-1 font-medium text-primary transition-colors hover:text-primary-dark"
                   >
-                    Learn more on Features <span aria-hidden="true">→</span>
+                    {block.linkText ?? "Learn more on Features"}{" "}
+                    <span aria-hidden="true">→</span>
                   </Link>
                 </div>
               </div>

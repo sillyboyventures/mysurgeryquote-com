@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/`, changeFrequency: "weekly", priority: 1.0 },
     { url: `${BASE}/features/`, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE}/surgical-practices/`, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${BASE}/modmed-quoting/`, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE}/standalone-surgery-quote-software/`, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE}/medical-spas/`, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE}/integrations/`, changeFrequency: "monthly", priority: 0.8 },
