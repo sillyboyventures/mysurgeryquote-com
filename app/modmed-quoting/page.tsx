@@ -308,6 +308,27 @@ export default function ModMedQuotingPage() {
       {/* 7. FAQ */}
       <FAQ items={faqs} className="bg-bg-alt py-24" />
 
+      {/* 7b. Deeper reading */}
+      <section className="bg-bg-alt pb-24 text-center">
+        <p className="mx-auto max-w-3xl px-6 text-lg leading-relaxed text-text-muted">
+          Want a detailed side-by-side? Read our{" "}
+          <Link
+            href="/modmed-quoting-vs-mysurgeryquote/"
+            className="font-medium text-primary transition-colors hover:text-primary-dark"
+          >
+            ModMed vs MySurgeryQuote comparison
+          </Link>
+          , or see how{" "}
+          <Link
+            href="/emr-quoting-tools-compared/"
+            className="font-medium text-primary transition-colors hover:text-primary-dark"
+          >
+            all major EMR quoting tools compare
+          </Link>
+          .
+        </p>
+      </section>
+
       {/* 8. Final CTA */}
       <FinalCta
         heading="Keep ModMed. Fix the quoting."
