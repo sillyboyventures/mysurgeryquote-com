@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Check } from "lucide-react";
 import BrowserFrame from "@/components/BrowserFrame";
@@ -264,6 +265,38 @@ export default function ModMedQuotingPage() {
             quote back to ModMed. One connection, included on every plan at no
             extra cost. Set up in a day.
           </p>
+        </div>
+      </section>
+
+      {/* 5b. Physician testimonial */}
+      <section className="bg-bg-blue-tint py-20">
+        <div className="mx-auto max-w-3xl px-6">
+          <figure className="flex flex-col items-center rounded-2xl border border-border bg-white p-10 text-center">
+            <Image
+              src="/icons/quote-icon.png"
+              alt=""
+              aria-hidden="true"
+              width={70}
+              height={51}
+              quality={100}
+              className="mb-6 h-auto w-[70px]"
+            />
+            <blockquote className="text-xl italic leading-relaxed text-text">
+              “MySurgeryQuote has been a revelation for our multi-specialty
+              practice. The platform is intuitive and thoughtfully designed -
+              integration into my day-to-day practice was seamless, and I am
+              already seeing a measurable impact in workflow efficiency and
+              patient response since transitioning to MSQ&apos;s quoting tool.”
+            </blockquote>
+            <figcaption className="mt-6">
+              <span className="block font-poppins font-semibold text-navy">
+                Johnathan Shih, MD
+              </span>
+              <span className="mt-1 block text-sm text-text-muted">
+                Golden State Plastic Surgery
+              </span>
+            </figcaption>
+          </figure>
         </div>
       </section>
 

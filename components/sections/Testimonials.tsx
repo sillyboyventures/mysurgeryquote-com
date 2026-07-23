@@ -19,6 +19,12 @@ const testimonials: Testimonial[] = [
     name: "Dr. Vincent Gardner",
     title: "Cosmetic Surgeon",
   },
+  {
+    quote:
+      "MySurgeryQuote has been a revelation for our multi-specialty practice. The platform is intuitive and thoughtfully designed - integration into my day-to-day practice was seamless, and I am already seeing a measurable impact in workflow efficiency and patient response since transitioning to MSQ's quoting tool.",
+    name: "Johnathan Shih, MD",
+    title: "Golden State Plastic Surgery",
+  },
 ];
 
 export default function Testimonials() {
