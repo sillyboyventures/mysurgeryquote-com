@@ -26,9 +26,11 @@ export default function TermsOfServicePage() {
           <div className="prose prose-slate max-w-none prose-headings:font-poppins prose-headings:text-navy prose-a:text-primary">
             <h2>Acceptance</h2>
             <p>
-              By accessing or using MySurgeryQuote (the &quot;Service&quot;), you
-              agree to these Terms of Service. If you do not agree, do not use the
-              Service.
+              MySurgeryQuote is operated by MySurgeryQuote LLC, a South Dakota
+              limited liability company (&quot;MySurgeryQuote,&quot;
+              &quot;we,&quot; &quot;us&quot;). By accessing or using
+              MySurgeryQuote (the &quot;Service&quot;), you agree to these Terms
+              of Service. If you do not agree, do not use the Service.
             </p>
 
             <h2>Account Eligibility</h2>

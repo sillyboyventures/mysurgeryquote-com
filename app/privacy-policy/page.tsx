@@ -5,7 +5,7 @@ import PageHero from "@/components/PageHero";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "How MySurgeryQuote collects, uses, and protects your data, including PHI handled as a HIPAA Business Associate. BAA available on request.",
+    "How MySurgeryQuote collects, uses, and protects your data, including PHI handled as a HIPAA Business Associate. BAA accepted in-app before patient data is used.",
   alternates: { canonical: "https://www.mysurgeryquote.com/privacy-policy/" },
 };
 
@@ -26,8 +26,9 @@ export default function PrivacyPolicyPage() {
           <div className="prose prose-slate max-w-none prose-headings:font-poppins prose-headings:text-navy prose-a:text-primary">
             <h2>Overview</h2>
             <p>
-              MySurgeryQuote (&quot;MySurgeryQuote,&quot; &quot;we,&quot;
-              &quot;us&quot;) provides quoting software for surgical practices and
+              MySurgeryQuote LLC, a South Dakota limited liability company
+              (&quot;MySurgeryQuote,&quot; &quot;we,&quot; &quot;us&quot;),
+              provides quoting software for surgical practices and
               medical spas. This Privacy Policy explains what information we
               collect, how we use it, and the choices you have. It applies to our
               marketing site and to the MySurgeryQuote application. Effective date:
@@ -57,11 +58,13 @@ export default function PrivacyPolicyPage() {
             <h2>HIPAA &amp; PHI Handling</h2>
             <p>
               When we handle PHI on behalf of a Covered Entity, we act as a
-              Business Associate under HIPAA. We make a Business Associate
-              Agreement (BAA) available on request, and we handle PHI only as
-              permitted by that BAA and applicable law. Please do not send PHI
-              through our marketing forms; use the application for any
-              patient-related data.
+              Business Associate under HIPAA. Before patient information can be
+              used in the application, a practice administrator must review and
+              accept our Business Associate Agreement, and we keep a record of
+              that acceptance. If we publish a materially updated version, your
+              practice is prompted to accept it. We handle PHI only as permitted
+              by that BAA and applicable law. Please do not send PHI through our
+              marketing forms; use the application for any patient-related data.
             </p>
 
             <h2>How We Use Information</h2>
