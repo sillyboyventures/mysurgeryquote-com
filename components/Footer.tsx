@@ -106,7 +106,7 @@ export default function Footer() {
 
         <div className="mt-12 border-t border-white/10 pt-8">
           <p className="text-sm text-white/60">
-            © 2026 MySurgeryQuote. All rights reserved.
+            © 2026 MySurgeryQuote LLC. All rights reserved.
           </p>
         </div>
       </div>

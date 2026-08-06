@@ -100,6 +100,12 @@ const nextConfig: NextConfig = {
       { source: "/help/implant-log", destination: "/help/reports-overview/", permanent: true },
       { source: "/help/pcc-productivity", destination: "/help/reports-overview/", permanent: true },
       { source: "/help/commission-reports", destination: "/help/setting-up-commissions/", permanent: true },
+
+      // --- Legal page shorthand. /terms/ has never been a real route (the page
+      // lives at /terms-of-service/) but it is the URL people guess and type.
+      // Destination carries the trailing slash so it lands on the canonical URL
+      // in a single hop under trailingSlash:true. ---
+      { source: "/terms", destination: "/terms-of-service/", permanent: true },
     ];
   },
   async headers() {

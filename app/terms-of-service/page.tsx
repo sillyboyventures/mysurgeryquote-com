@@ -20,9 +20,7 @@ export default function TermsOfServicePage() {
       <section className="bg-white py-16">
         <div className="mx-auto max-w-3xl px-6">
           <div className="mb-10 rounded-lg bg-bg-accent p-4 text-sm text-text-muted">
-            This Terms of Service is provided as a starting point and should be
-            reviewed by your legal counsel before relying on it. Last updated May
-            27, 2026.
+            Last updated August 6, 2026.
           </div>
 
           <div className="prose prose-slate max-w-none prose-headings:font-poppins prose-headings:text-navy prose-a:text-primary">
@@ -110,7 +108,7 @@ export default function TermsOfServicePage() {
 
             <h2>Governing Law</h2>
             <p>
-              These terms are governed by the laws of the State of Delaware, USA,
+              These terms are governed by the laws of the State of South Dakota, USA,
               without regard to its conflict-of-laws rules.
             </p>
 

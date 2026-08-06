@@ -20,9 +20,7 @@ export default function PrivacyPolicyPage() {
       <section className="bg-white py-16">
         <div className="mx-auto max-w-3xl px-6">
           <div className="mb-10 rounded-lg bg-bg-accent p-4 text-sm text-text-muted">
-            This Privacy Policy is provided as a starting point and should be
-            reviewed by your legal counsel before relying on it. Last updated May
-            27, 2026.
+            Last updated August 6, 2026.
           </div>
 
           <div className="prose prose-slate max-w-none prose-headings:font-poppins prose-headings:text-navy prose-a:text-primary">
@@ -33,7 +31,7 @@ export default function PrivacyPolicyPage() {
               medical spas. This Privacy Policy explains what information we
               collect, how we use it, and the choices you have. It applies to our
               marketing site and to the MySurgeryQuote application. Effective date:
-              May 27, 2026.
+              August 6, 2026.
             </p>
 
             <h2>Information We Collect</h2>
