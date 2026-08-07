@@ -15,7 +15,7 @@ const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "This surgery quote software has taken our quoting system down to 1-2 minutes and it easily generates PDFs we can send patients home with. Love it!",
+      "First, this system integrates with our current EMR, which is a must. Also it's better at generating quotes than any EMR I've ever used. Very easy to use, intuitive and practical.",
     name: "Dr. Vincent Gardner",
     title: "Cosmetic Surgeon",
   },
