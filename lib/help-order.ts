@@ -78,6 +78,7 @@ export const ARTICLE_ORDER: Record<string, string[]> = {
     "how-to-connect-modmed-modernizing-medicine",
     "how-to-connect-drchrono",
     "how-to-connect-nextech",
+    "how-to-connect-patientcadence",
     "troubleshooting-emr-connection-issues",
     "how-to-send-quotes-to-your-emr",
     "how-to-connect-gohighlevel",

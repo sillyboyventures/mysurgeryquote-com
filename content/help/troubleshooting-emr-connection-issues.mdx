@@ -2,7 +2,7 @@
 title: "Troubleshooting EMR Connection Issues"
 slug: "troubleshooting-emr-connection-issues"
 date: "2026-01-22T11:37:00Z"
-modified: "2026-01-22T11:37:02Z"
+modified: "2026-11-25T12:00:00Z"
 description: "Fix common EMR connection problems in MySurgeryQuote across ModMed, DrChrono, and Nextech: blocked popups, failed authorization, expired tokens, key registration, and missing patient search results."
 featured_image: ""
 category: "EMR Integrations"
@@ -12,6 +12,10 @@ stale_flag: false
 ---
 
 Having trouble with your EMR integration? Here are solutions to common issues.
+
+### "Credentials rejected"
+
+If a connection in **Admin → EMR Integration** shows Credentials rejected, the EMR or CRM refused the saved login or key, usually because it was changed, turned off or expired. You can still try sending from a quote, and a successful send clears the warning. To fix it, disconnect and reconnect with current credentials.
 
 ### ModMed Issues
 

@@ -1,0 +1,59 @@
+---
+title: "How to Connect PatientCadence"
+slug: "how-to-connect-patientcadence"
+date: "2026-11-25T12:00:00Z"
+modified: "2026-11-25T12:00:00Z"
+description: "Connect PatientCadence to MySurgeryQuote with a connection key to send quote PDFs to patient records and keep PatientCadence updated when a quote is opened or a deposit is paid."
+featured_image: ""
+category: "EMR Integrations"
+author: "MySurgeryQuote Team"
+reviewed_date: "2026-11-25"
+stale_flag: false
+---
+
+Connecting PatientCadence lets your team send quote PDFs to a patient's record in PatientCadence, and keeps PatientCadence updated when the patient opens the quote or pays a deposit.
+
+**What You Can Do**
+
+-   Send a quote PDF to a patient's Files in PatientCadence
+-   Search PatientCadence patients by name, email or phone
+-   Let PatientCadence know when a quote is sent, when the patient first opens it, and when a deposit is marked paid, with the dollar amount
+
+**Before You Begin**
+
+You will need:
+
+-   A PatientCadence account for your practice
+-   Your PatientCadence master admin, who makes the connection key
+-   An admin role in MySurgeryQuote
+
+**Step 1: Make a Connection Key in PatientCadence**
+
+1.  Your PatientCadence master admin opens **Practice admin > Connections**.
+2.  They confirm the practice has a signed Business Associate Agreement with MySurgeryQuote and make a key for MySurgeryQuote.
+3.  PatientCadence shows the key once. It starts with `pcc_`. Copy it.
+
+**Step 2: Connect in MySurgeryQuote**
+
+1.  Go to **Admin → EMR Integration**.
+2.  Choose **PatientCadence**.
+3.  Paste the key into **Connection Key** and click **Connect to PatientCadence**. MySurgeryQuote checks the key with PatientCadence before saving it.
+4.  You'll see "PatientCadence is connected".
+
+**Step 3: Test the Connection**
+
+1.  Click **Test Connection**.
+
+**Sending a Quote**
+
+1.  Open the quote and click **PatientCadence**.
+2.  Search for the patient, select them, and send. The quote then shows as Sent.
+3.  The first time the patient opens their quote link, PatientCadence adds it to their timeline and puts them on Needs you now so your team can follow up. When a deposit is marked paid, that goes to PatientCadence too.
+
+**Troubleshooting**
+
+-   **"Credentials rejected" or "PatientCadence connection key was rejected":** the key was turned off or replaced in PatientCadence. Ask your master admin for a new key, click **Disconnect**, and paste the new one.
+-   **"No matching patients in PatientCadence":** MySurgeryQuote doesn't create patients in PatientCadence. Add the patient in PatientCadence first, then search again.
+-   **Don't see the PatientCadence button on a quote:** only admins and users allowed to send to the EMR see it.
+
+Need help? Contact us at [https://www.mysurgeryquote.com/contact/](https://www.mysurgeryquote.com/contact/)
