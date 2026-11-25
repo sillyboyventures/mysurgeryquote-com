@@ -1,6 +1,6 @@
 # MySurgeryQuote
 
-> Quoting software for surgical practices and medical spas. Create professional patient quotes in under 2 minutes with automatic facility and anesthesia fee calculations, surgeon-specific pricing, and branded PDFs. HIPAA compliant. Plans from $100/mo (surgical) and $150/mo (med spa). All EMR integrations (ModMed, DrChrono, GoHighLevel, Nextech) included on every plan.
+> Quoting software for surgical practices and medical spas. Create professional patient quotes in under 2 minutes with automatic facility and anesthesia fee calculations, surgeon-specific pricing, and branded PDFs. HIPAA compliant. Plans from $100/mo (surgical) and $150/mo (med spa). All EMR integrations (ModMed, DrChrono, GoHighLevel, Nextech, PatientCadence) included on every plan.
 
 Site: MySurgeryQuote
 URL: https://www.mysurgeryquote.com
