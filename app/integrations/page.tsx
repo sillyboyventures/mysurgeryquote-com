@@ -9,9 +9,9 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.mysurgeryquote.com/integrations/" },
   openGraph: { siteName: "MySurgeryQuote", type: "website", images: ["/og/integrations.png"] },
   twitter: { card: "summary_large_image", images: ["/og/integrations.png"] },
-  title: "EMR Integrations: ModMed, DrChrono, GoHighLevel, Nextech",
+  title: "EMR Integrations: ModMed, DrChrono, GoHighLevel, Nextech, PatientCadence",
   description:
-    "Send quotes directly to your EMR. ModMed, DrChrono, GoHighLevel, and Nextech integrations included on every plan. One click from quote to chart.",
+    "Send quotes directly to your EMR. ModMed, DrChrono, GoHighLevel, Nextech, and PatientCadence integrations included on every plan. One click from quote to chart.",
 };
 
 type Integration = {
@@ -91,13 +91,28 @@ const integrations: Integration[] = [
     status: "live",
     cta: { label: "Start Free Trial", href: "/free-trial/" },
   },
+  {
+    name: "PatientCadence",
+    logo: "/logos/patientcadence.png",
+    width: 350,
+    height: 44,
+    body: "Sends finished quote PDFs to the patient's record in PatientCadence and keeps their timeline current. PatientCadence sees when the quote is sent, when the patient first opens it, and when a deposit is paid, with the dollar amount each time.",
+    bullets: [
+      "Patient search",
+      "First quote open flagged for follow-up",
+      "Deposit tracking",
+      "Audit log on every send",
+    ],
+    status: "live",
+    cta: { label: "Start Free Trial", href: "/free-trial/" },
+  },
 ];
 
 const benefits = [
   {
     icon: Send,
     title: "One-click delivery",
-    body: "Hit Send. The quote PDF lands in the patient's chart in ModMed, DrChrono, or Nextech, or as a contact attachment in GoHighLevel. No downloading and re-uploading.",
+    body: "Hit Send. The quote PDF lands in the patient's chart in ModMed, DrChrono, Nextech, or PatientCadence, or as a contact attachment in GoHighLevel. No downloading and re-uploading.",
   },
   {
     icon: Search,
@@ -130,10 +145,10 @@ export default function IntegrationsPage() {
       <PageHero
         eyebrow="Integrations"
         title="EMR integrations that just work"
-        subhead="One-click send to ModMed, DrChrono, GoHighLevel, and Nextech. Included on every plan."
+        subhead="One-click send to ModMed, DrChrono, GoHighLevel, Nextech, and PatientCadence. Included on every plan."
       />
 
-      {/* 4 integration cards */}
+      {/* 5 integration cards */}
       <section className="bg-white py-20">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
@@ -234,7 +249,7 @@ export default function IntegrationsPage() {
             </h3>
             <p className="mt-4 text-text-muted">
               Every EMR integration is included on every plan at no extra cost:
-              ModMed, DrChrono, GoHighLevel, and Nextech.
+              ModMed, DrChrono, GoHighLevel, Nextech, and PatientCadence.
             </p>
             <Link
               href="/pricing/"

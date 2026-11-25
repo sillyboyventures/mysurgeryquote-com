@@ -109,7 +109,7 @@ const featureBlocks: Block[] = [
     width: 1538,
     height: 781,
     title: "EMR Integration",
-    body: "Send finished quote PDFs straight to the patient's chart in ModMed, DrChrono, GoHighLevel, or Nextech. One click from quote to chart.",
+    body: "Send finished quote PDFs straight to the patient's chart in ModMed, DrChrono, GoHighLevel, Nextech, or PatientCadence. One click from quote to chart.",
     href: "/modmed-quoting/",
     linkText: "Better quoting for ModMed practices",
   },

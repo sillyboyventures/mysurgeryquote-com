@@ -40,4 +40,12 @@ export const emrLogos: EmrLogo[] = [
     detail:
       "Send finished quote PDFs straight to the patient's Nextech chart. No downloading and re-uploading. It's one click from quote to chart.",
   },
+  {
+    name: "PatientCadence",
+    src: "/logos/patientcadence.png",
+    width: 350,
+    height: 44,
+    detail:
+      "Sends finished quote PDFs to the patient's record in PatientCadence and keeps their timeline current. PatientCadence sees when the quote is sent, when the patient first opens it, and when a deposit is paid, with the dollar amount each time.",
+  },
 ];

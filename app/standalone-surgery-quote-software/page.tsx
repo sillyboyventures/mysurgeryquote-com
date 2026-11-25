@@ -77,7 +77,7 @@ const faqs = [
   },
   {
     q: "Which EMRs does it work with?",
-    a: "MySurgeryQuote integrates with ModMed, DrChrono, GoHighLevel, and Nextech. You can send finished quote PDFs directly to the patient's chart or CRM contact in one click. It also works on its own if you don't connect an EMR.",
+    a: "MySurgeryQuote integrates with ModMed, DrChrono, GoHighLevel, Nextech, and PatientCadence. You can send finished quote PDFs directly to the patient's chart or CRM contact in one click. It also works on its own if you don't connect an EMR.",
   },
   {
     q: "Why use a standalone tool instead of my EMR's built-in quoting?",
@@ -245,6 +245,7 @@ export default function StandaloneSurgeryQuoteSoftwarePage() {
                 "DrChrono — send quotes to the patient record",
                 "GoHighLevel — send quotes and invoices to your CRM",
                 "Nextech — send quotes to the patient chart",
+                "PatientCadence — send quotes to the patient record",
               ].map((item) => (
                 <li
                   key={item}
