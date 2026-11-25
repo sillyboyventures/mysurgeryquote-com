@@ -367,7 +367,7 @@ export default function PricingPage() {
             standard integrations.
           </p>
 
-          <div className="mt-12 overflow-x-auto md:overflow-x-visible">
+          <div className="relative mt-12 overflow-x-auto md:overflow-x-visible">
             <table className="w-full min-w-[760px] border-collapse text-left">
               <thead className="sticky top-16 z-10 bg-white">
                 <tr className="border-b border-border">
