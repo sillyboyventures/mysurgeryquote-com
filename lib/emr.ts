@@ -4,6 +4,7 @@ export type EmrLogo = {
   width: number;
   height: number;
   comingSoon?: boolean;
+  wide?: boolean;
   detail: string;
 };
 
@@ -45,6 +46,7 @@ export const emrLogos: EmrLogo[] = [
     src: "/logos/patientcadence.png",
     width: 350,
     height: 44,
+    wide: true,
     detail:
       "Sends finished quote PDFs to the patient's record in PatientCadence and keeps their timeline current. PatientCadence sees when the quote is sent, when the patient first opens it, and when a deposit is paid, with the dollar amount each time.",
   },

@@ -14,7 +14,7 @@ export default function EmrBar() {
             <Link
               key={logo.name}
               href="/integrations/"
-              className="group relative flex w-32 items-center justify-center"
+              className={`group relative flex ${logo.wide ? "w-48" : "w-32"} items-center justify-center`}
               aria-label={logo.name}
             >
               {logo.comingSoon && (

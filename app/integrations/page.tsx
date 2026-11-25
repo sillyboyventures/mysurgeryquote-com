@@ -155,7 +155,7 @@ export default function IntegrationsPage() {
             {integrations.map((it) => (
               <div
                 key={it.name}
-                className="relative flex flex-col rounded-2xl border border-border bg-white p-8"
+                className="relative flex flex-col rounded-2xl border border-border bg-white p-8 md:last:odd:col-span-2 md:last:odd:mx-auto md:last:odd:w-[calc(50%-1rem)]"
               >
                 {it.comingSoon && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-button-navy px-3 py-1 text-xs font-medium text-white">
