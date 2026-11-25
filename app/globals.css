@@ -59,3 +59,21 @@ h3,
 h4 {
   font-family: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
 }
+
+/* ── Markdown tables (blog + help) ─────────────────────────────────── */
+/* lib/mdx.ts wraps every markdown <table> in .table-scroll. A table wider
+   than the screen scrolls inside this box instead of widening the page.
+   `position: relative` keeps absolutely positioned children (sr-only text)
+   inside the box. The prose table margins move to the box so spacing is
+   unchanged: the box is its own formatting context, so the table's own
+   margins would no longer collapse with the paragraph around it. */
+.table-scroll {
+  position: relative;
+  overflow-x: auto;
+  margin-top: 1.75em; /* = prose table margin: 2em of its 14px text = 28px */
+  margin-bottom: 1.75em;
+}
+.table-scroll > table {
+  margin-top: 0;
+  margin-bottom: 0;
+}

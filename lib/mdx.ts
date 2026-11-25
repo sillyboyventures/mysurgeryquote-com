@@ -80,6 +80,37 @@ export function getHelpCategories(): { category: string; articles: Doc[] }[] {
   })).filter((g) => g.articles.length > 0);
 }
 
+type HastNode = {
+  type: string;
+  tagName?: string;
+  properties?: Record<string, unknown>;
+  children?: HastNode[];
+};
+
+/**
+ * Wrap every <table> in a horizontal scroll box (`.table-scroll`, globals.css),
+ * so a table wider than a phone scrolls inside itself instead of making the
+ * whole page scroll sideways.
+ */
+function rehypeWrapTables() {
+  const visit = (node: HastNode) => {
+    if (!node.children) return;
+    node.children = node.children.map((child) => {
+      if (child.type === "element" && child.tagName === "table") {
+        return {
+          type: "element",
+          tagName: "div",
+          properties: { className: ["table-scroll"] },
+          children: [child],
+        };
+      }
+      visit(child);
+      return child;
+    });
+  };
+  return (tree: HastNode) => visit(tree);
+}
+
 /** Render a markdown string to sanitized-ish HTML (GFM, heading anchors). */
 export async function renderMarkdown(md: string): Promise<string> {
   const file = await unified()
@@ -89,6 +120,7 @@ export async function renderMarkdown(md: string): Promise<string> {
     .use(rehypeRaw)
     .use(rehypeSlug)
     .use(rehypeAutolinkHeadings, { behavior: "wrap" })
+    .use(rehypeWrapTables)
     .use(rehypeStringify, { allowDangerousHtml: true })
     .process(md);
   return String(file);
