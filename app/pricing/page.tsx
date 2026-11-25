@@ -369,7 +369,7 @@ export default function PricingPage() {
 
           <div className="relative mt-12 overflow-x-auto md:overflow-x-visible">
             <table className="w-full min-w-[760px] border-collapse text-left">
-              <thead className="sticky top-16 z-10 bg-white">
+              <thead className="bg-white md:sticky md:top-16 md:z-10">
                 <tr className="border-b border-border">
                   <th className="py-3 pr-4 font-poppins text-sm font-semibold text-navy">
                     Feature
