@@ -20,10 +20,19 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.mysurgeryquote.com/medical-spas/" },
   openGraph: { siteName: "MySurgeryQuote", type: "website", images: ["/og/medspa.png"] },
   twitter: { card: "summary_large_image", images: ["/og/medspa.png"] },
-  title: "Medical Spa Quote Software: Injectables and Treatment Pricing",
+  title: "Med Spa Quote Software: Price Injectables and Treatments",
   description:
-    "Quote software built for medical spas. Price injectables, lasers, body contouring, and skin treatments in under 2 minutes. Unlimited providers. HIPAA compliant. $150/mo.",
+    "Build a med spa quote in under 2 minutes: Botox by the unit, fillers by the syringe, lasers and treatment series, membership discounts, branded PDF. Unlimited providers. $150/mo.",
 };
+
+const quoteContents = [
+  "Botox and Dysport priced by the unit, fillers by the syringe. Enter the quantity and the quote totals instantly.",
+  "Lasers, body contouring, and skin treatments priced by the session, plus treatment series like Buy 5 Get 1 Free.",
+  "Membership tier discounts applied across the entire quote when you select the patient's tier.",
+  "Retail skincare and products added alongside services for a complete patient estimate.",
+  "A branded PDF with your logo and colors, emailed to the patient and resent any time from the quote list.",
+  "One click to attach the quote to GoHighLevel, ModMed, DrChrono, Nextech, or PatientCadence.",
+];
 
 const painPoints = [
   {
@@ -244,12 +253,12 @@ export default function MedicalSpasPage() {
             For Medical Spas
           </p>
           <h1 className="mx-auto max-w-3xl font-poppins text-4xl font-bold leading-[1.1] text-white md:text-5xl lg:text-6xl">
-            Quote software built for medical spas
+            Med spa quote software for injectables, lasers and treatments
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/90 md:text-xl">
-            Create professional patient quotes for injectables, lasers, body
-            contouring, and skin treatments in under 2 minutes. Unlimited
-            providers. One flat price.
+            Build a branded med spa quote for injectables, lasers, body
+            contouring, and skin treatments in under 2 minutes, then email the
+            patient a PDF. Unlimited providers. One flat price.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link
@@ -276,6 +285,31 @@ export default function MedicalSpasPage() {
           </div>
         </div>
         <WaveDivider />
+      </section>
+
+      {/* 1b. What a med spa quote includes (answers "med spa quote") */}
+      <section className="bg-white pt-20">
+        <div className="mx-auto max-w-4xl px-6">
+          <h2 className="text-center font-poppins text-3xl font-bold text-navy md:text-4xl">
+            What goes into a med spa quote
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-text-muted">
+            Med spa mode leaves out facility fees, anesthesia formulas, and
+            implant selection. Every quote covers what a med spa patient
+            actually buys:
+          </p>
+          <ul className="mx-auto mt-8 max-w-3xl space-y-4">
+            {quoteContents.map((item) => (
+              <li key={item} className="flex items-start gap-3 text-text">
+                <Check
+                  className="mt-1 h-5 w-5 shrink-0 text-primary"
+                  aria-hidden="true"
+                />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
 
       {/* 2. Sound familiar? */}
