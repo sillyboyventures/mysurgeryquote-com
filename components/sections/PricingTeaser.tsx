@@ -35,7 +35,7 @@ export default function PricingTeaser() {
     <section className="bg-white py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2 className="text-center font-poppins text-4xl font-bold text-navy">
-          Simple and Transparent Pricing
+          Plastic Surgery and Med Spa Software Pricing
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-center text-text-muted">
           Plans for solo surgeons, multi-location practices, and medical spas.

@@ -13,6 +13,11 @@ import { faqs } from "@/lib/faq";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://www.mysurgeryquote.com/" },
+  title: {
+    absolute: "Surgery Quote Software: Personalized Patient Quotes | MySurgeryQuote",
+  },
+  description:
+    "Surgery quote software for surgical practices and med spas. A personalized patient quote in under 2 minutes, with automatic facility and anesthesia fees and a branded PDF. From $100/mo.",
 };
 
 const faqSchema = {

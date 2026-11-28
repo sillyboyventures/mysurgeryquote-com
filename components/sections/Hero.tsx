@@ -32,7 +32,7 @@ export default function Hero() {
           </p>
 
           <h1 className="mx-auto max-w-5xl font-poppins text-5xl font-bold leading-[1.05] tracking-tight text-white md:text-6xl lg:text-7xl">
-            Professional Patient Quotes
+            Personalized Surgery Quotes
             <br />
             in Under 2 Minutes
           </h1>
@@ -67,8 +67,9 @@ export default function Hero() {
         {/* Subhead + CTAs + feature pills */}
         <div className="mx-auto mt-12 max-w-5xl px-6 text-center">
           <p className="mx-auto max-w-2xl text-lg leading-relaxed text-white/90 md:text-xl">
-            Quoting software for surgical practices and medical spas. Accurate
-            pricing, automatic calculations, branded PDFs.
+            Surgery quote software for surgical practices and medical spas.
+            Each patient gets a quote with their procedures, surgeon-specific
+            fees, automatic facility and anesthesia math, and a branded PDF.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
