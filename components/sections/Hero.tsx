@@ -32,9 +32,9 @@ export default function Hero() {
           </p>
 
           <h1 className="mx-auto max-w-5xl font-poppins text-5xl font-bold leading-[1.05] tracking-tight text-white md:text-6xl lg:text-7xl">
-            Personalized Surgery Quotes
+            Personalized Surgery
             <br />
-            in Under 2 Minutes
+            Quotes in Under 2 Minutes
           </h1>
         </div>
 
