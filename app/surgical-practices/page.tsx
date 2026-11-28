@@ -22,10 +22,18 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.mysurgeryquote.com/surgical-practices/" },
   openGraph: { siteName: "MySurgeryQuote", type: "website", images: ["/og/surgical.png"] },
   twitter: { card: "summary_large_image", images: ["/og/surgical.png"] },
-  title: "Surgery Quote Software for Cosmetic Surgeons",
+  title: "Plastic Surgery Quote Software: Pricing from $100/mo",
   description:
-    "Multi-procedure quotes with automatic facility and anesthesia fee calculations. Surgeon-specific pricing. Implant tracking. Quick Quote templates. Professional PDFs in under 2 minutes.",
+    "Plastic surgery quote software with automatic facility and anesthesia fees, surgeon-specific pricing, and implants. A personalized patient quote in under 2 minutes. Plans from $100/mo, no contract.",
 };
+
+const quoteContents = [
+  "Every procedure the patient is considering, on one quote, with your surgeon's own price for each.",
+  "Implants by brand and type, attached to the patient record.",
+  "Facility and anesthesia fees calculated automatically from total surgical time.",
+  "Procedures billed to insurance flagged so the patient total covers cosmetic only.",
+  "A branded PDF with your logo, emailed to the patient with delivery logged.",
+];
 
 const painPoints = [
   {
@@ -231,12 +239,13 @@ export default function SurgicalPracticesPage() {
             For Surgical Practices
           </p>
           <h1 className="mx-auto max-w-3xl font-poppins text-4xl font-bold leading-[1.1] text-white md:text-5xl lg:text-6xl">
-            Surgery quote software that handles the math
+            Plastic surgery quote software that handles the math
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/90 md:text-xl">
-            Multi-procedure quotes with automatic facility and anesthesia fee
-            calculations. Surgeon-specific pricing. Professional PDFs in under 2
-            minutes.
+            Give every patient a personalized surgery quote in under 2 minutes:
+            multiple procedures, surgeon-specific pricing, and automatic
+            facility and anesthesia fees on a professional PDF. Plans from
+            $100/mo.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link
@@ -263,6 +272,30 @@ export default function SurgicalPracticesPage() {
           </div>
         </div>
         <WaveDivider />
+      </section>
+
+      {/* 1b. What a surgery quote includes (answers "surgery quote" searches) */}
+      <section className="bg-white pt-20">
+        <div className="mx-auto max-w-4xl px-6">
+          <h2 className="text-center font-poppins text-3xl font-bold text-navy md:text-4xl">
+            What goes into a surgery quote
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-text-muted">
+            A seven-step quote wizard walks your team from patient info to
+            delivery, so each personalized quote includes:
+          </p>
+          <ul className="mx-auto mt-8 max-w-3xl space-y-4">
+            {quoteContents.map((item) => (
+              <li key={item} className="flex items-start gap-3 text-text">
+                <Check
+                  className="mt-1 h-5 w-5 shrink-0 text-primary"
+                  aria-hidden="true"
+                />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
 
       {/* 2. Sound familiar? */}
@@ -391,11 +424,12 @@ export default function SurgicalPracticesPage() {
       <section className="bg-bg-accent py-24">
         <div className="mx-auto max-w-6xl px-6">
           <h2 className="text-center font-poppins text-4xl font-bold text-navy">
-            Pricing for surgical practices
+            Plastic surgery software pricing
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-center text-text-muted">
-            No contracts. Cancel anytime. Unlimited quotes and staff users on
-            every plan.
+            Plans start at $100/mo for a solo surgeon. No contracts, no setup
+            fees. Cancel anytime. Unlimited quotes and staff users on every
+            plan.
           </p>
           <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
             {plans.map((plan) => (
